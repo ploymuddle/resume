@@ -6,21 +6,81 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
   <style>
+
     body {
-      background-color:#D6E7FF;
+      background-color: #D6E7FF;
       color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .jumbotron {
+
+    .jumbotron , .list-group-item {
       background-color: #D6E7FF;
       color: black;
     }
+
     circle {
-      color: #455D80;
+      color: #4D4399;
     }
+
+    .container {
+      max-width: 95%;
+    }
+
+    .tab-content {
+      flex: 1 0 auto;
+    }
+
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .php {
+      background-color: #8A97ED;
+      color: black;
+    }
+
+    .mockup {
+      background-color: #7A5ED6;
+      color: white;
+    }
+
+    .html {
+      background-color: #F2994B;
+      color: #2B3240;
+    }
+
+    .wireframe {
+      background-color: #F799CF;
+      color: #2B3240;
+    }
+
+    .css {
+      background-color: #4AB1FA;
+      color: white;
+    }
+
+    .prototype {
+      background-color: #F2BF80;
+      color: #2B3240;
+    }
+
+    .laravel {
+      background-color: #C74C48;
+      color: white;
+    }
+
+
+    
   </style>
 
 </head>
@@ -29,20 +89,31 @@
 
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand"><circle>⬤</circle> Programmer</a>
+      <a class="navbar-brand">
+        <circle>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mb-1 bi bi-arrow-down-right-circle-fill" viewBox="0 0 16 16">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm5.904-2.803a.5.5 0 1 0-.707.707L9.293 10H6.525a.5.5 0 0 0 0 1H10.5a.5.5 0 0 0 .5-.5V6.525a.5.5 0 0 0-1 0v2.768L5.904 5.197z"/>
+          </svg> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class=" mb-1 bi bi-code-slash" viewBox="0 0 16 16">
+            <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+          </svg>
+        </circle> 
+       Programmer 
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+      <div class="collapse navbar navbar-collapse justify-content-end" id="navbarNav">
         <ul class="nav navbar-nav text-center">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#home">Home<span class="sr-only">(current)</span></a>
+          <li class="nav-item border-right border-secondary">
+            <a class="nav-link active" data-toggle="tab" href="#home">Ploypilin<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item border-right border-secondary">
             <a class="nav-link" data-toggle="tab" href="#resume">Resume</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item border-right border-secondary">
             <a class="nav-link" data-toggle="tab" href="#project">Project</a>
           </li>
           <li class="nav-item">
@@ -51,54 +122,234 @@
         </ul>
       </div>
     </nav>
-    <div class="tab-content">
-      <div id="home" class="container tab-pane active">
-        <div class="jumbotron text-center">
-          <img src="image/profile.jpg" class="rounded-circle" width="200"><br><br>
-          <h1>Ploypilin Bunprasoet</h1>
-          <p>Programmer</p>
-        </div>
-        <hr>
+  </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <h6>Phone</h6>
-              <p>098 827 0289</p>
-            </div>
-            <div class="col-sm-4">
-              <h6>Email</h6>
-              <p>ploypilin.bun@gmail.com</p>
-            </div>
-            <div class="col-sm-4">
-              <h6>GitHub</h6>
-              <a class="link" href="https://github.com/ploymuddle">
-                <!-- <i class="bi bi-github"></i> -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                  class="bi bi-github text-dark" viewBox="0 0 16 16">
-                  <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                </svg>
-              </a>
+  <div class="container tab-content my-5">
+    <div id="home" class="container tab-pane active">
+
+      <!-- Tap Home -->
+      <div class="jumbotron">
+        <div class="row justify-content-around align-items-center">
+          <div class="col-sm-4 text-right">
+            <img src="image/profile.jpg" class="rounded-circle" width="100%"><br><br>
+          </div>
+          <div class="col-sm-6 text-left">
+            <h1>Ploypilin Bunprasoet</h1>
+            <p>Programmer</p>
+            <div class="text-dark">
+              <p>A fresh graduate of Computer Science pursuing a career as a Software developer where I can utilize my
+                understanding of coding and software development along with honing my skills to the efficiently fulfill the
+                requirements of company.</p>
             </div>
           </div>
         </div>
+       
       </div>
-      <div id="resume" class="container tab-pane fade"><br>
-        <h3>Resume</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+    <!-- Tap Resume -->
+    <div id="resume" class="container tab-pane fade"><br>
+      <h1>Resume</h1>
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Education</h4>
+        </div>
+        <div class="col-sm-2">
+          <p>2017 - 2020</p>
+        </div>
+        <div class="col-sm-4">
+          <b>Bachelor of Science: Computer Science</b>
+          <p>King Mongkut's Institute of Technology Ladkrabang</p>
+        </div>
       </div>
-      <div id="project" class="container tab-pane fade"><br>
-        <h3>Project</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Work Experience</h4>
+        </div>
+        <div class="col-sm-2">
+          <p class="mb-0">Jan - July</p>
+          <p>2020</p>
+        </div>
+        <div class="col-sm-4">
+          <b>Java Developer (Cooperative Education)</b>
+          <p>MFEC Public Company Limited, Bangkok</p>
+          <p class="text-dark small">cooperative education offers a guideline for developing systems to solve the problems with web application management provide banking services for administrators. Such as making reports of the customer's service usage, customer information management, system improvements and modification, administrator access management etc. The application is developed with Vue for front-end </p>
+        </div>
       </div>
-      <div id="contact" class="container tab-pane fade"><br>
-        <h3>Contact</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Skills</h4>
+        </div>
+        <div class="col-sm-2">
+          <p></p>
+        </div>
+        <div class="col-sm-4">
+          <!-- <ul class="list-group list-group-flush ">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Cras justo odio
+              <span class="badge badge-primary badge-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Dapibus ac facilisis in
+              <span class="badge badge-primary badge-pill">2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Morbi leo risus
+              <span class="badge badge-primary badge-pill">1</span>
+            </li>
+          </ul> -->
+          <div class="row justify-content-between">
+          <p class="col-3 text-left">Java</p> 
+          <p class="col-auto text-center">● ● ● ○ ○</p>
+          <p class="col-3 text-dark small text-right">Good</p>
+        </div>
+        <div class="row justify-content-between">
+          <p class="col-3 text-left">HTML</p> 
+          <p class="col-auto text-center">● ● ● ● ○</p>
+          <p class="col-3 text-dark small text-right">Very Good</p>
+        </div>
+        <div class="row justify-content-between">
+          <p class="col-3 text-left">JavaScript</p> 
+          <p class="col-auto text-center">● ● ○ ○ ○</p>
+          <p class="col-3 text-dark small text-right">Average</p>
+        </div>
+        <div class="row justify-content-between">
+          <p class="col-3 text-left">PHP</p> 
+          <p class="col-auto text-center">● ○ ○ ○ ○</p>
+          <p class="col-3 text-dark small text-right">Basic</p>
+        </div>
+        <div class="row justify-content-between">
+          <p class="col-3 text-left">SQL</p> 
+          <p class="col-auto text-center">● ● ● ● ○</p>
+          <p class="col-3 text-dark small text-right">Very Good</p>
+        </div>
+
+        </div>
       </div>
     </div>
-  </div>
+    <!-- Tap Project -->
+    <div id="project" class="container tab-pane fade"><br>
+      <h1>Projects</h1>
+      <p>Projects and Assignments in class</p>
+      <!-- Project 1 -->
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Project UX&UI Web Application for Sell Furniture</h4>
+          <p>Designing Interactive System</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-2">Sep - Nov 2019</p>
+          <span class="badge badge-secondary badge-pill wireframe">Wireframe</span>
+          <span class="badge badge-primary badge-pill mockup">Mockup</span>
+          <span class="badge badge-primary badge-pill prototype">Prototype</span>
+        </div>
+      </div>
 
+      <!-- Project 2 -->
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Web Application for Sell Furniture</h4>
+          <p>Software Engineering</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-2">Oct - Nov 2019</p>
+          <span class="php badge badge-pill php">PHP</span>
+          <span class="badge badge-danger badge-pill html">HTML</span>
+          <span class="badge badge-primary badge-pill css">CSS</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Web Application for Residence Management</h4>
+          <p>Web Programming</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-2">Sep - Nov 2020</p>
+          <span class="badge badge-danger badge-pill laravel">Laravel Framework</span>
+          <span class="badge badge-primary badge-pill php">PHP</span>
+          <span class="badge badge-danger badge-pill html">HTML</span>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Mockup Mobile Application for pre-order Management</h4>
+          <p>Electronic Business</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-2">Nov 2020</p>
+          <span class="badge badge-primary badge-pill mockup">Mockup</span>
+          <span class="badge badge-primary badge-pill prototype">Prototype</span>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Web Application for Visualizing Air Pollution (PM 2.5) on a Map</h4>
+          <p>Spatial Databases and GIS Application</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="mb-2">Apr - May 2021</p>
+          <span class="badge badge-info badge-pill">React</span>
+          <span class="badge badge-warning badge-pill">JavaScript</span>
+          <span class="badge badge-danger badge-pill html">HTML</span>
+          <span class="badge badge-primary badge-pill css">CSS</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- Tap Contact -->
+    <div id="contact" class="container tab-pane fade"><br>
+      <h1>Contact</h1>
+      <p></p>
+      
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Address</h4>
+        </div>
+        <div class="col-sm-6">
+          <p>74/1 M.3 T.meanumkoo A.Plueakdeang, Rayong, 21140</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </body>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <h6>Phone</h6>
+        <p>098 827 0289</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <h6>Email</h6>
+        <p>ploypilin.bun@gmail.com</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <h6>GitHub</h6>
+        <a class="link" href="https://github.com/ploymuddle">
+          <!-- <i class="bi bi-github"></i> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-github text-dark" viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <br>
+  </div>
+</footer>
+
 
 </html>
