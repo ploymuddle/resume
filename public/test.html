@@ -12,7 +12,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+
   <style>
+
     body {
       letter-spacing: 2px;
       background-color: white;
@@ -22,56 +24,81 @@
       flex-direction: column;
     }
 
-    .band a {
+    a {
       color: black;
     }
 
     .jumbotron {
-      background-color: white;
+      background-color: #D6E7FF;
+      color: black;
+      margin-left: 60px;
+      margin-right: 60px;
     }
 
-    .card {
-      border-style: none;
+    circle {
+      color: #4D4399;
     }
 
-    .animate-image {
-      position: relative;
-      animation: animatebottom 0.5s
+   .btn-circle {
+    padding: 50px 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    border-style: none;
+    }
+    
+    .btn-circle:hover {
+      background-color: #8A97ED;
     }
 
-    .animate-btn1 {
-      position: relative;
-      animation: animatebottom 0.6s
+    .container {
+      max-width: 95%;
     }
 
-    .animate-btn2 {
-      position: relative;
-      animation: animatebottom 0.8s
-    }
-
-    .animate-btn3 {
-      position: relative;
-      animation: animatebottom 1.0s
-    }
-
-    @keyframes animatebottom {
-      from {
-        bottom: -150px;
-        opacity: -0.5;
-      }
-
-      to {
-        bottom: 0;
-        opacity: 1;
-      }
-    }
-
-    /* CONTENT FULLSCREEN  */
     .tab-content {
       flex: 1 0 auto;
     }
 
-    /* CSS MENU ON WEB  */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    .php {
+      background-color: #8A97ED;
+      color: black;
+    }
+
+    .mockup {
+      background-color: #7A5ED6;
+      color: white;
+    }
+
+    .html {
+      background-color: #F2994B;
+      color: #2B3240;
+    }
+
+    .wireframe {
+      background-color: #F799CF;
+      color: #2B3240;
+    }
+
+    .css {
+      background-color: #4AB1FA;
+      color: white;
+    }
+
+    .prototype {
+      background-color: #F2BF80;
+      color: #2B3240;
+    }
+
+    .laravel {
+      background-color: #C74C48;
+      color: white;
+    }
+
     nav {
       display: flex;
       height: 80px;
@@ -120,61 +147,14 @@
       display: none;
     }
 
-    /* BUTTON CICLE  */
-    .btn-circle {
-      width: 150px;
-      height: 150px;
-      /* padding: auto; */
-      border-radius: 50%;
-      font-size: 100%;
-      font-weight: bold;
-      border-style: none;
-      letter-spacing: 0px;
-      margin: 15px;
-    }
-
-    .btn-circle:hover {
-      background-color: #8A97ED;
-    }
-
-    .footer {
-      background-color: white;
-    }
-
     @media (max-width: 1200px) {
-      .btn-circle {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-      }
       nav {
         padding: 0 40px 0 50px;
       }
     }
 
-    @media (max-width: 440px) {
-      .band {
-        padding-top: 10px;
-        width: 100%;
-      }
-      .card-body {
-        padding-top: 0px;
-      }
-      .jumbotron {
-        padding-top: 0px;
-      }
-    }
+    @media (max-width: 920px) {
 
-    @media (max-width: 768px) {
-      .btn-circle {
-        width: 75px;
-        height: 75px;
-        font-size: 75%;
-        margin: 5px;
-      }
-    }
-
-    @media (max-width: 950px) {
       .nav {
         display: block;
       }
@@ -232,55 +212,24 @@
         z-index: -1;
       }
 
-    }
-    .php {
-      background-color: #8A97ED;
-      color: black;
-    }
-
-    .mockup {
-      background-color: #7A5ED6;
-      color: white;
-    }
-
-    .html {
-      background-color: #F2994B;
-      color: #2B3240;
-    }
-
-    .wireframe {
-      background-color: #F799CF;
-      color: #2B3240;
-    }
-
-    .css {
-      background-color: #4AB1FA;
-      color: white;
-    }
-
-    .prototype {
-      background-color: #F2BF80;
-      color: #2B3240;
-    }
-
-    .laravel {
-      background-color: #C74C48;
-      color: white;
-    }
-    .footer {
-      margin-bottom: 50px;
+      .band {
+        padding-top: 10px;
+        width: 100%;
+      }
     }
   </style>
 
 </head>
 
 <body>
-  <!-- NAV -->
+
   <nav class="sticky-top">
-    <!-- TITLE -->
     <div class="band row">
       <a class="navbar-brand">
         <circle>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="mb-1 bi bi-arrow-down-right-circle-fill" viewBox="0 0 16 16">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm5.904-2.803a.5.5 0 1 0-.707.707L9.293 10H6.525a.5.5 0 0 0 0 1H10.5a.5.5 0 0 0 .5-.5V6.525a.5.5 0 0 0-1 0v2.768L5.904 5.197z"/>
+        </svg> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
             class=" mb-1 bi bi-code-slash" viewBox="0 0 16 16">
             <path
@@ -291,9 +240,6 @@
       </a>
       <span class="navbar-text font-weight-light"> PROGRAMMER</span>
     </div>
-    <!-- TITLE -->
-
-    <!-- MENU -->
     <input type="checkbox" id="click">
     <label for="click" class="menu-btn">
       <i class="fas fa-bars"></i>
@@ -302,53 +248,40 @@
     <ul class="nav">
       <li><a class="active" data-toggle="tab" href="#home">Home</a></li>
       <li><a data-toggle="tab" href="#resume">Resume</a></li>
-      <li><a data-toggle="tab" href="#project">Projects</a></li>
-      <li><a data-toggle="tab" href="#contact">Contact</a></li>
+      <li><a data-toggle="tab" href="#project">Project</a></li>
     </ul>
-    <!-- MENU -->
+
   </nav>
-  <!-- NAV -->
-  <div class="container tab-content my-5">
-    <!-- Tap Home -->
+
+  <div class=" container tab-content my-5">
     <div id="home" class="container tab-pane active">
+
+      <!-- Tap Home -->
       <div class="jumbotron">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <img src="image/profile.jpg" class="rounded-circle animate-image" width="100%"><br><br>
-              </div>
+        <div class="row justify-content-around align-items-center">
+          <div class="col-sm-4 text-right">
+            <img src="image/profile.jpg" class="rounded-circle" width="100%"><br><br>
+          </div>
+          <div class="col-sm-6 text-left">
+            <h1>Ploypilin Bunprasoet</h1>
+            <p>Programmer</p>
+            <div class="text-dark">
+              <p>A fresh graduate of Computer Science pursuing a career as a Software developer where I can utilize my
+                understanding of coding and software development along with honing my skills to the efficiently fulfill
+                the
+                requirements of company.</p>
+            </div>
+            <div class="d-flex justify-content-around align-items-cente mx-5">
+            <button type="button" class="btn btn-primary btn-circle">Basic</button>
+            <button type="button" class="btn btn-primary btn-circle">Basic</button>
+            <button type="button" class="btn btn-primary btn-circle">Basic</button>
             </div>
           </div>
-          <div class="col-sm-8">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title h1 animate-image">Ploypilin Bunprasoet</h5>
-                <h6 class="card-subtitle mb-2 text-muted animate-image">Programmer</h6>
-                <p class="card-text animate-image">A fresh graduate of Computer Science pursuing a career as a Software
-                  developer
-                  where I
-                  can utilize my
-                  understanding of coding and software development along with honing my skills to the efficiently
-                  fulfill
-                  the requirements of company.</p>
-                <div class="d-flex justify-content-center">
-                  <button type="button" id="btn-resume" class="btn btn-primary btn-circle animate-btn1">Resume</button>
-                  <button type="button" id="btn-project"
-                    class="btn btn-primary btn-circle animate-btn2">Projects</button>
-                  <button type="button" id="btn-contact"
-                    class="btn btn-primary btn-circle animate-btn3">Contact</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </div>
-    <!-- Tap Home -->
 
+      </div>
+
+    </div>
     <!-- Tap Resume -->
     <div id="resume" class="container tab-pane fade"><br>
       <h1>Resume</h1>
@@ -419,8 +352,6 @@
         </div>
       </div>
     </div>
-    <!-- Tap Resume -->
-
     <!-- Tap Project -->
     <div id="project" class="container tab-pane fade"><br>
       <h1>Projects</h1>
@@ -494,8 +425,8 @@
           <span class="badge badge-primary badge-pill css">CSS</span>
         </div>
       </div>
+
     </div>
-    <!-- Tap Project -->
     <!-- Tap Contact -->
     <div id="contact" class="container tab-pane fade"><br>
       <h1>Contact</h1>
@@ -511,6 +442,7 @@
       </div>
 
     </div>
+
   </div>
 
 </body>
@@ -524,6 +456,10 @@
         <p>098 827 0289</p>
       </div>
       <div class="col-sm-4 text-center">
+        <h6>Email</h6>
+        <p>ploypilin.bun@gmail.com</p>
+      </div>
+      <div class="col-sm-4 text-center">
         <h6>GitHub</h6>
         <a class="link" href="https://github.com/ploymuddle">
           <!-- <i class="bi bi-github"></i> -->
@@ -534,11 +470,8 @@
           </svg>
         </a>
       </div>
-      <div class="col-sm-4 text-center">
-        <h6>Email</h6>
-        <p>ploypilin.bun@gmail.com</p>
-      </div>
     </div>
+    <br>
   </div>
 </footer>
 
@@ -546,21 +479,6 @@
   $('.nav a').on('click', () => {
     $('#click').prop('checked', false);
   });
-
-  $("#btn-resume").click(function (e) {
-    e.preventDefault();
-    $('.nav a[href="#resume"]').tab('show');
-  });
-  $("#btn-project").click(function (e) {
-    e.preventDefault();
-    $('.nav a[href="#project"]').tab('show');
-  });
-  $("#btn-contact").click(function (e) {
-    // $("footer").css({"position": "fixed", "top": "80vh","left": "0", "right": "0", "height": "20vh"});
-    e.preventDefault();
-    $('.nav a[href="#contact"]').tab('show');
-  });
-
 </script>
 
 </html>
