@@ -80,12 +80,24 @@
 
     @keyframes animatebottom {
       from {
-        bottom: -150px;
-        opacity: -0.5;
+        bottom: -100px;
+        opacity: 0;
       }
 
       to {
         bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animateleft {
+      from {
+        left: -150px;
+        opacity: -0.5;
+      }
+
+      to {
+        left: 0;
         opacity: 1;
       }
     }
@@ -167,12 +179,12 @@
       }
 
       .card-body {
-        padding-top: 0px;
+        padding: 0px;
       }
 
-      .jumbotron {
+      /* .jumbotron {
         padding-top: 0px;
-      }
+      } */
     }
 
     @media (max-width: 768px) {
@@ -182,6 +194,7 @@
         font-size: 75%;
         margin: 5px;
       }
+
       .image-circle {
         width: 100%;
       }
@@ -287,22 +300,72 @@
       background-color: #BDDEFF;
     }
 
+    .bg-sky-0 {
+      background-color: #D6EBFF;
+    }
 
-    .btn-download
-    {
+    .bg-black-1 {
+      background-color: #456380;
+      color: white;
+    }
+
+    .bg-purple {
+      background-color: #8A97ED;
+    }
+
+    .btn-download {
       background-color: #A4D2FF;
       border-color: black;
     }
-    .btn-download:hover
-    {
+
+    .btn-download:hover {
       background-color: white;
       border-color: black;
+    }
+
+    .text-skill {
+      font-weight: bold;
+      /* color: #BDDEFF; */
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .ul-skill {
+      padding-left: 20px;
+    }
+
+    .ul-skill li::before {
+      content: "\2022";
+      color: #A4D2FF;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      font-size: 20px;
     }
 
     /* mark { 
     background-color: #A4D2FF;
     color: black;
     } */
+
+    .element-hidden {
+      visibility:hidden;
+    }
+
+    .animate {
+      visibility: visible;
+      position: relative;
+      animation: animatebottom 0.8s;
+    }
+
+    .animate-skill {
+      visibility: visible;
+      position: relative;
+      animation: animateleft 1.0s;
+    }
   </style>
 
 </head>
@@ -341,10 +404,10 @@
     <!-- MENU -->
   </nav>
   <!-- NAV -->
-  <div class="container tab-content my-5">
+  <div class="container tab-content my-3">
     <!-- Tap Home -->
     <div id="home" class="container tab-pane fade">
-      <div class="jumbotron">
+      <div class="jumbotron mb-2">
         <div class="row">
           <div class="col-sm-4">
             <div class="card">
@@ -385,7 +448,7 @@
     <!-- Tap Resume -->
     <div id="resume" class="container tab-pane active"><br>
       <h1>Resume</h1>
-      <div class="row py-5 justify-content-center">
+      <div class="row py-4 justify-content-center">
         <div class="card text-center" style="width: 75%;">
           <div class="card-body">
             <h5 class="card-title"><mark class="bg-sky">ABOUT ME</mark></h5><br>
@@ -396,35 +459,36 @@
             <p class="card-text">NICKNAME: Ploy</p>
             <p class="card-text">AGE: 23</p>
             <p class="card-text">GENDER: Female</p>
-            <a href="./file/resume-ploypilin.pdf" class="btn btn-download" download="resume-ploypilin.pdf" target="_blank">DOWNLOAD RESUME</a>
+            <a href="./file/resume-ploypilin.pdf" class="btn btn-download" download="resume-ploypilin.pdf"
+              target="_blank">DOWNLOAD RESUME</a>
             <p class="card-text bg-sky">
-              <div class="row">
-                <div class="col-sm-4 text-center">
-                  <h6>Phone</h6>
-                  <p>098 827 0289</p>
-                </div>
-                <div class="col-sm-4 text-center">
-                  <h6>GitHub</h6>
-                  <a class="link" href="https://github.com/ploymuddle">
-                    <!-- <i class="bi bi-github"></i> -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                      class="bi bi-github text-dark" viewBox="0 0 16 16">
-                      <path
-                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                    </svg>
-                  </a>
-                </div>
-                <div class="col-sm-4 text-center">
-                  <h6>Email</h6>
-                  <p>ploypilin.bun@gmail.com</p>
-                </div>
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                <h6>Phone</h6>
+                <p>098 827 0289</p>
               </div>
+              <div class="col-sm-4 text-center">
+                <h6>GitHub</h6>
+                <a class="link" href="https://github.com/ploymuddle">
+                  <!-- <i class="bi bi-github"></i> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-github text-dark" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-sm-4 text-center">
+                <h6>Email</h6>
+                <p>ploypilin.bun@gmail.com</p>
+              </div>
+            </div>
             </p>
           </div>
         </div>
       </div>
       <hr>
-      <div class="row py-5">
+      <div class="row py-5 animation-test element-hidden">
         <div class="col-sm-5">
           <h4>Education</h4>
         </div>
@@ -437,7 +501,7 @@
         </div>
       </div>
       <hr>
-      <div class="row py-5">
+      <div class="row py-5 animation-test element-hidden">
         <div class="col-sm-5">
           <h4>Work Experience</h4>
         </div>
@@ -455,15 +519,63 @@
         </div>
       </div>
       <hr>
-      <div class="row py-5">
+      <div class="row py-5 animation-test element-hidden">
         <div class="col-sm-5">
-          <h4>Skills</h4>
+          <h4>Activity</h4>
         </div>
         <div class="col-sm-3">
-          <p></p>
+          <p>2017 - 2020</p>
         </div>
         <div class="col-sm-4">
-          <div class="row justify-content-between">
+          <b>Bachelor of Science: Computer Science</b>
+          <p>King Mongkut's Institute of Technology Ladkrabang</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row py-5 animation-test element-hidden">
+        <div class="col-sm-12 mb-4">
+          <h4>Skills</h4>
+        </div>
+
+        <div class="col-sm-8 px-0">
+          <div class="animation-skill element-hidden">
+            <div class="px-4 py-4 bg-black-1">
+              <h5><i class="fas fa-laptop-code"></i> Coding</h5>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p class="text-skill">Languages:</p>
+                  <ul class="ul-skill ">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <p class="text-skill">Framework&Libraries:</p>
+                  <ul class="ul-skill ">
+                    <li>Spring</li>
+                    <li>Laravel</li>
+                    <li>Vue.js</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <p class="text-skill">Tools:</p>
+                  <ul class="ul-skill ">
+                    <li>Git</li>
+                    <li>Visual Studio Code</li>
+                    <li>Xampp</li>
+                    <li>NetBeans</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  <!-- <div class="row justify-content-between">
             <p class="col-3 text-left">Java</p>
             <p class="col-auto text-center">● ● ● ○ ○</p>
             <p class="col-3 text-dark small text-right">Good</p>
@@ -487,9 +599,27 @@
             <p class="col-3 text-left">SQL</p>
             <p class="col-auto text-center">● ● ● ● ○</p>
             <p class="col-3 text-dark small text-right">Very Good</p>
+          </div> -->
+               
+
+        <div class="col-sm-4 px-0">
+          <div class="animation-skill element-hidden">
+            <div class="bg-sky-0 px-4 py-4">
+              <h5><i class="fas fa-magic"></i> Design</h5>
+              <p class="text-skill">Program:</p>
+              <ul class="ul-skill">
+                <li>Adobe XD</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>After Effect</li>
+                <li>Figma</li>
+              </ul>
+            </div>
           </div>
         </div>
+
       </div>
+
     </div>
     <!-- Tap Resume -->
 
@@ -632,6 +762,37 @@
     e.preventDefault();
     $('.nav a[href="#contact"]').tab('show');
   });
+
+  // animate-test 
+  $(window).scroll(function () {
+    $('.animation-test').each(function () {
+      var imagePos = $(this).offset().top;
+      var imageHeight = $(this).height();
+      var topOfWindow = $(window).scrollTop();
+
+      if (imagePos - 500 < topOfWindow + imageHeight) {
+        $(this).addClass("animate");
+      } else {
+        $(this).removeClass("animate");
+      }
+    });
+  });
+  $(window).scroll(function () {
+    $('.animation-skill').each(function () {
+      var imagePos = $(this).offset().top;
+      var imageHeight = $(this).height();
+      var topOfWindow = $(window).scrollTop();
+
+      if (imagePos - 200  < topOfWindow + imageHeight) {
+        $(this).addClass("animate-skill");
+      } else {
+        $(this).removeClass("animate-skill");
+      }
+    });
+  });
+// animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
+
+
 
 </script>
 
