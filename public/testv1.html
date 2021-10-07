@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Welcome to Ploypilin'resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <style>
+    body {
+      letter-spacing: 2px;
+      background-color: white;
+      color: black;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .band a {
+      color: black;
+    }
+
+    .jumbotron {
+      background-color: white;
+    }
+
+    .card {
+      border-style: none;
+    }
+
+    .aboutme {
+      background-color: #ddeeff;
+    }
+
+    /* BUTTON CICLE  */
+    .btn-circle {
+      width: 150px;
+      height: 150px;
+      /* padding: auto; */
+      border-radius: 50%;
+      font-size: 100%;
+      font-weight: bold;
+      border-color: black;
+      /* border-style: none; */
+      letter-spacing: 0px;
+      margin: 15px;
+      color: black;
+    }
+
+    .btn-circle:hover {
+      background-color: white;
+      color: black;
+      border-color: black;
+    }
+
+    .animate-image {
+      position: relative;
+      animation: animatebottom 0.5s;
+    }
+
+    .animate-btn1 {
+      position: relative;
+      animation: animatebottom 0.6s;
+      background-color: #B2B0FF;
+    }
+
+    .animate-btn2 {
+      position: relative;
+      animation: animatebottom 0.8s;
+      background-color: #A4D2FF;
+    }
+
+    .animate-btn3 {
+      position: relative;
+      animation: animatebottom 1.0s;
+      background-color: #FFBDF1;
+    }
+
+    @keyframes animatebottom {
+      from {
+        bottom: -100px;
+        opacity: 0;
+      }
+
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animateleft {
+      from {
+        left: -150px;
+        opacity: -0.5;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes animateleft {
+      from {
+        left: -150px;
+        opacity: -0.5;
+      }
+
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    /* CONTENT FULLSCREEN  */
+    .tab-content {
+      flex: 1 0 auto;
+    }
+
+    /* CSS MENU ON WEB  */
+    nav {
+      display: flex;
+      height: 80px;
+      width: 100%;
+      background: white;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px 0 100px;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 5px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #4AB1FA;
+    }
+
+    nav .menu-btn i {
+      color: #4AB1FA;
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .footer {
+      background-color: white;
+    }
+
+    @media (max-width: 1200px) {
+      .btn-circle {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      nav {
+        padding: 0 40px 0 50px;
+      }
+    }
+
+    @media (max-width: 440px) {
+
+      .band {
+        padding-top: 10px;
+        width: 100%;
+      }
+
+      .card-body {
+        padding: 0px;
+      }
+
+      /* .jumbotron {
+        padding-top: 0px;
+      } */
+    }
+
+    @media (max-width: 768px) {
+
+      .btn-circle {
+        width: 78px;
+        height: 78px;
+        font-size: 75%;
+        margin: 5px;
+      }
+
+      .image-circle {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 950px) {
+
+      .nav {
+        display: block;
+      }
+
+      nav .menu-btn i {
+        width: 100%;
+        display: block;
+      }
+
+      #click:checked~.menu-btn i:before {
+        content: "\f00d";
+      }
+
+      nav ul {
+        position: fixed;
+        top: 79px;
+        left: -100%;
+        background: white;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: none;
+        transition: all 0.3s ease;
+      }
+
+      #click:checked~ul {
+        left: 0;
+      }
+
+      nav ul li {
+        width: 100%;
+        margin: 40px 0;
+        margin-bottom: 100px;
+      }
+
+      nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      #click:checked~ul li a {
+        margin-left: 0px;
+      }
+
+      nav ul li a.active,
+      nav ul li a:hover {
+        background: none;
+        color: #4AB1FA;
+      }
+    }
+
+    /* ITEM PROJECT */
+    .php {
+      background-color: #8A97ED;
+      color: black;
+    }
+
+    .mockup {
+      background-color: #7A5ED6;
+      color: white;
+    }
+
+    .html {
+      background-color: #F2994B;
+      color: #2B3240;
+    }
+
+    .wireframe {
+      background-color: #F799CF;
+      color: #2B3240;
+    }
+
+    .css {
+      background-color: #4AB1FA;
+      color: white;
+    }
+
+    .prototype {
+      background-color: #F2BF80;
+      color: #2B3240;
+    }
+
+    .laravel {
+      background-color: #C74C48;
+      color: white;
+    }
+
+    .footer {
+      margin-bottom: 50px;
+    }
+
+    .bg-sky {
+      background-color: #BDDEFF;
+    }
+
+    .bg-sky-0 {
+      background-color: #D6EBFF;
+    }
+
+    .bg-sky-1 {
+      background-color: #c7e4ffad;
+    }
+
+    .bg-black-1 {
+      background-color: #456380;
+      color: white;
+    }
+
+    .bg-purple {
+      background-color: #8A97ED;
+    }
+
+    .btn-download {
+      background-color: #A4D2FF;
+      border-color: black;
+    }
+
+    .btn-download:hover {
+      background-color: white;
+      border-color: black;
+    }
+
+    .text-skill {
+      font-weight: bold;
+      /* color: #BDDEFF; */
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .ul-skill {
+      padding-left: 20px;
+    }
+
+    .ul-skill li::before {
+      content: "\2022";
+      color: #A4D2FF;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      font-size: 20px;
+    }
+
+    /* mark { 
+    background-color: #A4D2FF;
+    color: black;
+    } */
+
+    .element-hidden {
+      visibility: hidden;
+    }
+
+    .animate {
+      visibility: visible;
+      position: relative;
+      animation: animatebottom 0.8s;
+    }
+
+    .animate-skill {
+      visibility: visible;
+      position: relative;
+      animation: animateleft 1.0s;
+    }
+
+    .text-sky {
+      color: #8dabdb;
+    }
+
+    /* Timeline  */
+    ul.timeline {
+      list-style-type: none;
+      position: relative;
+    }
+
+    ul.timeline:before {
+      content: ' ';
+      background: #d4d9df;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+    }
+
+    ul.timeline>li {
+      margin: 30px 0;
+      padding-left: 20px;
+    }
+
+    ul.timeline>li:before {
+      content: ' ';
+      background: #A4D2FF;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+
+    /* Timeline ref:https://bootsnipp.com/snippets/xrKXW  */
+
+
+    /* Image  */
+    .row-image {
+      display: -ms-flexbox;
+      /* IE 10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE 10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    .column-image {
+      -ms-flex: 30%;
+      /* IE 10 */
+      flex: 30%;
+      padding: 0 4px;
+    }
+
+    .column-image img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      position: fixed;
+      top: 10px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .carousel-caption {
+      top: 100px;
+      text-align: center;
+      color: black;
+    }
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    }
+
+    .modal-content {
+      align-items: center;
+
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    .fullscreen {
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    button.btn.btn-image {
+      padding: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="sticky-top">
+    <!-- TITLE -->
+    <div class="band row">
+      <a class="navbar-brand">
+        <circle>
+          <i class="fas fa-laptop-code"></i>
+        </circle>
+        PLOYPILIN
+      </a>
+      <span class="navbar-text font-weight-light"> PROGRAMMER</span>
+    </div>
+    <!-- END TITLE -->
+
+    <!-- MENU -->
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <ul class="nav">
+      <li><a class="active" data-toggle="tab" href="#home">Home</a></li>
+      <li><a data-toggle="tab" href="#resume">Resume</a></li>
+      <li><a data-toggle="tab" href="#project">Projects</a></li>
+      <li><a data-toggle="tab" href="#contact">Contact</a></li>
+    </ul>
+    <!-- MENU -->
+  </nav>
+  <!-- NAV -->
+  <div class="container tab-content my-3">
+    <!-- Tap Home -->
+    <div id="home" class="container tab-pane active">
+      <div class="jumbotron mb-2">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <img src="image/profile1.jpg" class="rounded-circle animate-image" width="100%"><br><br>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title h1 animate-image">Ploypilin Bunprasoet</h5>
+                <h6 class="card-subtitle mb-2 text-muted animate-image">Programmer</h6>
+                <p class="card-text animate-image">A fresh graduate of Computer Science pursuing a career as a Software
+                  developer
+                  where I
+                  can utilize my
+                  understanding of coding and software development along with honing my skills to the efficiently
+                  fulfill
+                  the requirements of company.</p>
+                <div class="d-flex justify-content-center">
+                  <button type="button" id="btn-resume" class="btn btn-primary btn-circle animate-btn1">Resume</button>
+                  <button type="button" id="btn-project"
+                    class="btn btn-primary btn-circle animate-btn2">Projects</button>
+                  <button type="button" id="btn-contact"
+                    class="btn btn-primary btn-circle animate-btn3">Contact</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Tap Home -->
+
+    <!-- Tap Resume -->
+    <div id="resume" class="container tab-pane fade"><br>
+      <h1>Resume</h1>
+      <!-- About Me  -->
+      <div class="row py-4 justify-content-center">
+        <div class="card text-center aboutme" style="width: 75%;">
+          <div class="card-body">
+            <h5 class="card-title animate-image">ABOUT ME</h5>
+            <hr><br>
+            <img src="image/profile1.jpg" class="rounded-circle animate-image image-circle" width="30%"><br><br>
+            <p class="card-text">NAME: Ploypilin Bunprasoet</p>
+            <p class="card-text">NICKNAME: Ploy</p>
+            <p class="card-text">AGE: 23</p>
+            <p class="card-text">GENDER: Female</p>
+            <a href="./file/resume-ploypilin.pdf" class="btn btn-download" download="resume-ploypilin.pdf"
+              target="_blank">DOWNLOAD RESUME</a>
+            <p class="card-text bg-sky">
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                <h6>Phone</h6>
+                <p>098 827 0289</p>
+              </div>
+              <div class="col-sm-4 text-center">
+                <h6>GitHub</h6>
+                <a class="link" href="https://github.com/ploymuddle">
+                  <!-- <i class="bi bi-github"></i> -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-github text-dark" viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-sm-4 text-center">
+                <h6>Email</h6>
+                <p>ploypilin.bun@gmail.com</p>
+              </div>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Education  -->
+      <div class="row py-5 animation-test element-hidden">
+        <div class="col-sm-5">
+          <h4>Education</h4>
+        </div>
+        <div class="col-sm-3">
+          <p>2017 - 2021</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="text-sky"><b><i class="fas fa-graduation-cap"></i> Bachelor of Science:</b></p>
+          <b>Computer Science</b>
+          <p>King Mongkut's Institute of Technology Ladkrabang</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row py-5 animation-test element-hidden">
+        <div class="col-sm-5">
+          <h4>Work Experience</h4>
+        </div>
+        <div class="col-sm-3">
+          <p class="mb-0">13 January - 31 July</p>
+          <p>2020</p>
+        </div>
+        <div class="col-sm-4">
+          <p class="text-sky"><b><i class="fas fa-laptop-house"></i> Cooperative Education: </b></p>
+          <b>Java Developer</b>
+          <p>MFEC Public Company Limited, Bangkok</p>
+          <ul class="ul-skill text-dark small">
+            <li>Developed back office system for banking service apps management.</li>
+            <li>Developed back end web applications with Java using spring framework.</li>
+            <li>Developed front end web applications with Vue.</li>
+            <li>Design database specification and api specification.</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <!-- Activities -->
+      <div class="row py-5 animation-test element-hidden">
+        <div class="col-sm-5">
+          <h4>Activities</h4>
+        </div>
+        <div class="col-sm-7">
+          <div class="container mt-5 mb-5">
+            <div class="row">
+              <ul class="timeline">
+                <li>
+                  <p>Admin and Planner in CS Media team</p>
+                  <p class="text-dark small">PR team of Computer Science</p>
+                  <ul class="ul-skill text-dark small">
+                    <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl"
+                        target="_blank">Computer Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
+                    <li>Plan and manage tasks within the team</li>
+                    <li>Coordinate with external organizations</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Esports Department at the KMITL Sci Day</p>
+                  <p class="text-dark small">Admin in coordinating with tournament participants</p>
+                </li>
+                <li>
+                  <p>Registration Department at the Natwok Game 22nd</p>
+                  <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd</p>
+                </li>
+                <li>
+                  <p>Head of PR Department at the CS Camp 11</p>
+                  <p class="text-dark small">Computer Science Camp</p>
+                  <ul class="ul-skill text-dark small">
+                    <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl.camp"
+                        target="_blank">CS-CAMP KMIT'L <i class="fab fa-facebook-square "></i></a></li>
+                    <li>Plan and manage tasks within the team</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>PR-coordinate Department at the AUCC 2018</p>
+                  <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
+                  <ul class="ul-skill text-dark small">
+                    <li>Prepare road signs at each location</li>
+                    <li>Coordinate with external department</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Participate in a basketball competition</p>
+                  <p class="text-dark small">at the Vidya Vidya Sport Day</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Skills -->
+      <div class="row py-5 animation-test element-hidden">
+        <div class="col-sm-12 mb-4">
+          <h4>Skills</h4>
+        </div>
+        <!-- Coding  -->
+        <div class="col-sm-8 px-0">
+          <div class="animation-skill element-hidden">
+            <div class="px-4 py-4 bg-black-1">
+              <h5><i class="fas fa-laptop-code"></i> Coding</h5>
+              <div class="row">
+                <div class="col-sm-4">
+                  <p class="text-skill">Languages:</p>
+                  <ul class="ul-skill ">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <p class="text-skill">Framework&Libraries:</p>
+                  <ul class="ul-skill ">
+                    <li>Spring</li>
+                    <li>Laravel</li>
+                    <li>Vue.js</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                </div>
+                <div class="col-sm-4">
+                  <p class="text-skill">Tools:</p>
+                  <ul class="ul-skill ">
+                    <li>Git</li>
+                    <li>Visual Studio Code</li>
+                    <li>Xampp</li>
+                    <li>NetBeans</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row justify-content-between">
+            <p class="col-3 text-left">Java</p>
+            <p class="col-auto text-center">● ● ● ○ ○</p>
+            <p class="col-3 text-dark small text-right">Good</p>
+          </div>
+          <div class="row justify-content-between">
+            <p class="col-3 text-left">HTML</p>
+            <p class="col-auto text-center">● ● ● ● ○</p>
+            <p class="col-3 text-dark small text-right">Very Good</p>
+          </div>
+          <div class="row justify-content-between">
+            <p class="col-3 text-left">JavaScript</p>
+            <p class="col-auto text-center">● ● ○ ○ ○</p>
+            <p class="col-3 text-dark small text-right">Average</p>
+          </div>
+          <div class="row justify-content-between">
+            <p class="col-3 text-left">PHP</p>
+            <p class="col-auto text-center">● ○ ○ ○ ○</p>
+            <p class="col-3 text-dark small text-right">Basic</p>
+          </div>
+          <div class="row justify-content-between">
+            <p class="col-3 text-left">SQL</p>
+            <p class="col-auto text-center">● ● ● ● ○</p>
+            <p class="col-3 text-dark small text-right">Very Good</p>
+          </div> -->
+
+        <!-- Design -->
+        <div class="col-sm-4 px-0">
+          <div class="animation-skill element-hidden">
+            <div class="bg-sky-0 px-4 py-4">
+              <h5><i class="fas fa-magic"></i> Design</h5>
+              <p class="text-skill">Program:</p>
+              <ul class="ul-skill">
+                <li>Adobe XD</li>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>After Effect</li>
+                <li>Figma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End Skills -->
+    </div>
+    <!-- End Tap Resume -->
+
+    <!-- Tap Project -->
+    <div id="project" class="container tab-pane fade"><br>
+      <h1>Projects</h1>
+      <p>Projects and Assignments in class</p>
+      <!-- Project 0 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Back Office System</h4>
+          <p>MFEC Public Company Limited, Bangkok</p>
+         
+
+          <div class="detail font-weight-light">
+            Developed back office system for banking service apps management.
+          </div>
+          <div class="">
+            <span class="php badge badge-pill java">Java</span>
+            <span class="badge badge-danger badge-pill spring">Spring Framework</span>
+            <span class="badge badge-primary badge-pill vue">Vue</span>
+          </div>
+
+          <div class=" m-3 ">
+          <img src="image/mfec.png" style="width:75%" >
+</div>
+
+        
+          <!-- <div class=" py-2 mb-5 ">
+            <p>architecture diagram</p>
+          <img src="image/bos.jpg" style="width:75%" >
+         <img src="image/bostools.jpg" style="width:75%" >
+          <img src="image/bosdeploy.jpg" style="width:75%" >
+        </div> -->
+        </div>
+
+      </div>
+
+
+      <!-- Project 1 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Web Application for Sell Furniture</h4>
+          <p>Software Engineering</p>
+ 
+
+          <div class="detail font-weight-light">
+            Developed back office system for banking service apps management.
+          </div>
+          <div class="mb-2">
+            <span class="php badge badge-pill php">PHP</span>
+            <span class="badge badge-danger badge-pill html">HTML</span>
+            <span class="badge badge-primary badge-pill css">CSS</span>
+          </div>
+          <div class=" py-2 mb-5 ">
+            <p>architecture diagram</p>
+          <img src="image/sell-furniturn.jpg" style="width:75%" >
+        </div>
+        </div>
+   
+        <!-- Photo Grid -->
+        <div class="row-image">
+          <div class="column-image">
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-home.jpg"><img id="myImg" src="image/sell-furniturn-home.jpg"
+                style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-empty.jpg"><img id="myImg" src="image/sell-furniturn-empty.jpg"
+                style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-product-detail.jpg"><img id="myImg"
+                src="image/sell-furniturn-product-detail.jpg" style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-cart.jpg"><img id="myImg" src="image/sell-furniturn-cart.jpg"
+                style="width:100%"></button>
+
+          </div>
+          <div class="column-image">
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-login.jpg"> <img id="myImg" src="image/sell-furniturn-login.jpg"
+                style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-search-by.jpg"><img id="myImg"
+                src="image/sell-furniturn-search-by.jpg" style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-complete.jpg"><img id="myImg" src="image/sell-furniturn-complete.jpg"
+                style="width:100%"></button>
+          </div>
+          <div class="column-image">
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-search.jpg"><img id="myImg" src="image/sell-furniturn-search.jpg"
+                style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-search-by2.jpg"><img id="myImg"
+                src="image/sell-furniturn-search-by2.jpg" style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-add.jpg"><img id="myImg" src="image/sell-furniturn-add.jpg"
+                style="width:100%"></button>
+            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="image/sell-furniturn-confirm.jpg"><img id="myImg" src="image/sell-furniturn-confirm.jpg"
+                style="width:100%"></button>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content fullscreen">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="modal-body">
+                <img id="image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Project 2 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Web Application for Residence Management</h4>
+          <p>Web Programming</p>
+          <hr>
+          <div class="">
+            <span class="badge badge-danger badge-pill laravel">Laravel Framework</span>
+            <span class="badge badge-primary badge-pill php">PHP</span>
+            <span class="badge badge-danger badge-pill html">HTML</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Project 3 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Web Application for Visualizing Air Pollution (PM 2.5) on a Map</h4>
+          <p>Spatial Databases and GIS Application</p>
+          <hr>
+          <div class="">
+            <span class="badge badge-info badge-pill">React</span>
+            <span class="badge badge-warning badge-pill">JavaScript</span>
+            <span class="badge badge-danger badge-pill html">HTML</span>
+            <span class="badge badge-primary badge-pill css">CSS</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Project 4 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>UX&UI Course Online Landing page</h4>
+          <p></p>
+          <hr>
+          <div class="">
+            <span class="badge badge-primary badge-pill mockup">Mockup</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Project 5 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Project UX&UI Web Application for Sell Furniture</h4>
+          <p>Designing Interactive System</p>
+          <hr>
+          <div class="">
+            <span class="badge badge-secondary badge-pill wireframe">Wireframe</span>
+            <span class="badge badge-primary badge-pill mockup">Mockup</span>
+            <span class="badge badge-primary badge-pill prototype">Prototype</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- Project 6 -->
+      <div class="py-5 text-center">
+        <div class="">
+          <hr>
+          <h4>Mockup Mobile Application for Pre-order Management</h4>
+          <p>Electronic Business</p>
+          <hr>
+          <div class="">
+            <span class="badge badge-primary badge-pill mockup">Mockup</span>
+            <span class="badge badge-primary badge-pill prototype">Prototype</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End Tap Project -->
+
+    <!-- Tap Contact -->
+    <div id="contact" class="container tab-pane fade"><br>
+      <h1>Contact</h1>
+      <p></p>
+
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <h4>Address</h4>
+        </div>
+        <div class="col-sm-6">
+          <p>74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- End Tap Contact -->
+  </div>
+  <!-- The Modal -->
+  <!-- <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div> -->
+</body>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <h6>Phone</h6>
+        <p>098 827 0289</p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <h6>GitHub</h6>
+        <a class="link" href="https://github.com/ploymuddle">
+          <!-- <i class="bi bi-github"></i> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-github text-dark" viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg>
+        </a>
+      </div>
+      <div class="col-sm-4 text-center">
+        <h6>Email</h6>
+        <p>ploypilin.bun@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  $('.nav a').on('click', () => {
+    $('#click').prop('checked', false);
+  });
+
+  $("#btn-resume").click(function (e) {
+    e.preventDefault();
+    $('.nav a[href="#resume"]').tab('show');
+  });
+  $("#btn-project").click(function (e) {
+    e.preventDefault();
+    $('.nav a[href="#project"]').tab('show');
+  });
+  $("#btn-contact").click(function (e) {
+    e.preventDefault();
+    $('.nav a[href="#contact"]').tab('show');
+  });
+
+  // animate-test 
+  $(window).scroll(function () {
+    $('.animation-test').each(function () {
+      var imagePos = $(this).offset().top;
+      var imageHeight = $(this).height();
+      var topOfWindow = $(window).scrollTop();
+
+      if (imagePos - 300 < topOfWindow + imageHeight) {
+        $(this).addClass("animate");
+      } else {
+        $(this).removeClass("animate");
+      }
+    });
+  });
+  $(window).scroll(function () {
+    $('.animation-skill').each(function () {
+      var imagePos = $(this).offset().top;
+      var imageHeight = $(this).height();
+      var topOfWindow = $(window).scrollTop();
+
+      if (imagePos - 300 < topOfWindow + imageHeight) {
+        $(this).addClass("animate-skill");
+      } else {
+        $(this).removeClass("animate-skill");
+      }
+    });
+  });
+  // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
+
+
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('#image').attr("src", recipient);
+
+  })
+
+
+
+</script>
+
+</html>

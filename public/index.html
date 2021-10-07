@@ -2,1155 +2,1248 @@
 <html lang="en">
 
 <head>
-  <title>Welcome to Ploypilin'resume</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-  <style>
-    body {
-      letter-spacing: 2px;
-      background-color: white;
-      color: black;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .band a {
-      color: black;
-    }
-
-    .jumbotron {
-      background-color: white;
-    }
-
-    .card {
-      border-style: none;
-    }
-
-    .aboutme {
-      background-color: #ddeeff;
-    }
-
-    /* BUTTON CICLE  */
-    .btn-circle {
-      width: 150px;
-      height: 150px;
-      /* padding: auto; */
-      border-radius: 50%;
-      font-size: 100%;
-      font-weight: bold;
-      border-color: black;
-      /* border-style: none; */
-      letter-spacing: 0px;
-      margin: 15px;
-      color: black;
-    }
-
-    .btn-circle:hover {
-      background-color: white;
-      color: black;
-      border-color: black;
-    }
-
-    .animate-image {
-      position: relative;
-      animation: animatebottom 0.5s;
-    }
-
-    .animate-btn1 {
-      position: relative;
-      animation: animatebottom 0.6s;
-      background-color: #B2B0FF;
-    }
-
-    .animate-btn2 {
-      position: relative;
-      animation: animatebottom 0.8s;
-      background-color: #A4D2FF;
-    }
-
-    .animate-btn3 {
-      position: relative;
-      animation: animatebottom 1.0s;
-      background-color: #FFBDF1;
-    }
-
-    @keyframes animatebottom {
-      from {
-        bottom: -100px;
-        opacity: 0;
-      }
-
-      to {
-        bottom: 0;
-        opacity: 1;
-      }
-    }
-
-    @keyframes animateleft {
-      from {
-        left: -150px;
-        opacity: -0.5;
-      }
-
-      to {
-        left: 0;
-        opacity: 1;
-      }
-    }
-
-    @keyframes animateleft {
-      from {
-        left: -150px;
-        opacity: -0.5;
-      }
-
-      to {
-        left: 0;
-        opacity: 1;
-      }
-    }
-
-    /* CONTENT FULLSCREEN  */
-    .tab-content {
-      flex: 1 0 auto;
-    }
-
-    /* CSS MENU ON WEB  */
-    nav {
-      display: flex;
-      height: 80px;
-      width: 100%;
-      background: white;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 50px 0 100px;
-      flex-wrap: wrap;
-    }
-
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 0 5px;
-    }
-
-    nav ul li a {
-      color: black;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      padding: 8px 15px;
-      border-radius: 5px;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    nav ul li a.active,
-    nav ul li a:hover {
-      color: #4AB1FA;
-    }
-
-    nav .menu-btn i {
-      color: #4AB1FA;
-      font-size: 22px;
-      cursor: pointer;
-      display: none;
-    }
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
-    .footer {
-      background-color: white;
-    }
-
-    @media (max-width: 1200px) {
-      .btn-circle {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-      }
-
-      nav {
-        padding: 0 40px 0 50px;
-      }
-    }
-
-    @media (max-width: 440px) {
-
-      .band {
-        padding-top: 10px;
-        width: 100%;
-      }
-
-      .card-body {
-        padding: 0px;
-      }
-
-      /* .jumbotron {
-        padding-top: 0px;
-      } */
-    }
-
-    @media (max-width: 768px) {
-
-      .btn-circle {
-        width: 78px;
-        height: 78px;
-        font-size: 75%;
-        margin: 5px;
-      }
-
-      .image-circle {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 950px) {
-
-      .nav {
-        display: block;
-      }
-
-      nav .menu-btn i {
-        width: 100%;
-        display: block;
-      }
-
-      #click:checked~.menu-btn i:before {
-        content: "\f00d";
-      }
-
-      nav ul {
-        position: fixed;
-        top: 79px;
-        left: -100%;
-        background: white;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: none;
-        transition: all 0.3s ease;
-      }
-
-      #click:checked~ul {
-        left: 0;
-      }
-
-      nav ul li {
-        width: 100%;
-        margin: 40px 0;
-        margin-bottom: 100px;
-      }
-
-      nav ul li a {
-        width: 100%;
-        margin-left: -100%;
-        display: block;
-        font-size: 20px;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      }
-
-      #click:checked~ul li a {
-        margin-left: 0px;
-      }
-
-      nav ul li a.active,
-      nav ul li a:hover {
-        background: none;
-        color: #4AB1FA;
-      }
-    }
-
-    /* ITEM PROJECT */
-    .php {
-      background-color: #8A97ED;
-      color: black;
-    }
-
-    .mockup {
-      background-color: #7A5ED6;
-      color: white;
-    }
-
-    .html {
-      background-color: #F2994B;
-      color: #2B3240;
-    }
-
-    .wireframe {
-      background-color: #F799CF;
-      color: #2B3240;
-    }
-
-    .css {
-      background-color: #4AB1FA;
-      color: white;
-    }
-
-    .prototype {
-      background-color: #F2BF80;
-      color: #2B3240;
-    }
-
-    .laravel {
-      background-color: #C74C48;
-      color: white;
-    }
-
-    .footer {
-      margin-bottom: 50px;
-    }
-
-    .bg-sky {
-      background-color: #BDDEFF;
-    }
-
-    .bg-sky-0 {
-      background-color: #D6EBFF;
-    }
-
-    .bg-sky-1 {
-      background-color: #c7e4ffad;
-    }
-
-    .bg-black-1 {
-      background-color: #456380;
-      color: white;
-    }
-
-    .bg-purple {
-      background-color: #8A97ED;
-    }
-
-    .btn-download {
-      background-color: #A4D2FF;
-      border-color: black;
-    }
-
-    .btn-download:hover {
-      background-color: white;
-      border-color: black;
-    }
-
-    .text-skill {
-      font-weight: bold;
-      /* color: #BDDEFF; */
-    }
-
-    ul li {
-      list-style: none;
-    }
-
-    .ul-skill {
-      padding-left: 20px;
-    }
-
-    .ul-skill li::before {
-      content: "\2022";
-      color: #A4D2FF;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-      font-size: 20px;
-    }
-
-    /* mark { 
-    background-color: #A4D2FF;
-    color: black;
-    } */
-
-    .element-hidden {
-      visibility: hidden;
-    }
-
-    .animate {
-      visibility: visible;
-      position: relative;
-      animation: animatebottom 0.8s;
-    }
-
-    .animate-skill {
-      visibility: visible;
-      position: relative;
-      animation: animateleft 1.0s;
-    }
-
-    .text-sky {
-      color: #8dabdb;
-    }
-
-    /* Timeline  */
-    ul.timeline {
-      list-style-type: none;
-      position: relative;
-    }
-
-    ul.timeline:before {
-      content: ' ';
-      background: #d4d9df;
-      display: inline-block;
-      position: absolute;
-      left: 29px;
-      width: 2px;
-      height: 100%;
-      z-index: 400;
-    }
-
-    ul.timeline>li {
-      margin: 30px 0;
-      padding-left: 20px;
-    }
-
-    ul.timeline>li:before {
-      content: ' ';
-      background: #A4D2FF;
-      display: inline-block;
-      position: absolute;
-      border-radius: 50%;
-      left: 20px;
-      width: 20px;
-      height: 20px;
-      z-index: 400;
-    }
-
-    /* Timeline ref:https://bootsnipp.com/snippets/xrKXW  */
-
-
-    /* Image  */
-    .row-image {
-      display: -ms-flexbox;
-      /* IE 10 */
-      display: flex;
-      -ms-flex-wrap: wrap;
-      /* IE 10 */
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-
-    .column-image {
-      -ms-flex: 30%;
-      /* IE 10 */
-      flex: 30%;
-      padding: 0 4px;
-    }
-
-    .column-image img {
-      margin-top: 8px;
-      vertical-align: middle;
-    }
-
-
-    #myImg {
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #myImg:hover {
-      opacity: 0.7;
-    }
-
-
-    @-webkit-keyframes zoom {
-      from {
-        -webkit-transform: scale(0)
-      }
-
-      to {
-        -webkit-transform: scale(1)
-      }
-    }
-
-    @keyframes zoom {
-      from {
-        transform: scale(0)
-      }
-
-      to {
-        transform: scale(1)
-      }
-    }
-
-    /* The Close Button */
-    .close {
-      position: fixed;
-      top: 10px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #bbb;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .carousel-caption {
-      top: 100px;
-      text-align: center;
-      color: black;
-    }
-
-    #myImg {
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #myImg:hover {
-      opacity: 0.7;
-    }
-
-    .modal-content {
-      align-items: center;
-
-    }
-
-    .modal-body {
-      padding: 0;
-    }
-
-    .fullscreen {
-      margin: 0;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    button.btn.btn-image {
-      padding: 0;
-    }
-  </style>
+    <title>Welcome to Ploypilin'resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+
+            background-color: white;
+            color: black;
+            min-height: 100vh;
+            display: block;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+
+        h5 {
+            font-weight: 500;
+        }
+
+        h6 {
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .text-detail {
+            font-weight: 300;
+        }
+
+        a.link {
+            color: #454c53;
+        }
+
+        a.link i {
+            color: #454c53;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        /* Color  */
+
+        .text-1 {
+            color: #BDDEFF;
+        }
+
+        .text-2 {
+            color: #A4D2FF;
+        }
+
+        .text-3 {
+            color: #4AB1FA;
+        }
+
+        .text-4 {
+            color: #1d4289;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .text-black {
+            color: black;
+        }
 
+        .text-purple {
+            color: #899FE8;
+        }
+
+        .text-purple-1 {
+            color: #B2B0FF;
+        }
+
+        .text-purple-2 {
+            color: #716ECC;
+        }
+
+        .text-purple-0 {
+            color: #282599;
+        }
+
+
+        .text-green {
+            color: #89D2E8;
+        }
+
+        .text-green-1 {
+            color: #96FFFC;
+        }
+
+        .text-brown {
+            color: #CC8F6E;
+        }
+
+        .text-brown-1 {
+            color: #FFF1E3;
+        }
+
+        .bg-white {
+            background-color: white;
+            color: black;
+        }
+
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+
+        .bg-1 {
+            background-color: #BDDEFF;
+        }
+
+        .bg-2 {
+            background-color: #A4D2FF;
+        }
+
+        .bg-3 {
+            background-color: #4AB1FA;
+        }
+
+        .bg-4 {
+            background-color: #1d4289;
+
+        }
+
+        .bg-5 {
+            background-color: #122A3B;
+        }
+
+        .bg-purple {
+            background-color: #899FE8;
+        }
+
+        .bg-purple-1 {
+            background-color: #B2B0FF;
+        }
+
+        .bg-purple-2 {
+            background-color: #716ECC;
+        }
+
+        .bg-purple-0 {
+            background-color: #282599;
+        }
+
+
+        .bg-green {
+            background-color: #89D2E8;
+        }
+
+        .bg-green-1 {
+            background-color: #96FFFC;
+        }
+
+        .bg-brown {
+            background-color: #CC8F6E;
+        }
+
+        .bg-brown-1 {
+            background-color: #FFF1E3;
+        }
+
+
+        /* NAV  */
+
+        .band a {
+            color: black;
+        }
+
+        div.row.band {
+            margin: 0px 0px 0px 20px;
+        }
+
+        /* .fixed-top {
+            box-shadow: 0px 0.5px 5px rgb(163, 163, 163);
+        } */
+
+        /* CSS MENU ON WEB  */
+        /* ref: https://www.codingnepalweb.com/responsive-navigation-menu-bar-html-css/ */
+        nav {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px 0 100px;
+            flex-wrap: wrap;
+            z-index: 1030;
+
+        }
+
+        nav.navbar {
+            background: white;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0 5px;
+
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #4AB1FA;
+        }
+
+        nav .menu-btn i {
+            color: #4AB1FA;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+
+
+        /* CSS section  */
+        .container-fluid {
+            padding: 90px 0px 90px 0px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        .card {
+            text-align: left;
+            border-style: none;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+
+        /* CSS Home */
+        .home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-bottom: 10px;
+        }
+
+        .jumbotron {
+            padding: 30px;
+            margin: 80px;
+            text-align: left;
+        }
+
+        .card-home {
+            margin: 0 100px 0 200px;
+
+        }
+
+        ul.content-list {
+            padding: 0px;
+            list-style: none;
+            text-align: left;
+        }
+
+        ul.content-list i {
+            color: black;
+            margin-bottom: 10px;
+            background-color: #A4D2FF;
+            border-radius: 15px;
+            margin-right: 15px;
+            padding: 5px;
+        }
+
+        /* CSS About */
+        .about {
+            padding: 80px 100px 80px 100px;
+
+        }
+
+        .about ul.content-list li span:first-child {
+            font-weight: 700;
+            color: #000000;
+            width: 130px;
+        }
+
+        .about ul.content-list li {
+            margin-bottom: 16px;
+        }
+
+        .btn-download {
+            background-color: black;
+            /* border-color: #A4D2FF; */
+            box-shadow: 0px 3px 5px rgba(133, 133, 133, 0.733);
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #BDDEFF;
+            border-color: black;
+            box-shadow: none;
+        }
+
+        .about p.card-text.text-detail {
+            margin-right: 30px;
+        }
+
+        /* resume */
+
+        .select::before {
+            content: "~ ";
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .ul-skill {
+            padding-left: 20px;
+        }
+
+        .ul-skill li::before {
+            content: "\0025E6";
+            /* content: "\2022"; */
+            color: #A4D2FF;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 20px;
+        }
+
+        .ul-skill-b {
+            padding-left: 20px;
+        }
+
+        .ul-skill-b li::before {
+            content: "\0025E6";
+            /* content: "\2022"; */
+            color: #1d4289;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 20px;
+        }
+
+        /* Timeline  */
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+        }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+
+        ul.timeline>li {
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+
+        ul.timeline>li:before {
+            content: ' ';
+            background: #A4D2FF;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+
+        /* Timeline ref:https://bootsnipp.com/snippets/xrKXW  */
+
+        /* BUTTON CICLE  */
+        .circle {
+            width: 180px;
+            height: 180px;
+            padding: auto;
+            border-radius: 50%;
+            font-size: 100%;
+            font-weight: bold;
+            border-color: black;
+            /* border-style: none; */
+            letter-spacing: 0px;
+            margin: 15px;
+            color: black;
+        }
+
+        .circle:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+
+        .project {
+            margin: auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+
+            nav {
+                padding: 0 40px 0 50px;
+            }
+
+            .btn-circle {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            /* home  */
+            .jumbotron {
+                margin: 0 10px 0 10px;
+            }
+        }
+
+
+        @media (max-width: 992px) {
+
+            div.row.band {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 200px;
+            }
+
+            nav .menu-btn i {
+                width: 100%;
+                display: block;
+            }
+
+            #click:checked~.menu-btn i:before {
+                content: "\f00d";
+            }
+
+            nav ul {
+                position: fixed;
+                top: 79px;
+                left: -100%;
+                background: white;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                display: none;
+                transition: all 0.3s ease;
+            }
+
+            #click:checked~ul {
+                left: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                width: 100%;
+                margin-left: -100%;
+                display: block;
+                font-size: 20px;
+                transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            #click:checked~ul li a {
+                margin-left: 0px;
+            }
+
+            nav ul li a.active,
+            nav ul li a:hover {
+                background: none;
+                color: #4AB1FA;
+            }
+
+
+            /* home  */
+            .jumbotron {
+                text-align: center;
+            }
+
+            .card-home {
+                margin: 0;
+            }
+
+            .image-circle {
+                width: 50%;
+            }
+
+            ul.content-list {
+                margin: auto;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .btn-circle {
+                width: 78px;
+                height: 78px;
+                font-size: 75%;
+                margin: 5px;
+            }
+
+            .about {
+                padding: 20px;
+                padding-top: 80px;
+            }
+
+            .card-text {
+                padding: 0px;
+            }
+
+            .about p.card-text.text-detail {
+                margin-right: 0;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            /* home  */
+            .jumbotron {
+                margin: 0;
+                text-align: center;
+                padding: 10px;
+                padding-bottom: 20px;
+            }
+
+            .image-circle {
+                width: 100%;
+            }
+
+            .home {
+                padding-bottom: 0;
+            }
+
+            /* resume  */
+            #resume h5 span {
+                display: flex;
+                flex-direction: column;
+            }
+
+            div#contact.container-fluid {
+                padding-bottom: 10px;
+            }
+
+            footer .container-fluid {
+                padding: 0;
+                padding-bottom: 10px;
+            }
+
+            #project div.container.project {
+                margin: auto;
+                margin-bottom: 10px;
+                width: 90%;
+            }
+
+        }
+
+        /* animation */
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -150px;
+                opacity: -0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animateleft {
+            from {
+                left: -150px;
+                opacity: -0.5;
+            }
+
+            to {
+                left: 0;
+                opacity: 1;
+            }
+        }
+
+        .animate-t08 {
+            visibility: visible;
+            animation: animatetop 0.8s;
+        }
+
+        .animate-b05 {
+            position: relative;
+            animation: animatebottom 0.5s;
+        }
+
+        .animate-b06 {
+            position: relative;
+            animation: animatebottom 0.6s;
+        }
+
+        .animate-b08 {
+            position: relative;
+            animation: animatebottom 0.8s;
+        }
+
+        .animate-b10 {
+            position: relative;
+            animation: animatebottom 1.0s;
+        }
+
+        .element-hidden {
+            visibility: hidden;
+        }
+
+        .animate {
+            visibility: visible;
+            position: relative;
+            animation: animatebottom 0.8s;
+        }
+
+        .animate-skill {
+            visibility: visible;
+            position: relative;
+            animation: animateleft 1.0s;
+        }
+
+        /* arrow  */
+        /* ref: https://codepen.io/bisaillonyannick/pen/pvZeGg */
+        .arrow {
+            text-align: center;
+            /* margin: 8% 0; */
+        }
+
+        .bounce {
+            -moz-animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .fixed {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            left: 265px;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="sticky-top">
-    <!-- TITLE -->
-    <div class="band row">
-      <a class="navbar-brand">
-        <circle>
-          <i class="fas fa-laptop-code"></i>
-        </circle>
-        PLOYPILIN
-      </a>
-      <span class="navbar-text font-weight-light"> PROGRAMMER</span>
-    </div>
-    <!-- TITLE -->
+    <!-- NAV -->
+    <nav class="navbar position-absolute" id="navbar">
+        <!-- TITLE -->
+        <div class="band row">
+            <a class="navbar-brand">
+                <circle>
+                    <i class="fas fa-laptop-code"></i>
+                </circle>
+                PLOYPILIN
+            </a>
+            <span class="navbar-text font-weight-light"> PROGRAMMER</span>
+        </div>
+        <!-- END TITLE -->
 
-    <!-- MENU -->
-    <input type="checkbox" id="click">
-    <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </label>
+        <!-- MENU -->
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav">
+            <li>
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#project">Projects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <!-- END MENU -->
+    </nav>
+    <!-- END NAV -->
 
-    <ul class="nav">
-      <li><a class="active" data-toggle="tab" href="#home">Home</a></li>
-      <li><a data-toggle="tab" href="#resume">Resume</a></li>
-      <li><a data-toggle="tab" href="#project">Projects</a></li>
-      <li><a data-toggle="tab" href="#contact">Contact</a></li>
-    </ul>
-    <!-- MENU -->
-  </nav>
-  <!-- NAV -->
-  <div class="container tab-content my-3">
-    <!-- Tap Home -->
-    <div id="home" class="container tab-pane active">
-      <div class="jumbotron mb-2">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <img src="image/profile1.jpg" class="rounded-circle animate-image" width="100%"><br><br>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-8">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title h1 animate-image">Ploypilin Bunprasoet</h5>
-                <h6 class="card-subtitle mb-2 text-muted animate-image">Programmer</h6>
-                <p class="card-text animate-image">A fresh graduate of Computer Science pursuing a career as a Software
-                  developer
-                  where I
-                  can utilize my
-                  understanding of coding and software development along with honing my skills to the efficiently
-                  fulfill
-                  the requirements of company.</p>
-                <div class="d-flex justify-content-center">
-                  <button type="button" id="btn-resume" class="btn btn-primary btn-circle animate-btn1">Resume</button>
-                  <button type="button" id="btn-project"
-                    class="btn btn-primary btn-circle animate-btn2">Projects</button>
-                  <button type="button" id="btn-contact"
-                    class="btn btn-primary btn-circle animate-btn3">Contact</button>
+    <!-- Section  -->
+    <div id="home" class="container-fluid bg-white home">
+        <div class="jumbotron bg-white">
+            <div class="row align-items-center card-home">
+                <div class="col-lg-4 mb-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle"
+                                width="100%"><br><br>
+                        </div>
+                    </div>
                 </div>
-
-              </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <h6 class="text-3">HELLO, I AM</h6>
+                            <h1 class="card-title animate-b05">PLOYPILIN BUNPRASOET</h1>
+                            <h5 class="card-subtitle mb-5 animate-b06">PROGRAMMER</h5>
+                            <ul class="content-list animate-b08">
+                                <li><a class="link"><i class="fas fa-phone-alt"></i>098 827 0289</a></li>
+                                <li><a class="link"><i class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
+                                <li><a class="link" href="https://github.com/ploymuddle">
+                                        <i class="fab fa-github"></i>ploymuddle</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-
         </div>
-      </div>
+
+        <div id="navbar" class="arrow bounce">
+            <a class="fa fa-arrow-down fa-2x" href="#about"></a>
+        </div>
     </div>
-    <!-- Tap Home -->
+    <div id="about" class="container-fluid bg-white about">
 
-    <!-- Tap Resume -->
-    <div id="resume" class="container tab-pane fade"><br>
-      <h1>Resume</h1>
-      <!-- About Me  -->
-      <div class="row py-4 justify-content-center">
-        <div class="card text-center aboutme" style="width: 75%;">
-          <div class="card-body">
-            <h5 class="card-title animate-image">ABOUT ME</h5>
-            <hr><br>
-            <img src="image/profile1.jpg" class="rounded-circle animate-image image-circle" width="30%"><br><br>
-            <p class="card-text">NAME: Ploypilin Bunprasoet</p>
-            <p class="card-text">NICKNAME: Ploy</p>
-            <p class="card-text">AGE: 23</p>
-            <p class="card-text">GENDER: Female</p>
-            <a href="./file/resume-ploypilin.pdf" class="btn btn-download" download="resume-ploypilin.pdf"
-              target="_blank">DOWNLOAD RESUME</a>
-            <p class="card-text bg-sky">
-            <div class="row">
-              <div class="col-sm-4 text-center">
-                <h6>Phone</h6>
-                <p>098 827 0289</p>
-              </div>
-              <div class="col-sm-4 text-center">
-                <h6>GitHub</h6>
-                <a class="link" href="https://github.com/ploymuddle">
-                  <!-- <i class="bi bi-github"></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-github text-dark" viewBox="0 0 16 16">
-                    <path
-                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-                  </svg>
-                </a>
-              </div>
-              <div class="col-sm-4 text-center">
-                <h6>Email</h6>
-                <p>ploypilin.bun@gmail.com</p>
-              </div>
+        <div class="card bg-1">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h1 class="card-title">About Me</h1>
+                        <p class="card-text text-detail">A fresh graduate of Computer Science pursuing a career as
+                            a Software
+                            developer
+                            where I
+                            can utilize my
+                            understanding of coding and software development along with honing my skills to the
+                            efficiently
+                            fulfill
+                            the requirements of company.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="content-list text-detail mt-3">
+                            <li class="d-flex">
+                                <span>Name :</span>
+                                <span>Ploypilin Bunprasoet</span>
+                            </li>
+                            <li class="d-flex">
+                                <span>Nickname :</span>
+                                <span>Ploy</span>
+                            </li>
+                            <li class="d-flex">
+                                <span>Date of birth :</span>
+                                <span>January 7, 1998</span>
+                            </li>
+                            <li class="d-flex">
+                                <span>Gender :</span>
+                                <span>Female</span>
+                            </li>
+                        </ul>
+                        <a href="./file/resume-ploypilin.pdf" class="btn btn-download m-5 d-flex justify-content-center"
+                            download="resume-ploypilin.pdf" target="_blank">DOWNLOAD RESUME</a>
+                    </div>
+                </div>
             </div>
-            </p>
-          </div>
         </div>
-      </div>
-      <hr>
-      <!-- Education  -->
-      <div class="row py-5 animation-test element-hidden">
-        <div class="col-sm-5">
-          <h4>Education</h4>
-        </div>
-        <div class="col-sm-3">
-          <p>2017 - 2021</p>
-        </div>
-        <div class="col-sm-4">
-          <p class="text-sky"><b><i class="fas fa-graduation-cap"></i> Bachelor of Science:</b></p>
-          <b>Computer Science</b>
-          <p>King Mongkut's Institute of Technology Ladkrabang</p>
-        </div>
-      </div>
-      <hr>
-      <div class="row py-5 animation-test element-hidden">
-        <div class="col-sm-5">
-          <h4>Work Experience</h4>
-        </div>
-        <div class="col-sm-3">
-          <p class="mb-0">13 January - 31 July</p>
-          <p>2020</p>
-        </div>
-        <div class="col-sm-4">
-          <p class="text-sky"><b><i class="fas fa-laptop-house"></i> Cooperative Education: </b></p>
-          <b>Java Developer</b>
-          <p>MFEC Public Company Limited, Bangkok</p>
-          <ul class="ul-skill text-dark small">
-            <li>Developed back office system for banking service apps management.</li>
-            <li>Developed back end web applications with Java using spring framework.</li>
-            <li>Developed front end web applications with Vue.</li>
-            <li>Design database specification and api specification.</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <!-- Activities -->
-      <div class="row py-5 animation-test element-hidden">
-        <div class="col-sm-5">
-          <h4>Activities</h4>
-        </div>
-        <div class="col-sm-7">
-          <div class="container mt-5 mb-5">
-            <div class="row">
-              <ul class="timeline">
-                <li>
-                  <p>Admin and Planner in CS Media team</p>
-                  <p class="text-dark small">PR team of Computer Science</p>
-                  <ul class="ul-skill text-dark small">
-                    <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl"
-                        target="_blank">Computer Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
-                    <li>Plan and manage tasks within the team</li>
-                    <li>Coordinate with external organizations</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>Esports Department at the KMITL Sci Day</p>
-                  <p class="text-dark small">Admin in coordinating with tournament participants</p>
-                </li>
-                <li>
-                  <p>Registration Department at the Natwok Game 22nd</p>
-                  <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd</p>
-                </li>
-                <li>
-                  <p>Head of PR Department at the CS Camp 11</p>
-                  <p class="text-dark small">Computer Science Camp</p>
-                  <ul class="ul-skill text-dark small">
-                    <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl.camp"
-                        target="_blank">CS-CAMP KMIT'L <i class="fab fa-facebook-square "></i></a></li>
-                    <li>Plan and manage tasks within the team</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>PR-coordinate Department at the AUCC 2018</p>
-                  <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
-                  <ul class="ul-skill text-dark small">
-                    <li>Prepare road signs at each location</li>
-                    <li>Coordinate with external department</li>
-                  </ul>
-                </li>
-                <li>
-                  <p>Participate in a basketball competition</p>
-                  <p class="text-dark small">at the Vidya Vidya Sport Day</p>
-                </li>
-              </ul>
+
+    </div>
+    <div id="resume" class="container-fluid bg-white">
+        <h1>Resume</h1>
+        <!-- Education  -->
+        <div class="container">
+            <div class="row py-5 animation element-hidden">
+                <div class="col-sm-6">
+                    <h4>Education</h4>
+                </div>
+                <div class="col-sm-6">
+                    <p class="text-detail text-muted"><i class="fas fa-graduation-cap"></i> 2017 - 2021</p>
+                    <h5><span>Bachelor of Science:</span> Computer Science</h5>
+                    <p>King Mongkut's Institute of Technology Ladkrabang</p>
+                </div>
             </div>
-          </div>
+            <hr>
         </div>
-      </div>
-      <hr>
-      <!-- Skills -->
-      <div class="row py-5 animation-test element-hidden">
-        <div class="col-sm-12 mb-4">
-          <h4>Skills</h4>
+
+        <!-- Experience -->
+        <div class="container">
+            <div class="row py-5 animation element-hidden">
+                <div class="col-sm-6">
+                    <h4>Work Experience</h4>
+                </div>
+                <div class="col-sm-6">
+                    <p class="text-detail text-muted"><i class="fas fa-laptop-house"></i> 13 January - 31 July 2020</p>
+                    <h5><span>Cooperative Education:</span> Java Developer</h5>
+                    <p>MFEC Public Company Limited, Bangkok</p>
+                    <ul class="ul-skill text-detail small">
+                        <li>Developed back office system for banking service apps management.</li>
+                        <li>Developed back end web applications with Java using spring framework.</li>
+                        <li>Developed front end web applications with Vue.</li>
+                        <li>Design database specification and api specification.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
         </div>
-        <!-- Coding  -->
-        <div class="col-sm-8 px-0">
-          <div class="animation-skill element-hidden">
-            <div class="px-4 py-4 bg-black-1">
-              <h5><i class="fas fa-laptop-code"></i> Coding</h5>
-              <div class="row">
+
+        <!-- Activities -->
+        <div class="container">
+            <div class="row py-5 animation element-hidden">
                 <div class="col-sm-4">
-                  <p class="text-skill">Languages:</p>
-                  <ul class="ul-skill ">
-                    <li>HTML/CSS</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>PHP</li>
-                    <li>SQL</li>
-                  </ul>
+                    <h4>Activities</h4>
                 </div>
-                <div class="col-sm-4">
-                  <p class="text-skill">Framework&Libraries:</p>
-                  <ul class="ul-skill ">
-                    <li>Spring</li>
-                    <li>Laravel</li>
-                    <li>Vue.js</li>
-                    <li>Bootstrap</li>
-                  </ul>
+                <div class="col-sm-8">
+                    <div class="container my-5">
+                        <div class="row">
+                            <ul class="timeline">
+                                <li>
+                                    <p>Admin and Planner in CS Media team</p>
+                                    <p class="text-dark small">PR team of Computer Science</p>
+                                    <ul class="ul-skill text-dark small">
+                                        <li>Admin facebook page: <a class="text-sky"
+                                                href="https://www.facebook.com/cskmitl" target="_blank">Computer
+                                                Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
+                                        <li>Plan and manage tasks within the team</li>
+                                        <li>Coordinate with external organizations</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Esports Department at the KMITL Sci Day</p>
+                                    <p class="text-dark small">Admin in coordinating with tournament participants</p>
+                                </li>
+                                <li>
+                                    <p>Registration Department at the Natwok Game 22nd</p>
+                                    <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Head of PR Department at the CS Camp 11</p>
+                                    <p class="text-dark small">Computer Science Camp</p>
+                                    <ul class="ul-skill text-dark small">
+                                        <li>Admin facebook page: <a class="text-sky"
+                                                href="https://www.facebook.com/cskmitl.camp" target="_blank">CS-CAMP
+                                                KMIT'L <i class="fab fa-facebook-square "></i></a></li>
+                                        <li>Plan and manage tasks within the team</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>PR-coordinate Department at the AUCC 2018</p>
+                                    <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
+                                    <ul class="ul-skill text-dark small">
+                                        <li>Prepare road signs at each location</li>
+                                        <li>Coordinate with external department</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Participate in a basketball competition</p>
+                                    <p class="text-dark small">at the Vidya Vidya Sport Day</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                  <p class="text-skill">Tools:</p>
-                  <ul class="ul-skill ">
-                    <li>Git</li>
-                    <li>Visual Studio Code</li>
-                    <li>Xampp</li>
-                    <li>NetBeans</li>
-                  </ul>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Skills -->
+        <div class="container">
+            <div class="row py-5 animation element-hidden">
+                <div class="col-sm-12 mb-4">
+                    <h4>Skills</h4>
                 </div>
-              </div>
+                <!-- Coding  -->
+                <div class="col-sm-8 px-0">
+                    <div class="skill animation-skill element-hidden">
+                        <div class="px-4 py-4 bg-5 text-white rounded m-3">
+                            <h5><i class="fas fa-laptop-code"></i> Coding</h5>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h6 class="text-2">Languages:</h6>
+                                    <ul class="ul-skill ">
+                                        <p class="text-detail text-1 small mt-2 mb-0">(intermediate)</p>
+                                        <li>HTML/CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Java</li>
+                                        <li>SQL</li>
+                                        <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="text-2">Framework&Libraries:</h6>
+                                    <ul class="ul-skill">
+                                        <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                        <li>Spring</li>
+                                        <li>Laravel</li>
+                                        <li>Vue.js</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="text-2">Tools:</h6>
+                                    <ul class="ul-skill ">
+                                        <li>Git</li>
+                                        <li>Visual Studio Code</li>
+                                        <li>Xampp</li>
+                                        <li>NetBeans</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="col-sm-4 px-0">
+                    <div class="animation-skill element-hidden">
+                        <div class="px-4 py-4 bg-1 rounded m-3">
+                            <h5><i class="fas fa-magic"></i> Design</h5>
+                            <h6 class="text-4">Program:</h6>
+                            <ul class="ul-skill-b">
+                                <li>Adobe XD</li>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                                <li>After Effect</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
+            <!-- End Skills -->
         </div>
-
-        <!-- <div class="row justify-content-between">
-            <p class="col-3 text-left">Java</p>
-            <p class="col-auto text-center">● ● ● ○ ○</p>
-            <p class="col-3 text-dark small text-right">Good</p>
-          </div>
-          <div class="row justify-content-between">
-            <p class="col-3 text-left">HTML</p>
-            <p class="col-auto text-center">● ● ● ● ○</p>
-            <p class="col-3 text-dark small text-right">Very Good</p>
-          </div>
-          <div class="row justify-content-between">
-            <p class="col-3 text-left">JavaScript</p>
-            <p class="col-auto text-center">● ● ○ ○ ○</p>
-            <p class="col-3 text-dark small text-right">Average</p>
-          </div>
-          <div class="row justify-content-between">
-            <p class="col-3 text-left">PHP</p>
-            <p class="col-auto text-center">● ○ ○ ○ ○</p>
-            <p class="col-3 text-dark small text-right">Basic</p>
-          </div>
-          <div class="row justify-content-between">
-            <p class="col-3 text-left">SQL</p>
-            <p class="col-auto text-center">● ● ● ● ○</p>
-            <p class="col-3 text-dark small text-right">Very Good</p>
-          </div> -->
-
-        <!-- Design -->
-        <div class="col-sm-4 px-0">
-          <div class="animation-skill element-hidden">
-            <div class="bg-sky-0 px-4 py-4">
-              <h5><i class="fas fa-magic"></i> Design</h5>
-              <p class="text-skill">Program:</p>
-              <ul class="ul-skill">
-                <li>Adobe XD</li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>After Effect</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!-- End Skills -->
-    </div>
-    <!-- End Tap Resume -->
-
-    <!-- Tap Project -->
-    <div id="project" class="container tab-pane fade"><br>
-      <h1>Projects</h1>
-      <p>Projects and Assignments in class</p>
-      <!-- Project 0 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Back Office System</h4>
-          <p>MFEC Public Company Limited, Bangkok</p>
-         
-
-          <div class="detail font-weight-light">
-            Developed back office system for banking service apps management.
-          </div>
-          <div class="">
-            <span class="php badge badge-pill java">Java</span>
-            <span class="badge badge-danger badge-pill spring">Spring Framework</span>
-            <span class="badge badge-primary badge-pill vue">Vue</span>
-          </div>
-
-          <div class=" m-3 ">
-          <img src="image/mfec.png" style="width:75%" >
-</div>
-
-        
-          <!-- <div class=" py-2 mb-5 ">
-            <p>architecture diagram</p>
-          <img src="image/bos.jpg" style="width:75%" >
-         <img src="image/bostools.jpg" style="width:75%" >
-          <img src="image/bosdeploy.jpg" style="width:75%" >
-        </div> -->
-        </div>
-
-      </div>
-
-
-      <!-- Project 1 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Web Application for Sell Furniture</h4>
-          <p>Software Engineering</p>
- 
-
-          <div class="detail font-weight-light">
-            Developed back office system for banking service apps management.
-          </div>
-          <div class="mb-2">
-            <span class="php badge badge-pill php">PHP</span>
-            <span class="badge badge-danger badge-pill html">HTML</span>
-            <span class="badge badge-primary badge-pill css">CSS</span>
-          </div>
-          <div class=" py-2 mb-5 ">
-            <p>architecture diagram</p>
-          <img src="image/sell-furniturn.jpg" style="width:75%" >
-        </div>
-        </div>
-   
-        <!-- Photo Grid -->
-        <div class="row-image">
-          <div class="column-image">
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-home.jpg"><img id="myImg" src="image/sell-furniturn-home.jpg"
-                style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-empty.jpg"><img id="myImg" src="image/sell-furniturn-empty.jpg"
-                style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-product-detail.jpg"><img id="myImg"
-                src="image/sell-furniturn-product-detail.jpg" style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-cart.jpg"><img id="myImg" src="image/sell-furniturn-cart.jpg"
-                style="width:100%"></button>
-
-          </div>
-          <div class="column-image">
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-login.jpg"> <img id="myImg" src="image/sell-furniturn-login.jpg"
-                style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-search-by.jpg"><img id="myImg"
-                src="image/sell-furniturn-search-by.jpg" style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-complete.jpg"><img id="myImg" src="image/sell-furniturn-complete.jpg"
-                style="width:100%"></button>
-          </div>
-          <div class="column-image">
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-search.jpg"><img id="myImg" src="image/sell-furniturn-search.jpg"
-                style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-search-by2.jpg"><img id="myImg"
-                src="image/sell-furniturn-search-by2.jpg" style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-add.jpg"><img id="myImg" src="image/sell-furniturn-add.jpg"
-                style="width:100%"></button>
-            <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
-              data-whatever="image/sell-furniturn-confirm.jpg"><img id="myImg" src="image/sell-furniturn-confirm.jpg"
-                style="width:100%"></button>
-          </div>
-        </div>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content fullscreen">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <div class="modal-body">
-                <img id="image">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Project 2 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Web Application for Residence Management</h4>
-          <p>Web Programming</p>
-          <hr>
-          <div class="">
-            <span class="badge badge-danger badge-pill laravel">Laravel Framework</span>
-            <span class="badge badge-primary badge-pill php">PHP</span>
-            <span class="badge badge-danger badge-pill html">HTML</span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Project 3 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Web Application for Visualizing Air Pollution (PM 2.5) on a Map</h4>
-          <p>Spatial Databases and GIS Application</p>
-          <hr>
-          <div class="">
-            <span class="badge badge-info badge-pill">React</span>
-            <span class="badge badge-warning badge-pill">JavaScript</span>
-            <span class="badge badge-danger badge-pill html">HTML</span>
-            <span class="badge badge-primary badge-pill css">CSS</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Project 4 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>UX&UI Course Online Landing page</h4>
-          <p></p>
-          <hr>
-          <div class="">
-            <span class="badge badge-primary badge-pill mockup">Mockup</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Project 5 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Project UX&UI Web Application for Sell Furniture</h4>
-          <p>Designing Interactive System</p>
-          <hr>
-          <div class="">
-            <span class="badge badge-secondary badge-pill wireframe">Wireframe</span>
-            <span class="badge badge-primary badge-pill mockup">Mockup</span>
-            <span class="badge badge-primary badge-pill prototype">Prototype</span>
-          </div>
-        </div>
-
-      </div>
-      <!-- Project 6 -->
-      <div class="py-5 text-center">
-        <div class="">
-          <hr>
-          <h4>Mockup Mobile Application for Pre-order Management</h4>
-          <p>Electronic Business</p>
-          <hr>
-          <div class="">
-            <span class="badge badge-primary badge-pill mockup">Mockup</span>
-            <span class="badge badge-primary badge-pill prototype">Prototype</span>
-          </div>
-        </div>
-
-      </div>
 
     </div>
-    <!-- End Tap Project -->
+    <div id="project" class="container-fluid bg-4 text-white">
+        <h1>Projects</h1>
+        <p>Project in class!</p>
 
-    <!-- Tap Contact -->
-    <div id="contact" class="container tab-pane fade"><br>
-      <h1>Contact</h1>
-      <p></p>
-
-      <div class="row py-5">
-        <div class="col-sm-6">
-          <h4>Address</h4>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
         </div>
-        <div class="col-sm-6">
-          <p>74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</p>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
         </div>
-      </div>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
+        </div>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
+        </div>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
+        </div>
+        <div class="container project text-black">
+            <h4>Back Office System</h4>
+        </div>
+    </div>
+    <div class="container-fluid bg-1 text-black">
+        <h1>Other Work</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section
+            and
+            look at the navigation bar while scrolling!</p>
 
     </div>
-    <!-- End Tap Contact -->
-  </div>
-  <!-- The Modal -->
-  <!-- <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div> -->
+    <div id="contact" class="container-fluid bg-white">
+        <h1>Contact Me</h1>
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-sm-6 pr-5">
+                    <div class="row py-2">
+                        <div class="col-md-4">
+                            <h5>Phone</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p>098 827 0289</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-4">
+                            <h5>Email</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p>ploypilin.bun@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-md-4">
+                            <h5>Address</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p>74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputFirst">First name</label>
+                                <input type="text" class="form-control" id="inputFirst">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputLast">Last name</label>
+                                <input type="text" class="form-control" id="inputLast">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="inputSubject">Subject</label>
+                                    <input type="text" class="form-control" id="inputSubject">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 m-auto">
+                                <button type="submit"
+                                    class="btn btn-block bg-2 rounded-circle circle m-auto">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section  -->
 </body>
 
-<footer class="footer">
-  <div class="container">
-    <hr>
-    <div class="row">
-      <div class="col-sm-4 text-center">
-        <h6>Phone</h6>
-        <p>098 827 0289</p>
-      </div>
-      <div class="col-sm-4 text-center">
-        <h6>GitHub</h6>
-        <a class="link" href="https://github.com/ploymuddle">
-          <!-- <i class="bi bi-github"></i> -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-            class="bi bi-github text-dark" viewBox="0 0 16 16">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-          </svg>
-        </a>
-      </div>
-      <div class="col-sm-4 text-center">
-        <h6>Email</h6>
-        <p>ploypilin.bun@gmail.com</p>
-      </div>
+<footer>
+    <div class="container-fluid">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center my-3">
+                    <h6>Phone</h6>
+                    <p>098 827 0289</p>
+                </div>
+                <div class="col-sm-4 text-center my-3">
+                    <h6>GitHub</h6>
+                    <a class="link" href="https://github.com/ploymuddle">
+                        <!-- <i class="bi bi-github"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-github text-dark" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center my-3">
+                    <h6>Email</h6>
+                    <p>ploypilin.bun@gmail.com</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
 
 <script>
-
-  $('.nav a').on('click', () => {
-    $('#click').prop('checked', false);
-  });
-
-  $("#btn-resume").click(function (e) {
-    e.preventDefault();
-    $('.nav a[href="#resume"]').tab('show');
-  });
-  $("#btn-project").click(function (e) {
-    e.preventDefault();
-    $('.nav a[href="#project"]').tab('show');
-  });
-  $("#btn-contact").click(function (e) {
-    e.preventDefault();
-    $('.nav a[href="#contact"]').tab('show');
-  });
-
-  // animate-test 
-  $(window).scroll(function () {
-    $('.animation-test').each(function () {
-      var imagePos = $(this).offset().top;
-      var imageHeight = $(this).height();
-      var topOfWindow = $(window).scrollTop();
-
-      if (imagePos - 300 < topOfWindow + imageHeight) {
-        $(this).addClass("animate");
-      } else {
-        $(this).removeClass("animate");
-      }
+    $('.nav a').on('click', () => {
+        $('#click').prop('checked', false);
+        $('body').css("overflow", "scroll");
     });
-  });
-  $(window).scroll(function () {
-    $('.animation-skill').each(function () {
-      var imagePos = $(this).offset().top;
-      var imageHeight = $(this).height();
-      var topOfWindow = $(window).scrollTop();
 
-      if (imagePos - 300 < topOfWindow + imageHeight) {
-        $(this).addClass("animate-skill");
-      } else {
-        $(this).removeClass("animate-skill");
-      }
+    $("#click").change(function () {
+        if ($(this).is(":checked"))
+            $('body').css("overflow", "hidden");
+        else
+            $('body').css("overflow", "scroll");
     });
-  });
+
+    //  The scrollable area w3school ref:https://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp
+    $(document).ready(function () {
+        $('body').scrollspy({ target: ".navbar", offset: 80 });
+        // Add smooth scrolling on all links inside the navbar
+        $("#navbar a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            }  // End if
+        });
+    });
+
+    // scroll >= 300 show navbar
+    $(window).scroll(function () {
+        var sticky = $('.navbar'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+            sticky.removeClass('position-absolute');
+            sticky.addClass('fixed-top');
+            sticky.addClass('animate-t08');
+
+        }
+        else {
+            sticky.removeClass('fixed-top ');
+            sticky.addClass('position-absolute');
+            sticky.removeClass('animate-t08');
+        }
+    });
+
+    // animate-test 
+    $(window).scroll(function () {
+        $('.animation').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos - 300 < topOfWindow + imageHeight) {
+                $(this).addClass("animate");
+            } else {
+                $(this).removeClass("animate");
+            }
+        });
+    });
+    $(window).scroll(function () {
+        $('.animation-skill').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos - 300 < topOfWindow + imageHeight) {
+                $(this).addClass("animate-skill");
+            } else {
+                $(this).removeClass("animate-skill");
+            }
+        });
+    });
   // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
-
-
-  $('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('#image').attr("src", recipient);
-
-  })
-
-
 
 </script>
 
