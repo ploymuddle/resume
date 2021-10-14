@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="libery/slick.css">
+    <link rel="stylesheet" href="libery/slick-theme.css">
     <style>
         body {
 
@@ -100,6 +102,10 @@
 
         .text-purple-0 {
             color: #282599;
+        }
+
+        .text-0 {
+            color: #6a6e72;
         }
 
 
@@ -453,6 +459,228 @@
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472);
         }
 
+        .btn-git:hover {
+            color: #1d4289;
+        }
+
+        /* ITEM PROJECT */
+        .php {
+            background-color: #8A97ED;
+            color: black;
+        }
+
+        .mockup {
+            background-color: #7A5ED6;
+            color: white;
+        }
+
+        .html {
+            background-color: #F2994B;
+            color: #2B3240;
+        }
+
+        .wireframe {
+            background-color: #F799CF;
+            color: #2B3240;
+        }
+
+        .css {
+            background-color: #4AB1FA;
+            color: white;
+        }
+
+        .prototype {
+            background-color: #F2BF80;
+            color: #2B3240;
+        }
+
+        .laravel {
+            background-color: #C74C48;
+            color: white;
+        }
+
+        .img-1 {
+            border: 1px solid #d4d9df;
+            padding: 10px;
+        }
+
+        .img-detail {
+            text-align: right;
+            width: 500px;
+        }
+
+        .img-dc {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev,
+        .carousel-indicators {
+            filter: invert(100%);
+        }
+
+        .carousel-indicators {
+            margin: 0;
+        }
+
+        .btn-doc {
+            color: #b2b6bb;
+        }
+
+        /* Image  */
+        .row-image {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column-image {
+            -ms-flex: 30%;
+            /* IE 10 */
+            flex: 30%;
+            padding: 0 4px;
+        }
+
+        .column-image img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: fixed;
+            top: 5px;
+            right: 35px;
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .carousel-caption {
+            top: 100px;
+            text-align: center;
+            color: black;
+        }
+
+        .modal-content {
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .fullscreen {
+            margin: 0;
+            top: 20px;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        button.btn.btn-image {
+            padding: 0;
+        }
+
+        /* End zoom */
+
+        .slider {
+            width: 90%;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f137";
+            color: black;
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .slick-next:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f138";
+            color: black;
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: 1;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+
         /* Responsive */
         @media (max-width: 1200px) {
 
@@ -621,6 +849,13 @@
                 width: 90%;
             }
 
+            .slick-slide {
+                margin: 0px 1px;
+            }
+
+            .slider {
+                margin: auto;
+            }
         }
 
         /* animation */
@@ -802,9 +1037,11 @@
                             <h1 class="card-title animate-b05">PLOYPILIN BUNPRASOET</h1>
                             <h5 class="card-subtitle mb-5 animate-b06">PROGRAMMER</h5>
                             <ul class="content-list animate-b08">
-                                <li><a class="link"><i class="fas fa-phone-alt"></i>098 827 0289</a></li>
-                                <li><a class="link"><i class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
-                                <li><a class="link" href="https://github.com/ploymuddle">
+                                <li><a class="link" href="tel:0988270289"><i class="fas fa-phone-alt"></i>098 827
+                                        0289</a></li>
+                                <li><a class="link" href="mailto:ploypilin.bun@gmail.com"><i
+                                            class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
+                                <li><a class="link" href="https://github.com/ploymuddle" target="_blank">
                                         <i class="fab fa-github"></i>ploymuddle</a>
                                 </li>
                             </ul>
@@ -1034,30 +1271,458 @@
         <h1>Projects</h1>
         <p>Project in class!</p>
 
+        <!-- Project Co -->
         <div class="container project text-black">
-            <h4>Back Office System</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Back Office System</h4>
+                    <p>MFEC Public Company Limited, Bangkok</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">Java</span>
+                        <span class="badge badge-dark badge-pill">Spring Framework</span>
+                        <span class="badge badge-dark badge-pill">Vue</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+
+                    <div id="img-slide" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#img-slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#img-slide" data-slide-to="1"></li>
+                            <li data-target="#img-slide" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/bosacd.png" class="d-block w-100" alt="Architecture Diagram">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bosdeploy.png" class="d-block w-100" alt="Tools">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bostools.png" class="d-block w-100" alt="Tools">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#img-slide" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#img-slide" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-1">
+                <img src="image/mfec.png" style="width:100%;">
+            </div>
+
         </div>
+
+        <!-- Project Web Sell Furniture -->
         <div class="container project text-black">
-            <h4>Back Office System</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Sell Furniture</h4>
+                    <p>Software Engineering</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">PHP</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                        <span class="badge badge-dark badge-pill">CSS</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <div class=" py-2 text-center d-flex flex-column  align-items-center">
+                        <img src="image/sell-furniturn.jpg" class="d-block w-75" alt="Architecture Diagram">
+                        <p class="text-0 mt-3">Architecture Diagram</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo Grid -->
+            <div class="row-image">
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-home.jpg"><img id="myImg"
+                            src="image/sell-furniturn-home.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-empty.jpg"><img id="myImg"
+                            src="image/sell-furniturn-empty.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-product-detail.jpg"><img id="myImg"
+                            src="image/sell-furniturn-product-detail.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-cart.jpg"><img id="myImg"
+                            src="image/sell-furniturn-cart.jpg" style="width:100%"></button>
+
+                </div>
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-login.jpg"> <img id="myImg"
+                            src="image/sell-furniturn-login.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search-by.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search-by.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-complete.jpg"><img id="myImg"
+                            src="image/sell-furniturn-complete.jpg" style="width:100%"></button>
+                </div>
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search-by2.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search-by2.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-add.jpg"><img id="myImg" src="image/sell-furniturn-add.jpg"
+                            style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-confirm.jpg"><img id="myImg"
+                            src="image/sell-furniturn-confirm.jpg" style="width:100%"></button>
+                </div>
+            </div>
         </div>
-        <div class="container project text-black">
-            <h4>Back Office System</h4>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content fullscreen">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+                        <img id="image">
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Project Web Residence Management -->
         <div class="container project text-black">
-            <h4>Back Office System</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Residence Management</h4>
+                    <p>Web Programming</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">Laravel Framework</span>
+                        <span class="badge badge-dark badge-pill">PHP</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <div class=" py-2 text-center d-flex flex-column  align-items-center">
+                        <img src="image/webrm.png" class="d-block w-100" alt="Architecture Diagram">
+                        <p class="text-0 mt-3">Architecture Diagram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider autoplay">
+                <div>
+                    <img src="image/webRM/1.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/2.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/3.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/4.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/5.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/6.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/7.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/9.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/10.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/11.jpg">
+                </div>
+            </div>
         </div>
+        <!-- Project Web PM2.5 -->
         <div class="container project text-black">
-            <h4>Back Office System</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Visualizing Air Pollution (PM 2.5) on a
+                        Map</h4>
+                    <p>Spatial Databases and GIS Application</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">React</span>
+                        <span class="badge badge-dark badge-pill">JavaScript</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                        <span class="badge badge-dark badge-pill">CSS</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/1DDTKmbgoloYSofjnsCR_6lkGF9Wop7m6/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+
+            </div>
         </div>
+
+        <!-- Project Landing page -->
         <div class="container project text-black">
-            <h4>Back Office System</h4>
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> UX&UI Course Online Landing page</h4>
+                    <p></p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">Mockup</span>
+
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://www.figma.com/proto/VUAgpVPG0cV3lVxw6nrocj/60050212?node-id=23%3A63&starting-point-node-id=23%3A63"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> FIGMA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col">
+                    <img class="img-1" src="image/landingm.png" style="width:100%;">
+                </div>
+                <div class="col">
+                    <img class="img-1" src="image/landingw.png" style="width:100%;">
+                </div>
+                <div class="col">
+                    <img class="img-1" src="image/landingd.png" style="width:100%;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project UXUI MeHome -->
+        <div class="container project text-black">
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Project UX&UI Web Application for Sell Furniture</h4>
+                    <p>Designing Interactive System</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill ">Wireframe</span>
+                        <span class="badge badge-dark badge-pill ">Mockup</span>
+                        <span class="badge badge-dark badge-pill ">Prototype</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/12ytWmrBL5KZwBGrT2sxCcdBu_3lcgjj0/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Mockup -->
+        <div class="container project text-black">
+            <div class="row my-3">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Mockup Mobile Application for Pre-order Management</h4>
+                    <p>Electronic Business</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill ">Mockup</span>
+                        <span class="badge badge-dark badge-pill ">Prototype</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> PROTOTYPE</a>
+                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> MOCKUP</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/1m2NjRhTwENAOoesUYHYlRrBS8Gtk85TG/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+            </div>
+
+            <div class="slider center">
+                <div>
+                    <img src="image/xd/a1.png">
+                </div>
+                <div>
+                    <img src="image/xd/a2.png">
+                </div>
+                <div>
+                    <img src="image/xd/a3.png">
+                </div>
+                <div>
+                    <img src="image/xd/1.png">
+                </div>
+                <div>
+                    <img src="image/xd/2.png">
+                </div>
+                <div>
+                    <img src="image/xd/3.png">
+                </div>
+                <div>
+                    <img src="image/xd/4.png">
+                </div>
+                <div>
+                    <img src="image/xd/5.png">
+                </div>
+                <div>
+                    <img src="image/xd/6.png">
+                </div>
+                <div>
+                    <img src="image/xd/7.png">
+                </div>
+                <div>
+                    <img src="image/xd/9.png">
+                </div>
+                <div>
+                    <img src="image/xd/10.png">
+                </div>
+                <div>
+                    <img src="image/xd/12.png">
+                </div>
+                <div>
+                    <img src="image/xd/13.png">
+                </div>
+                <div>
+                    <img src="image/xd/14.png">
+                </div>
+                <div>
+                    <img src="image/xd/15.png">
+                </div>
+                <div>
+                    <img src="image/xd/16.png">
+                </div>
+                <div>
+                    <img src="image/xd/17.png">
+                </div>
+                <div>
+                    <img src="image/xd/18.png">
+                </div>
+                <div>
+                    <img src="image/xd/19.png">
+                </div>
+                <div>
+                    <img src="image/xd/20.png">
+                </div>
+                <div>
+                    <img src="image/xd/21.png">
+                </div>
+                <div>
+                    <img src="image/xd/22.png">
+                </div>
+                <div>
+                    <img src="image/xd/23.png">
+                </div>
+                <div>
+                    <img src="image/xd/24.png">
+                </div>
+                <div>
+                    <img src="image/xd/25.png">
+                </div>
+                <div>
+                    <img src="image/xd/26.png">
+                </div>
+                <div>
+                    <img src="image/xd/27.png">
+                </div>
+                <div>
+                    <img src="image/xd/28.png">
+                </div>
+                <div>
+                    <img src="image/xd/29.png">
+                </div>
+                <div>
+                    <img src="image/xd/30.png">
+                </div>
+                <div>
+                    <img src="image/xd/31.png">
+                </div>
+                <div>
+                    <img src="image/xd/32.png">
+                </div>
+                <div>
+                    <img src="image/xd/33.png">
+                </div>
+                <div>
+                    <img src="image/xd/34.png">
+                </div>
+                <div>
+                    <img src="image/xd/35.png">
+                </div>
+                <div>
+                    <img src="image/xd/36.png">
+                </div>
+                <div>
+                    <img src="image/xd/37.png">
+                </div>
+            </div>
         </div>
     </div>
     <div class="container-fluid bg-1 text-black">
-        <h1>Other Work</h1>
-        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section
-            and
-            look at the navigation bar while scrolling!</p>
+        <h1>See my projects on GitHub.</h1>
+
+        <div>
+            <a class="link" href="https://github.com/ploymuddle" target="_blank">
+                <!-- <i class="bi bi-github"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-github text-black btn-git" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+
+        </div>
 
     </div>
     <div id="contact" class="container-fluid bg-white">
@@ -1070,7 +1735,7 @@
                             <h5>Phone</h5>
                         </div>
                         <div class="col-md-8">
-                            <p>098 827 0289</p>
+                            <p><a class="link" href="tel:0988270289">098 827 0289</a></p>
                         </div>
                     </div>
                     <div class="row py-2">
@@ -1078,7 +1743,7 @@
                             <h5>Email</h5>
                         </div>
                         <div class="col-md-8">
-                            <p>ploypilin.bun@gmail.com</p>
+                            <p><a class="link" href="mailto:ploypilin.bun@gmail.com">ploypilin.bun@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="row py-2">
@@ -1086,39 +1751,39 @@
                             <h5>Address</h5>
                         </div>
                         <div class="col-md-8">
-                            <p>74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</p>
+                            <p><a class="link">74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <form>
+                    <form method="post">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputFirst">First name</label>
-                                <input type="text" class="form-control" id="inputFirst">
+                                <label for="First">First name</label>
+                                <input type="text" class="form-control" name="Name" id="Name">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputLast">Last name</label>
-                                <input type="text" class="form-control" id="inputLast">
+                                <label for="Last">Last name</label>
+                                <input type="text" class="form-control" id="Last">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail">
+                            <label for="Email">Email</label>
+                            <input type="email" class="form-control" id="Email" name="Email">
                         </div>
                         <div class="form-row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="inputSubject">Subject</label>
-                                    <input type="text" class="form-control" id="inputSubject">
+                                    <label for="Subject">Subject</label>
+                                    <input type="text" class="form-control" id="Subject">
                                 </div>
                                 <div class="form-group ">
-                                    <label for="message">Message</label>
-                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                    <label for="Message">Message</label>
+                                    <textarea class="form-control" id="Message" name="Message" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6 m-auto">
-                                <button type="submit"
+                                <button type="button" value="Send Email" onclick="sendEmail()"
                                     class="btn btn-block bg-2 rounded-circle circle m-auto">Submit</button>
                             </div>
                         </div>
@@ -1137,14 +1802,14 @@
             <div class="row">
                 <div class="col-sm-4 text-center my-3">
                     <h6>Phone</h6>
-                    <p>098 827 0289</p>
+                    <p><a class="text-black" href="tel:0988270289">098 827 0289</a></p>
                 </div>
                 <div class="col-sm-4 text-center my-3">
                     <h6>GitHub</h6>
-                    <a class="link" href="https://github.com/ploymuddle">
+                    <a class="text-black" href="https://github.com/ploymuddle" target="_blank">
                         <!-- <i class="bi bi-github"></i> -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-github text-dark" viewBox="0 0 16 16">
+                            class="bi bi-github" viewBox="0 0 16 16">
                             <path
                                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                         </svg>
@@ -1152,7 +1817,7 @@
                 </div>
                 <div class="col-sm-4 text-center my-3">
                     <h6>Email</h6>
-                    <p>ploypilin.bun@gmail.com</p>
+                    <p><a class="text-black" href="mailto:ploypilin.bun@gmail.com">ploypilin.bun@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -1243,8 +1908,38 @@
             }
         });
     });
-  // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
+    // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
+
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var recipient = button.data('whatever')
+        var modal = $(this)
+        modal.find('#image').attr("src", recipient);
+
+    })
+
+    $(document).ready(function () {
+        $(".center").slick({
+            dots: false,
+            infinite: true,
+            centerMode: false,
+            touchMove: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplaySpeed: 2000
+        });
+        $('.autoplay').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    });
+
 
 </script>
+
+<script src="libery/jquery.min.js"></script>
+<script src="libery/slick.js"></script>
 
 </html>
