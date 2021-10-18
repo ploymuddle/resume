@@ -33,6 +33,15 @@
             font-weight: 700;
         }
 
+        /* #about h1::after,
+        #resume h1::after,
+        #project h1::after,
+        #contact h1::after{
+            content: ' ';
+            display: block;
+            border: 2px solid black;
+        } */
+
         h4 {
             font-weight: 700;
         }
@@ -133,6 +142,10 @@
         .bg-black {
             background-color: black;
             color: white;
+        }
+
+        .bg-gray {
+            background-color: #F7F7F7;
         }
 
         .bg-1 {
@@ -312,19 +325,18 @@
         }
 
         ul.content-list i {
-            color: black;
+            color: white;
             margin-bottom: 10px;
-            background-color: #A4D2FF;
+            background-color: #4AB1FA;
             border-radius: 15px;
             margin-right: 15px;
             padding: 5px;
         }
 
         /* CSS About */
-        .about {
+        /* .about {
             padding: 80px 100px 80px 100px;
-
-        }
+        } */
 
         .about ul.content-list li span:first-child {
             font-weight: 700;
@@ -337,16 +349,30 @@
         }
 
         .btn-download {
-            background-color: black;
-            /* border-color: #A4D2FF; */
-            box-shadow: 0px 3px 5px rgba(133, 133, 133, 0.733);
-            color: white;
+            /* background-color: black; */
+            /* border-radius: 10px; */
+            border: 2px solid black;
+            /* box-shadow: 0px 3px 5px rgba(133, 133, 133, 0.733); */
+            color: black;
+            font-weight: 500;
         }
 
         .btn-download:hover {
-            background-color: #BDDEFF;
-            border-color: black;
-            box-shadow: none;
+            background-color: #93DEFF;
+            /* box-shadow: none; */
+        }
+
+        .btn-git {
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            font-weight: 500;
+        }
+
+        .btn-git:hover {
+            border: 2px solid #93DEFF;
+            background-color: #93DEFF;
+            color: black;
         }
 
         .about p.card-text.text-detail {
@@ -368,8 +394,8 @@
         }
 
         .ul-skill li::before {
-            content: "\0025E6";
-            /* content: "\2022"; */
+            /* content: "\0025E6"; */
+            content: "\2022";
             color: #A4D2FF;
             font-weight: bold;
             display: inline-block;
@@ -383,8 +409,8 @@
         }
 
         .ul-skill-b li::before {
-            content: "\0025E6";
-            /* content: "\2022"; */
+            /* content: "\0025E6"; */
+            content: "\2022";
             color: #1d4289;
             font-weight: bold;
             display: inline-block;
@@ -459,7 +485,7 @@
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472);
         }
 
-        .btn-git:hover {
+        .git:hover {
             color: #1d4289;
         }
 
@@ -502,6 +528,12 @@
         .img-1 {
             border: 1px solid #d4d9df;
             padding: 10px;
+        }
+
+        .card-slide {
+            border: 1px solid #d4d9df;
+            padding: 10px;
+            height: 300px;
         }
 
         .img-detail {
@@ -564,6 +596,28 @@
             opacity: 0.7;
         }
 
+        .r-text {
+            display: inline-flex;
+            border-radius: 30px;
+            padding: 10px 15px 10px 15px;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .r-card {
+            display: inline-flex;
+            border-radius: 30px;
+            padding: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .s-card {
+            display: inline-flex;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
 
         @-webkit-keyframes zoom {
             from {
@@ -617,6 +671,10 @@
             padding: 0;
         }
 
+        .modal-body img {
+            width: 100%;
+        }
+
         .fullscreen {
             margin: 0;
             top: 20px;
@@ -634,6 +692,10 @@
         .slider {
             width: 90%;
             margin: 100px auto;
+        }
+
+        .slick-dots li button:before {
+            font-size: 30px;
         }
 
         .slick-slide {
@@ -678,6 +740,11 @@
 
         .slick-current {
             opacity: 1;
+        }
+
+        .card-slide h5,
+        .card-slide p {
+            text-align: center;
         }
 
 
@@ -791,10 +858,10 @@
                 margin: 5px;
             }
 
-            .about {
+            /* .about {
                 padding: 20px;
                 padding-top: 80px;
-            }
+            } */
 
             .card-text {
                 padding: 0px;
@@ -1020,7 +1087,7 @@
 
     <!-- Section  -->
     <div id="home" class="container-fluid bg-white home">
-        <div class="jumbotron bg-white">
+        <!-- <div class="jumbotron bg-white">
             <div class="row align-items-center card-home">
                 <div class="col-lg-4 mb-2">
                     <div class="card">
@@ -1049,50 +1116,77 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="navbar" class="arrow bounce">
-            <a class="fa fa-arrow-down fa-2x" href="#about"></a>
-        </div>
-    </div>
-    <div id="about" class="container-fluid bg-white about">
-
-        <div class="card bg-1">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6 mb-5">
-                        <h1 class="card-title">About Me</h1>
-                        <p class="card-text text-detail">A fresh graduate of Computer Science pursuing a career as
-                            a Software
-                            developer
-                            where I
-                            can utilize my
-                            understanding of coding and software development along with honing my skills to the
-                            efficiently
-                            fulfill
-                            the requirements of company.</p>
+        </div> -->
+        <div class="container bg-white">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-2">
+                    <div class="text-center">
+                        <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle"
+                            width="80%"><br><br>
                     </div>
-                    <div class="col-md-6">
-                        <ul class="content-list text-detail mt-3">
-                            <li class="d-flex">
-                                <span>Name :</span>
-                                <span>Ploypilin Bunprasoet</span>
-                            </li>
-                            <li class="d-flex">
-                                <span>Nickname :</span>
-                                <span>Ploy</span>
-                            </li>
-                            <li class="d-flex">
-                                <span>Date of birth :</span>
-                                <span>January 7, 1998</span>
-                            </li>
-                            <li class="d-flex">
-                                <span>Gender :</span>
-                                <span>Female</span>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-0">
+                        <h6 class="text-3">HELLO, I AM</h6>
+                        <h1 class="animate-b05">PLOYPILIN BUNPRASOET</h1>
+                        <h5 class="mb-5 animate-b06">PROGRAMMER</h5>
+                        <ul class="content-list animate-b08">
+                            <li><a class="link" href="tel:0988270289"><i class="fas fa-phone-alt"></i>098 827
+                                    0289</a></li>
+                            <li><a class="link" href="mailto:ploypilin.bun@gmail.com"><i
+                                        class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
+                            <li><a class="link" href="https://github.com/ploymuddle" target="_blank">
+                                    <i class="fab fa-github"></i>ploymuddle</a>
                             </li>
                         </ul>
-                        <a href="./file/resume-ploypilin.pdf" class="btn btn-download m-5 d-flex justify-content-center"
-                            download="resume-ploypilin.pdf" target="_blank">DOWNLOAD RESUME</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="navbar" class="arrow bounce">
+            <a class="fa fa-arrow-down fa-2x" href="#about"></a>
+        </div> -->
+    </div>
+    <div id="about" class="container-fluid bg-gray about border-top border-bottom ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>About Me</h1>
+                    <p class="text-detail">A fresh graduate of Computer Science pursuing a career as
+                        a Software
+                        developer
+                        where I
+                        can utilize my
+                        understanding of coding and software development along with honing my skills to the
+                        efficiently
+                        fulfill
+                        the requirements of company.</p>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="content-list text-detail mt-3">
+                        <li class="d-flex">
+                            <span>Name :</span>
+                            <span>Ploypilin Bunprasoet</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Nickname :</span>
+                            <span>Ploy</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Date of birth :</span>
+                            <span>January 7, 1998</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Gender :</span>
+                            <span>Female</span>
+                        </li>
+                    </ul>
+                    <div class="py-4 ">
+                        <a href="./file/resume-ploypilin.pdf" class="btn btn-git d-inline-flex px-3"
+                            download="resume-ploypilin.pdf" target="_blank">GitHub</a>
+                        <a href="./file/resume-ploypilin.pdf" class="btn btn-download d-inline-flex px-3"
+                            download="resume-ploypilin.pdf" target="_blank">Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -1101,29 +1195,19 @@
     </div>
     <div id="resume" class="container-fluid bg-white">
         <h1>Resume</h1>
-        <!-- Education  -->
-        <div class="container">
-            <div class="row py-5 animation element-hidden">
-                <div class="col-sm-6">
-                    <h4>Education</h4>
-                </div>
-                <div class="col-sm-6">
-                    <p class="text-detail text-muted"><i class="fas fa-graduation-cap"></i> 2017 - 2021</p>
+
+        <div class="container my-5">
+            <div class="row p-3 bg-gray ">
+                <div class="border col-sm-6 p-4 bg-white animation element-hidden">
+                    <h4 class="bg-gray r-text"><i class="fas fa-graduation-cap"></i> Education</h4>
+                    <p class="text-detail text-muted">2017 - 2021</p>
                     <h5><span>Bachelor of Science:</span> Computer Science</h5>
                     <p>King Mongkut's Institute of Technology Ladkrabang</p>
-                </div>
-            </div>
-            <hr>
-        </div>
 
-        <!-- Experience -->
-        <div class="container">
-            <div class="row py-5 animation element-hidden">
-                <div class="col-sm-6">
-                    <h4>Work Experience</h4>
                 </div>
-                <div class="col-sm-6">
-                    <p class="text-detail text-muted"><i class="fas fa-laptop-house"></i> 13 January - 31 July 2020</p>
+                <div class="border col-sm-6 p-4 bg-white animation element-hidden">
+                    <h4 class="bg-gray r-text"><i class="fas fa-laptop-house"></i> Work Experience</h4>
+                    <p class="text-detail text-muted">13 January - 31 July 2020</p>
                     <h5><span>Cooperative Education:</span> Java Developer</h5>
                     <p>MFEC Public Company Limited, Bangkok</p>
                     <ul class="ul-skill text-detail small">
@@ -1134,123 +1218,106 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </div>
 
-        <!-- Activities -->
-        <div class="container">
-            <div class="row py-5 animation element-hidden">
-                <div class="col-sm-4">
-                    <h4>Activities</h4>
+        <div class="container py-4">
+            <div class="text-center">
+                <h4 class="r-text bg-gray"><i class="fas fa-users"></i> Activities</h4>
+            </div>
+            <div class="row p-3 ">
+                <div class="slider autoplay-3 my-3">
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Admin and Planner in CS Media team</h5>
+
+                        <p class="text-dark small">PR team of Computer Science</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl"
+                                    target="_blank">Computer
+                                    Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
+                            <li>Plan and manage tasks within the team</li>
+                            <li>Coordinate with external organizations</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Esports Department at the KMITL Sci Day</h5>
+                        <p class="text-dark small">Admin in coordinating with tournament participants</p>
+
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Registration Department at the Natwok Game 22nd</h5>
+                        <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd
+                        </p>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Head of PR Department at the CS Camp 11</h5>
+                        <p class="text-dark small">Computer Science Camp</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl.camp"
+                                    target="_blank">CS-CAMP
+                                    KMIT'L <i class="fab fa-facebook-square "></i></a></li>
+                            <li>Plan and manage tasks within the team</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>PR-coordinate Department at the AUCC 2018</h5>
+                        <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Prepare road signs at each location</li>
+                            <li>Coordinate with external department</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Participate in a basketball competition</h5>
+                        <p class="text-dark small">at the Vidya Vidya Sport Day</p>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <div class="container my-5">
-                        <div class="row">
-                            <ul class="timeline">
-                                <li>
-                                    <p>Admin and Planner in CS Media team</p>
-                                    <p class="text-dark small">PR team of Computer Science</p>
-                                    <ul class="ul-skill text-dark small">
-                                        <li>Admin facebook page: <a class="text-sky"
-                                                href="https://www.facebook.com/cskmitl" target="_blank">Computer
-                                                Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
-                                        <li>Plan and manage tasks within the team</li>
-                                        <li>Coordinate with external organizations</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <p>Esports Department at the KMITL Sci Day</p>
-                                    <p class="text-dark small">Admin in coordinating with tournament participants</p>
-                                </li>
-                                <li>
-                                    <p>Registration Department at the Natwok Game 22nd</p>
-                                    <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Head of PR Department at the CS Camp 11</p>
-                                    <p class="text-dark small">Computer Science Camp</p>
-                                    <ul class="ul-skill text-dark small">
-                                        <li>Admin facebook page: <a class="text-sky"
-                                                href="https://www.facebook.com/cskmitl.camp" target="_blank">CS-CAMP
-                                                KMIT'L <i class="fab fa-facebook-square "></i></a></li>
-                                        <li>Plan and manage tasks within the team</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <p>PR-coordinate Department at the AUCC 2018</p>
-                                    <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
-                                    <ul class="ul-skill text-dark small">
-                                        <li>Prepare road signs at each location</li>
-                                        <li>Coordinate with external department</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <p>Participate in a basketball competition</p>
-                                    <p class="text-dark small">at the Vidya Vidya Sport Day</p>
-                                </li>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <!-- <div class="container-fluid"> -->
+        <div class="container my-5">
+            <div class="row p-3">
+                <div class="col-lg-8">
+                    <h4 class="bg-gray r-text"><i class="fas fa-laptop-code"></i> Coding Skills</h4>
+                    <div class="row mb-3 p-3">
+                        <div class="col-sm-4 border s-card flex-column bg-gray">
+                            <h6 class="text-2 bg-white border-bottom r-text">Languages:</h6>
+                            <ul class="ul-skill ">
+                                <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4  s-card border flex-column bg-gray">
+                            <h6 class="text-2 bg-white border-bottom r-text">Framework & Libraries:</h6>
+                            <ul class="ul-skill">
+                                <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                <li>Spring</li>
+                                <li>Laravel</li>
+                                <li>Vue.js</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4  s-card border flex-column bg-gray">
+                            <h6 class="text-2 bg-white border-bottom r-text">Tools:</h6>
+                            <ul class="ul-skill ">
+                                <li>Git</li>
+                                <li>VS Code</li>
+                                <li>Xampp</li>
+                                <li>NetBeans</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-        </div>
-
-        <!-- Skills -->
-        <div class="container">
-            <div class="row py-5 animation element-hidden">
-                <div class="col-sm-12 mb-4">
-                    <h4>Skills</h4>
-                </div>
-                <!-- Coding  -->
-                <div class="col-sm-8 px-0">
-                    <div class="skill animation-skill element-hidden">
-                        <div class="px-4 py-4 bg-5 text-white rounded m-3">
-                            <h5><i class="fas fa-laptop-code"></i> Coding</h5>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <h6 class="text-2">Languages:</h6>
-                                    <ul class="ul-skill ">
-                                        <p class="text-detail text-1 small mt-2 mb-0">(intermediate)</p>
-                                        <li>HTML/CSS</li>
-                                        <li>JavaScript</li>
-                                        <li>Java</li>
-                                        <li>SQL</li>
-                                        <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
-                                        <li>PHP</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <h6 class="text-2">Framework&Libraries:</h6>
-                                    <ul class="ul-skill">
-                                        <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
-                                        <li>Spring</li>
-                                        <li>Laravel</li>
-                                        <li>Vue.js</li>
-                                        <li>Bootstrap</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <h6 class="text-2">Tools:</h6>
-                                    <ul class="ul-skill ">
-                                        <li>Git</li>
-                                        <li>Visual Studio Code</li>
-                                        <li>Xampp</li>
-                                        <li>NetBeans</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Design -->
-                <div class="col-sm-4 px-0">
-                    <div class="animation-skill element-hidden">
-                        <div class="px-4 py-4 bg-1 rounded m-3">
-                            <h5><i class="fas fa-magic"></i> Design</h5>
-                            <h6 class="text-4">Program:</h6>
+                <div class="col-lg-4">
+                    <h4 class="bg-gray r-text"><i class="fas fa-magic"></i> Design Skills</h4>
+                    <div class="row mb-3 p-3">
+                        <div class="col-sm-12  s-card border flex-column bg-gray">
+                            <h6 class="text-4 bg-white border-bottom r-text">Program:</h6>
                             <ul class="ul-skill-b">
                                 <li>Adobe XD</li>
                                 <li>Photoshop</li>
@@ -1261,19 +1328,19 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- End Skills -->
         </div>
+        <!-- </div> -->
 
     </div>
-    <div id="project" class="container-fluid bg-4 text-white">
+    <div id="project" class="container-fluid bg-gray border">
         <h1>Projects</h1>
         <p>Project in class!</p>
 
         <!-- Project Co -->
         <div class="container project text-black">
-            <div class="row my-3">
+            <div class="row my-3 ">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Back Office System</h4>
                     <p>MFEC Public Company Limited, Bangkok</p>
@@ -1287,7 +1354,8 @@
                         <span class="badge badge-dark badge-pill">Vue</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                        <a href="https://drive.google.com/file/d/1PEqAAcueu2uKX2oMxTP_fbp0vs4aKGDQ/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
                                 class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
                     </div>
                 </div>
@@ -1335,7 +1403,7 @@
                     <p>Software Engineering</p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        System analysis and design including code a website using php and xampp.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill">PHP</span>
@@ -1343,7 +1411,8 @@
                         <span class="badge badge-dark badge-pill">CSS</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                        <a href="https://drive.google.com/file/d/1W1gi3iEni0xYJMXCrmylOIZ4C8Cf-Ecb/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
                                 class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
                     </div>
                 </div>
@@ -1421,7 +1490,7 @@
                     <p>Web Programming</p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        Developed a web application using Laravel framework.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill">Laravel Framework</span>
@@ -1429,8 +1498,11 @@
                         <span class="badge badge-dark badge-pill">HTML</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                        <a href="https://drive.google.com/file/d/1nIhzlyYfzrmN5fOKfOuG82dQygwUK2jI/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
                                 class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                        <a href="https://github.com/sutheemon/project-wp-residence.git" target="_blank"
+                            class="btn-doc border p-2 small"><i class="fab fa-github"></i> GITHUB</a>
                     </div>
                 </div>
                 <div class="col-md-6 img-detail border-left">
@@ -1482,7 +1554,8 @@
                     <p>Spatial Databases and GIS Application</p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        Developed a web application using React to insert and search data with a database using
+                        Microsoft SQL.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill">React</span>
@@ -1491,8 +1564,12 @@
                         <span class="badge badge-dark badge-pill">CSS</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                        <a href="https://drive.google.com/file/d/1W9jjxEp2wqKbdhvYeJ0yN6eQsYxWtJKe/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
                                 class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+
+                        <a href="https://github.com/ploymuddle/web-app-pm25.git" target="_blank"
+                            class="btn-doc border p-2 small"><i class="fab fa-github"></i> GITHUB</a>
                     </div>
                 </div>
                 <div class="col-md-6 img-detail border-left">
@@ -1511,7 +1588,7 @@
                     <p></p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        UXUI design landing page on figma according to the theory learned.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill">Mockup</span>
@@ -1545,7 +1622,7 @@
                     <p>Designing Interactive System</p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        Design and test UX UI according to the theory the theory learned in the course.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill ">Wireframe</span>
@@ -1553,7 +1630,8 @@
                         <span class="badge badge-dark badge-pill ">Prototype</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
+                        <a href="https://drive.google.com/file/d/12ytWmrBL5KZwBGrT2sxCcdBu_3lcgjj0/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
                                 class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
                     </div>
                 </div>
@@ -1572,17 +1650,18 @@
                     <p>Electronic Business</p>
 
                     <div class="detail font-weight-light">
-                        Developed back office system for banking service apps management.
+                        Mockup mobile app design for the purpose of trader to manage the product.
                     </div>
                     <div>
                         <span class="badge badge-dark badge-pill ">Mockup</span>
-                        <span class="badge badge-dark badge-pill ">Prototype</span>
                     </div>
                     <div class="d-flex mt-3">
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
-                                class="fas fa-external-link-square-alt"></i> PROTOTYPE</a>
-                        <a href="" target="_blank" class="btn-doc border p-2 small"><i
-                                class="fas fa-external-link-square-alt"></i> MOCKUP</a>
+                        <a href="https://drive.google.com/file/d/1T-4YpZ6bmY_w0sNvJWkbT8shcCiCBNik/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> PROJECT PROPOSAL</a>
+                        <a href="https://drive.google.com/file/d/16CBaq7RpKBwCgT--E2f5SQpeWKOnWH4R/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> MOCKUP XD</a>
                     </div>
                 </div>
                 <div class="col-md-6 img-detail border-left">
@@ -1591,7 +1670,7 @@
                 </div>
             </div>
 
-            <div class="slider center">
+            <div class="slider slide-5">
                 <div>
                     <img src="image/xd/a1.png">
                 </div>
@@ -1716,7 +1795,7 @@
             <a class="link" href="https://github.com/ploymuddle" target="_blank">
                 <!-- <i class="bi bi-github"></i> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-github text-black btn-git" viewBox="0 0 16 16">
+                    class="bi bi-github text-black git" viewBox="0 0 16 16">
                     <path
                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                 </svg>
@@ -1756,20 +1835,20 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <form method="post">
+                    <form method="post" id="send">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="First">First name</label>
-                                <input type="text" class="form-control" name="Name" id="Name">
+                                <input type="text" class="form-control" name="Name" id="first">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Last">Last name</label>
-                                <input type="text" class="form-control" id="Last">
+                                <input type="text" class="form-control" id="last">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Email">Email</label>
-                            <input type="email" class="form-control" id="Email" name="Email">
+                            <input type="email" class="form-control" id="email" name="Email">
                         </div>
                         <div class="form-row">
                             <div class="col-md-6">
@@ -1779,7 +1858,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <label for="Message">Message</label>
-                                    <textarea class="form-control" id="Message" name="Message" rows="3"></textarea>
+                                    <textarea class="form-control" id="message" name="Message" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6 m-auto">
@@ -1881,7 +1960,7 @@
         }
     });
 
-    // animate-test 
+    // animate
     $(window).scroll(function () {
         $('.animation').each(function () {
             var imagePos = $(this).offset().top;
@@ -1908,6 +1987,20 @@
             }
         });
     });
+
+    $(window).scroll(function () {
+        $('.animation-timeline').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos + 200 < topOfWindow + imageHeight) {
+                $(this).addClass("animate");
+            } else {
+                $(this).removeClass("animate");
+            }
+        });
+    });
     // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
 
     $('#exampleModal').on('show.bs.modal', function (event) {
@@ -1919,7 +2012,7 @@
     })
 
     $(document).ready(function () {
-        $(".center").slick({
+        $(".slide-5").slick({
             dots: false,
             infinite: true,
             centerMode: false,
@@ -1929,17 +2022,65 @@
             autoplaySpeed: 2000
         });
         $('.autoplay').slick({
+            dots: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
         });
+        $('.autoplay-3').slick({
+            dots: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
     });
+    // https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
 
+    function sendEmail() {
+        var x = document.getElementById("send");
+        var first = "&first=" + x.elements[0].value;
+        var last = "&last=" + x.elements[1].value;
+        var email = "&email=" + x.elements[2].value;
+        var subject = "&subject=" + x.elements[3].value;
+        var massage = "&massage=" + x.elements[4].value;
 
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", 'https://script.google.com/macros/s/AKfycbwuSE7d6_qoNmKvejEVFIrVWN4HvjTohCwZfAURsTexLZWGV0qL_PLY_ykIoj_io1nuCw/exec?action=insert' + first + last + email + subject + massage , true);
+
+        //Send the proper header information along with the request
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhttp.onreadystatechange = function () { 
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+               alert("Thank you for contacting me!");
+            }
+        }
+        xhttp.send("null");
+    }
 </script>
 
-<script src="libery/jquery.min.js"></script>
 <script src="libery/slick.js"></script>
 
 </html>
