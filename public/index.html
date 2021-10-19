@@ -479,50 +479,16 @@
         .project {
             margin: auto;
             margin-bottom: 30px;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             background: white;
             padding: 20px;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472);
+            /* border-style: solid;
+            border-width: 1px; */
+            /* box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472); */
         }
 
         .git:hover {
             color: #1d4289;
-        }
-
-        /* ITEM PROJECT */
-        .php {
-            background-color: #8A97ED;
-            color: black;
-        }
-
-        .mockup {
-            background-color: #7A5ED6;
-            color: white;
-        }
-
-        .html {
-            background-color: #F2994B;
-            color: #2B3240;
-        }
-
-        .wireframe {
-            background-color: #F799CF;
-            color: #2B3240;
-        }
-
-        .css {
-            background-color: #4AB1FA;
-            color: white;
-        }
-
-        .prototype {
-            background-color: #F2BF80;
-            color: #2B3240;
-        }
-
-        .laravel {
-            background-color: #C74C48;
-            color: white;
         }
 
         .img-1 {
@@ -532,7 +498,7 @@
 
         .card-slide {
             border: 1px solid #d4d9df;
-            padding: 10px;
+            padding: 20px;
             height: 300px;
         }
 
@@ -747,6 +713,14 @@
             text-align: center;
         }
 
+        .project p {
+            margin-bottom: 30px;
+        }
+
+        .container-fluid h4 {
+            /* color: #7F78D2; */
+        }
+
 
         /* Responsive */
         @media (max-width: 1200px) {
@@ -938,6 +912,16 @@
             }
         }
 
+        @keyframes animatew {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         @keyframes animatetop {
             from {
                 top: -150px;
@@ -997,7 +981,19 @@
             animation: animatebottom 0.8s;
         }
 
-        .animate-skill {
+        .animate-w {
+            visibility: visible;
+            position: relative;
+            animation: animatew 1s;
+        }
+
+        .animate-1 {
+            visibility: visible;
+            position: relative;
+            animation: animatebottom 0.4s;
+        }
+
+        .animate-left {
             visibility: visible;
             position: relative;
             animation: animateleft 1.0s;
@@ -1121,21 +1117,21 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-2">
                     <div class="text-center">
-                        <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle"
+                        <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle animation-home"
                             width="80%"><br><br>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-0">
-                        <h6 class="text-3">HELLO, I AM</h6>
+                        <h6 class="text-3 animate-b05 animation-home">HELLO, I AM</h6>
                         <h1 class="animate-b05">PLOYPILIN BUNPRASOET</h1>
                         <h5 class="mb-5 animate-b06">PROGRAMMER</h5>
                         <ul class="content-list animate-b08">
-                            <li><a class="link" href="tel:0988270289"><i class="fas fa-phone-alt"></i>098 827
+                            <li class="animation-home element-hidden"><a class="link" href="tel:0988270289"><i class="fas fa-phone-alt"></i>098 827
                                     0289</a></li>
-                            <li><a class="link" href="mailto:ploypilin.bun@gmail.com"><i
+                            <li class="animation-home element-hidden"><a class="link" href="mailto:ploypilin.bun@gmail.com"><i
                                         class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
-                            <li><a class="link" href="https://github.com/ploymuddle" target="_blank">
+                            <li class="animation-home element-hidden"><a class="link" href="https://github.com/ploymuddle" target="_blank">
                                     <i class="fab fa-github"></i>ploymuddle</a>
                             </li>
                         </ul>
@@ -1152,8 +1148,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>About Me</h1>
-                    <p class="text-detail">A fresh graduate of Computer Science pursuing a career as
+                    <h1 class="animation element-hidden">About Me</h1>
+                    <p class="text-detail animation element-hidden">A fresh graduate of Computer Science pursuing a career as
                         a Software
                         developer
                         where I
@@ -1164,7 +1160,7 @@
                         the requirements of company.</p>
                 </div>
                 <div class="col-lg-4">
-                    <ul class="content-list text-detail mt-3">
+                    <ul class="content-list text-detail mt-3 ">
                         <li class="d-flex">
                             <span>Name :</span>
                             <span>Ploypilin Bunprasoet</span>
@@ -1199,14 +1195,17 @@
         <div class="container my-5">
             <div class="row p-3 bg-gray ">
                 <div class="border col-sm-6 p-4 bg-white animation element-hidden">
-                    <h4 class="bg-gray r-text"><i class="fas fa-graduation-cap"></i> Education</h4>
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-graduation-cap"></i> Education</h4>
+                    <div class="animation element-hidden">
                     <p class="text-detail text-muted">2017 - 2021</p>
                     <h5><span>Bachelor of Science:</span> Computer Science</h5>
                     <p>King Mongkut's Institute of Technology Ladkrabang</p>
+                </div>
 
                 </div>
                 <div class="border col-sm-6 p-4 bg-white animation element-hidden">
-                    <h4 class="bg-gray r-text"><i class="fas fa-laptop-house"></i> Work Experience</h4>
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-laptop-house"></i> Work Experience</h4>
+                    <div class="animation element-hidden">
                     <p class="text-detail text-muted">13 January - 31 July 2020</p>
                     <h5><span>Cooperative Education:</span> Java Developer</h5>
                     <p>MFEC Public Company Limited, Bangkok</p>
@@ -1217,12 +1216,13 @@
                         <li>Design database specification and api specification.</li>
                     </ul>
                 </div>
+                </div>
             </div>
         </div>
 
         <div class="container py-4">
             <div class="text-center">
-                <h4 class="r-text bg-gray"><i class="fas fa-users"></i> Activities</h4>
+                <h4 class="r-text bg-gray animation element-hidden"><i class="fas fa-users"></i> Activities</h4>
             </div>
             <div class="row p-3 ">
                 <div class="slider autoplay-3 my-3">
@@ -1279,11 +1279,11 @@
         <div class="container my-5">
             <div class="row p-3">
                 <div class="col-lg-8">
-                    <h4 class="bg-gray r-text"><i class="fas fa-laptop-code"></i> Coding Skills</h4>
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-laptop-code"></i> Coding Skills</h4>
                     <div class="row mb-3 p-3">
                         <div class="col-sm-4 border s-card flex-column bg-gray">
-                            <h6 class="text-2 bg-white border-bottom r-text">Languages:</h6>
-                            <ul class="ul-skill ">
+                            <h6 class="text-2 bg-white border-bottom r-text animation element-hidden">Languages:</h6>
+                            <ul class="ul-skill animation element-hidden">
                                 <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
                                 <li>HTML/CSS</li>
                                 <li>JavaScript</li>
@@ -1293,8 +1293,8 @@
                             </ul>
                         </div>
                         <div class="col-sm-4  s-card border flex-column bg-gray">
-                            <h6 class="text-2 bg-white border-bottom r-text">Framework & Libraries:</h6>
-                            <ul class="ul-skill">
+                            <h6 class="text-2 bg-white border-bottom r-text animation element-hidden">Framework & Libraries:</h6>
+                            <ul class="ul-skill animation element-hidden">
                                 <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
                                 <li>Spring</li>
                                 <li>Laravel</li>
@@ -1303,8 +1303,8 @@
                             </ul>
                         </div>
                         <div class="col-sm-4  s-card border flex-column bg-gray">
-                            <h6 class="text-2 bg-white border-bottom r-text">Tools:</h6>
-                            <ul class="ul-skill ">
+                            <h6 class="text-2 bg-white border-bottom r-text animation element-hidden">Tools:</h6>
+                            <ul class="ul-skill animation element-hidden">
                                 <li>Git</li>
                                 <li>VS Code</li>
                                 <li>Xampp</li>
@@ -1314,11 +1314,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <h4 class="bg-gray r-text"><i class="fas fa-magic"></i> Design Skills</h4>
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-magic"></i> Design Skills</h4>
                     <div class="row mb-3 p-3">
                         <div class="col-sm-12  s-card border flex-column bg-gray">
-                            <h6 class="text-4 bg-white border-bottom r-text">Program:</h6>
-                            <ul class="ul-skill-b">
+                            <h6 class="text-4 bg-white border-bottom r-text animation element-hidden">Program:</h6>
+                            <ul class="ul-skill-b animation element-hidden">
                                 <li>Adobe XD</li>
                                 <li>Photoshop</li>
                                 <li>Illustrator</li>
@@ -1339,16 +1339,16 @@
         <p>Project in class!</p>
 
         <!-- Project Co -->
-        <div class="container project text-black">
-            <div class="row my-3 ">
-                <div class="col-md-6">
-                    <h4><i class="far fa-folder-open"></i> Back Office System</h4>
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6 ">
+                    <h4 class=""><i class="far fa-folder-open"></i> Back Office System</h4>
                     <p>MFEC Public Company Limited, Bangkok</p>
 
                     <div class="detail font-weight-light">
                         Developed back office system for banking service apps management.
                     </div>
-                    <div>
+                    <div class="">
                         <span class="badge badge-dark badge-pill">Java</span>
                         <span class="badge badge-dark badge-pill">Spring Framework</span>
                         <span class="badge badge-dark badge-pill">Vue</span>
@@ -1396,8 +1396,8 @@
         </div>
 
         <!-- Project Web Sell Furniture -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Web Application for Sell Furniture</h4>
                     <p>Software Engineering</p>
@@ -1483,8 +1483,8 @@
         </div>
 
         <!-- Project Web Residence Management -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Web Application for Residence Management</h4>
                     <p>Web Programming</p>
@@ -1546,8 +1546,8 @@
             </div>
         </div>
         <!-- Project Web PM2.5 -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Web Application for Visualizing Air Pollution (PM 2.5) on a
                         Map</h4>
@@ -1581,8 +1581,8 @@
         </div>
 
         <!-- Project Landing page -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> UX&UI Course Online Landing page</h4>
                     <p></p>
@@ -1615,8 +1615,8 @@
         </div>
 
         <!-- Project UXUI MeHome -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Project UX&UI Web Application for Sell Furniture</h4>
                     <p>Designing Interactive System</p>
@@ -1643,8 +1643,8 @@
         </div>
 
         <!-- Project Mockup -->
-        <div class="container project text-black">
-            <div class="row my-3">
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
                 <div class="col-md-6">
                     <h4><i class="far fa-folder-open"></i> Mockup Mobile Application for Pre-order Management</h4>
                     <p>Electronic Business</p>
@@ -1788,14 +1788,14 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-1 text-black">
-        <h1>See my projects on GitHub.</h1>
+    <div class="container-fluid bg-5 text-white">
+        <h1 class="animation element-hidden">See my projects on GitHub.</h1>
 
-        <div>
+        <div class="animation element-hidden">
             <a class="link" href="https://github.com/ploymuddle" target="_blank">
                 <!-- <i class="bi bi-github"></i> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-github text-black git" viewBox="0 0 16 16">
+                    class="bi bi-github text-white git" viewBox="0 0 16 16">
                     <path
                         d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                 </svg>
@@ -1809,7 +1809,7 @@
         <div class="container">
             <div class="row py-4">
                 <div class="col-sm-6 pr-5">
-                    <div class="row py-2">
+                    <div class="row py-2 animation element-hidden">
                         <div class="col-md-4">
                             <h5>Phone</h5>
                         </div>
@@ -1817,7 +1817,7 @@
                             <p><a class="link" href="tel:0988270289">098 827 0289</a></p>
                         </div>
                     </div>
-                    <div class="row py-2">
+                    <div class="row py-2 animation element-hidden">
                         <div class="col-md-4">
                             <h5>Email</h5>
                         </div>
@@ -1825,7 +1825,7 @@
                             <p><a class="link" href="mailto:ploypilin.bun@gmail.com">ploypilin.bun@gmail.com</a></p>
                         </div>
                     </div>
-                    <div class="row py-2">
+                    <div class="row py-2 animation element-hidden">
                         <div class="col-md-4">
                             <h5>Address</h5>
                         </div>
@@ -1967,23 +1967,24 @@
             var imageHeight = $(this).height();
             var topOfWindow = $(window).scrollTop();
 
-            if (imagePos - 300 < topOfWindow + imageHeight) {
+            if (imagePos - 400  < topOfWindow + imageHeight ) {
                 $(this).addClass("animate");
             } else {
                 $(this).removeClass("animate");
             }
+
         });
     });
     $(window).scroll(function () {
-        $('.animation-skill').each(function () {
+        $('.animation-home').each(function () {
             var imagePos = $(this).offset().top;
             var imageHeight = $(this).height();
             var topOfWindow = $(window).scrollTop();
 
-            if (imagePos - 300 < topOfWindow + imageHeight) {
-                $(this).addClass("animate-skill");
+            if (imagePos + imageHeight > topOfWindow -100 ) {
+                $(this).addClass("animate");
             } else {
-                $(this).removeClass("animate-skill");
+                $(this).removeClass("animate");
             }
         });
     });
@@ -1994,7 +1995,7 @@
             var imageHeight = $(this).height();
             var topOfWindow = $(window).scrollTop();
 
-            if (imagePos + 200 < topOfWindow + imageHeight) {
+            if (imagePos - 300 < topOfWindow + imageHeight) {
                 $(this).addClass("animate");
             } else {
                 $(this).removeClass("animate");
