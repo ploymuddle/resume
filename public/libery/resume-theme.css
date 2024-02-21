@@ -8,6 +8,10 @@ body {
     font-family: 'Sriracha', cursive;
   }
 
+  .font {
+    font-family: Silkscreen, cursive;
+  }
+
   .band a {
     color: black;
   }
