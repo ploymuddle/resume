@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Ploypilin'resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="libery/slick.css">
+    <link rel="stylesheet" href="libery/slick-theme.css">
+    <style>
+        .text-hld {
+            color: white;
+            background-color: #1089FF;
+            display: inline-flex;
+            padding: 0 10px 0 10px;
+        }
+
+        .text-1 {
+            color: #404969;
+        }
+
+        .text-2 {
+            color: #BDE4F4;
+        }
+
+        .text-4 {
+            color: #B0F5E3;
+        }
+
+        .bg-1 {
+            background-color: #404969;
+        }
+
+        .bg-2 {
+            background-color: #BDE4F4;
+        }
+
+        .bg-3 {
+            background-color: #B0F5E3;
+        }
+
+        .bg-4 {
+            background-color: #C9CBFF;
+
+        }
+
+
+        body {
+
+            background-color: white;
+            color: black;
+            min-height: 100vh;
+            display: block;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        /* #about h1::after,
+        #resume h1::after,
+        #project h1::after,
+        #contact h1::after{
+            content: ' ';
+            display: block;
+            border: 2px solid black;
+        } */
+
+        h4 {
+            font-weight: 700;
+        }
+
+        h5 {
+            font-weight: 500;
+        }
+
+        h6 {
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .text-detail {
+            font-weight: 300;
+        }
+
+        a.link {
+            color: #454c53;
+        }
+
+        a.link i {
+            color: #454c53;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #1089FF;
+        }
+
+        /* Color  */
+
+        /* .text-1 {
+            color: #BDDEFF;
+        }
+
+        .text-2 {
+            color: #A4D2FF;
+        }
+
+        .text-hld {
+            color: #1089FF;
+        }
+
+        .text-4 {
+            color: #1d4289;
+        } */
+
+        .text-white {
+            color: white;
+        }
+
+        .text-black {
+            color: black;
+        }
+
+        .bg-white {
+            background-color: white;
+        }
+
+        .bg-black {
+            background-color: black;
+        }
+
+        .bg-gray {
+            background-color: #eeee;
+        }
+
+        /* NAV  */
+
+        .band a {
+            color: black;
+        }
+
+        div.row.band {
+            margin: 0px 0px 0px 20px;
+        }
+
+        /* .fixed-top {
+            box-shadow: 0px 0.5px 5px rgb(163, 163, 163);
+        } */
+
+        /* CSS MENU ON WEB  */
+        /* ref: https://www.codingnepalweb.com/responsive-navigation-menu-bar-html-css/ */
+        nav {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px 0 100px;
+            flex-wrap: wrap;
+            z-index: 1030;
+
+        }
+
+        nav.navbar {
+            background: white;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0 5px;
+
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+            color: #1089FF;
+        }
+
+        nav .menu-btn i {
+            color: #1089FF;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+        }
+
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+
+
+        /* CSS section  */
+        .container-fluid {
+            padding: 90px 0px 90px 0px;
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        .card {
+            text-align: left;
+            border-style: none;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+
+        /* CSS Home */
+        .home {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-bottom: 10px;
+        }
+
+        .jumbotron {
+            padding: 30px;
+            margin: 80px;
+            text-align: left;
+        }
+
+        .card-home {
+            margin: 0 100px 0 200px;
+
+        }
+
+        ul.content-list {
+            padding: 0px;
+            list-style: none;
+            text-align: left;
+        }
+
+        ul.content-list i {
+            color: white;
+            margin-bottom: 10px;
+            background-color: #1089FF;
+            border-radius: 15px;
+            margin-right: 15px;
+            padding: 5px;
+        }
+
+        /* CSS About */
+        /* .about {
+            padding: 80px 100px 80px 100px;
+        } */
+
+        .about ul.content-list li span:first-child {
+            font-weight: 700;
+            color: #000000;
+            width: 130px;
+        }
+
+        .about ul.content-list li {
+            margin-bottom: 16px;
+        }
+
+        .btn-download {
+            /* background-color: black; */
+            /* border-radius: 10px; */
+            border: 2px solid black;
+            /* box-shadow: 0px 3px 5px rgba(133, 133, 133, 0.733); */
+            color: black;
+            font-weight: 500;
+        }
+
+        .btn-download:hover {
+            background-color: #93DEFF;
+            /* box-shadow: none; */
+        }
+
+        .btn-git {
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            font-weight: 500;
+        }
+
+        .btn-git:hover {
+            border: 2px solid #93DEFF;
+            background-color: #93DEFF;
+            color: black;
+        }
+
+        .about p.card-text.text-detail {
+            margin-right: 30px;
+        }
+
+        /* resume */
+
+        .select::before {
+            content: "~ ";
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .ul-skill {
+            padding-left: 20px;
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+            padding-bottom: 20px;
+        }
+
+        .ul-skill li::before {
+            /* content: "\0025E6"; */
+            content: "\2022";
+            color: #A4D2FF;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 20px;
+        }
+
+        .ul-skill-b {
+            padding-left: 20px;
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+            padding-bottom: 20px;
+        }
+
+        .ul-skill-b li::before {
+            /* content: "\0025E6"; */
+            content: "\2022";
+            color: #1d4289;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 20px;
+        }
+
+        /* Timeline  */
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+        }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+
+        ul.timeline>li {
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+
+        ul.timeline>li:before {
+            content: ' ';
+            background: #A4D2FF;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+
+        /* Timeline ref:https://bootsnipp.com/snippets/xrKXW  */
+
+        /* BUTTON CICLE  */
+        .circle {
+            width: 180px;
+            height: 180px;
+            padding: auto;
+            border-radius: 50%;
+            font-size: 100%;
+            font-weight: bold;
+            border-color: black;
+            /* border-style: none; */
+            letter-spacing: 0px;
+            margin: 15px;
+            color: black;
+        }
+
+        .circle:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+
+        .project {
+            margin: auto;
+            margin-bottom: 30px;
+            /* border-radius: 10px; */
+            background: white;
+            padding: 20px;
+            /* border-style: solid;
+            border-width: 1px; */
+            /* box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.472); */
+        }
+
+        .git:hover {
+            color: #1d4289;
+        }
+
+        .img-1 {
+            border: 1px solid #d4d9df;
+            padding: 10px;
+        }
+
+        .card-slide {
+            border: 1px solid #d4d9df;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .img-detail {
+            text-align: right;
+            width: 500px;
+        }
+
+        .img-dc {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev,
+        .carousel-indicators {
+            filter: invert(100%);
+        }
+
+        .carousel-indicators {
+            margin: 0;
+        }
+
+        .btn-doc {
+            color: #b2b6bb;
+        }
+
+        /* Image  */
+        .row-image {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column-image {
+            -ms-flex: 30%;
+            /* IE 10 */
+            flex: 30%;
+            padding: 0 4px;
+        }
+
+        .column-image img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        .r-text {
+            display: inline-flex;
+            border-radius: 30px;
+            padding: 10px 15px 10px 15px;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .r-card {
+            display: inline-flex;
+            border-radius: 30px;
+            padding: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .s-card {
+            display: inline-flex;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: fixed;
+            top: 5px;
+            right: 35px;
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .carousel-caption {
+            top: 100px;
+            text-align: center;
+            color: black;
+        }
+
+        .modal-content {
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-body img {
+            width: 100%;
+        }
+
+        .fullscreen {
+            margin: 0;
+            top: 20px;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        button.btn.btn-image {
+            padding: 0;
+        }
+
+        /* End zoom */
+
+        .slider {
+            width: 90%;
+            margin: 100px auto;
+        }
+
+        .slick-dots li button:before {
+            font-size: 30px;
+        }
+
+        .slick-slide {
+            margin: 0px 5px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f137";
+            color: black;
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .slick-next:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f138";
+            color: black;
+            display: inline-block;
+            padding-right: 3px;
+            vertical-align: middle;
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: 1;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+        .card-slide h5,
+        .card-slide p {
+            text-align: center;
+        }
+
+        .project p {
+            margin-bottom: 30px;
+        }
+
+        .container-fluid h4 {
+            /* color: #7F78D2; */
+        }
+
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+
+            nav {
+                padding: 0 40px 0 50px;
+            }
+
+            .btn-circle {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            /* home  */
+            .jumbotron {
+                margin: 0 10px 0 10px;
+            }
+        }
+
+
+        @media (max-width: 992px) {
+
+            div.row.band {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: 200px;
+            }
+
+            nav .menu-btn i {
+                width: 100%;
+                display: block;
+            }
+
+            #click:checked~.menu-btn i:before {
+                content: "\f00d";
+            }
+
+            nav ul {
+                position: fixed;
+                top: 79px;
+                left: -100%;
+                background: white;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                display: none;
+                transition: all 0.3s ease;
+            }
+
+            #click:checked~ul {
+                left: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                width: 100%;
+                margin-left: -100%;
+                display: block;
+                font-size: 20px;
+                transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            #click:checked~ul li a {
+                margin-left: 0px;
+            }
+
+            nav ul li a.active,
+            nav ul li a:hover {
+                background: none;
+                color: #1089FF;
+            }
+
+
+            /* home  */
+            .jumbotron {
+                text-align: center;
+            }
+
+            .card-home {
+                margin: 0;
+            }
+
+            .image-circle {
+                width: 50%;
+            }
+
+            ul.content-list {
+                margin: auto;
+
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .btn-circle {
+                width: 78px;
+                height: 78px;
+                font-size: 75%;
+                margin: 5px;
+            }
+
+            /* .about {
+                padding: 20px;
+                padding-top: 80px;
+            } */
+
+            .card-text {
+                padding: 0px;
+            }
+
+            .about p.card-text.text-detail {
+                margin-right: 0;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            /* home  */
+            .jumbotron {
+                margin: 0;
+                text-align: center;
+                padding: 10px;
+                padding-bottom: 20px;
+            }
+
+            .image-circle {
+                width: 100%;
+            }
+
+            .home {
+                padding-bottom: 0;
+            }
+
+            /* resume  */
+            #resume h5 span {
+                display: flex;
+                flex-direction: column;
+            }
+
+            div#contact.container-fluid {
+                padding-bottom: 10px;
+            }
+
+            footer .container-fluid {
+                padding: 0;
+                padding-bottom: 10px;
+            }
+
+            #project div.container.project {
+                margin: auto;
+                margin-bottom: 10px;
+                width: 90%;
+            }
+
+            .slick-slide {
+                margin: 0px 1px;
+            }
+
+            .slider {
+                margin: auto;
+            }
+        }
+
+        /* animation */
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatew {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -150px;
+                opacity: -0.5;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animateleft {
+            from {
+                left: -150px;
+                opacity: -0.5;
+            }
+
+            to {
+                left: 0;
+                opacity: 1;
+            }
+        }
+
+        .animate-t08 {
+            visibility: visible;
+            animation: animatetop 0.8s;
+        }
+
+        .animate-b05 {
+            position: relative;
+            animation: animatebottom 0.5s;
+        }
+
+        .animate-b06 {
+            position: relative;
+            animation: animatebottom 0.6s;
+        }
+
+        .animate-b08 {
+            position: relative;
+            animation: animatebottom 0.8s;
+        }
+
+        .animate-b10 {
+            position: relative;
+            animation: animatebottom 1.0s;
+        }
+
+        .element-hidden {
+            visibility: hidden;
+        }
+
+        .animate {
+            visibility: visible;
+            position: relative;
+            animation: animatebottom 0.8s;
+        }
+
+        .animate-w {
+            visibility: visible;
+            position: relative;
+            animation: animatew 1s;
+        }
+
+        .animate-1 {
+            visibility: visible;
+            position: relative;
+            animation: animatebottom 0.4s;
+        }
+
+        .animate-left {
+            visibility: visible;
+            position: relative;
+            animation: animateleft 1.0s;
+        }
+
+        /* arrow  */
+        /* ref: https://codepen.io/bisaillonyannick/pen/pvZeGg */
+        .arrow {
+            text-align: center;
+            /* margin: 8% 0; */
+        }
+
+        .bounce {
+            -moz-animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .fixed {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            left: 265px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar position-absolute" id="navbar">
+        <!-- TITLE -->
+        <div class="band row">
+            <a class="navbar-brand">
+                <circle>
+                    <i class="fas fa-laptop-code"></i>
+                </circle>
+                PLOYPILIN
+            </a>
+            <span class="navbar-text font-weight-light"> PROGRAMMER</span>
+        </div>
+        <!-- END TITLE -->
+
+        <!-- MENU -->
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav">
+            <li>
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#resume">Resume</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#project">Projects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <!-- END MENU -->
+    </nav>
+    <!-- END NAV -->
+
+    <!-- Section  -->
+    <div id="home" class="container-fluid bg-white home">
+        <!-- <div class="jumbotron bg-white">
+            <div class="row align-items-center card-home">
+                <div class="col-lg-4 mb-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle"
+                                width="100%"><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <h6 class="text-hld">HELLO, I AM</h6>
+                            <h1 class="card-title animate-b05">PLOYPILIN BUNPRASOET</h1>
+                            <h5 class="card-subtitle mb-5 animate-b06">PROGRAMMER</h5>
+                            <ul class="content-list animate-b08">
+                                <li><a class="link" href="tel:0988270289"><i class="fas fa-phone-alt"></i>098 827
+                                        0289</a></li>
+                                <li><a class="link" href="mailto:ploypilin.bun@gmail.com"><i
+                                            class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
+                                <li><a class="link" href="https://github.com/ploymuddle" target="_blank">
+                                        <i class="fab fa-github"></i>ploymuddle</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container bg-white">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-2">
+                    <div class="text-center">
+                        <img src="image/profile1.jpg" class="rounded-circle animate-b05 image-circle animation-home"
+                            width="80%"><br><br>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-0">
+                        <h6 class="text-hld animate-b05 animation-home">HELLO, I AM</h6>
+                        <h1 class="animate-b05">PLOYPILIN BUNPRASOET</h1>
+                        <h5 class="mb-5 animate-b06">PROGRAMMER</h5>
+                        <ul class="content-list animate-b08">
+                            <li class="animation-home element-hidden"><a class="link" href="tel:0988270289"><i
+                                        class="fas fa-phone-alt"></i>098 827
+                                    0289</a></li>
+                            <li class="animation-home element-hidden"><a class="link"
+                                    href="mailto:ploypilin.bun@gmail.com"><i
+                                        class="fas fa-envelope"></i>ploypilin.bun@gmail.com</a></li>
+                            <li class="animation-home element-hidden"><a class="link"
+                                    href="https://github.com/ploymuddle" target="_blank">
+                                    <i class="fab fa-github"></i>ploymuddle</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="navbar" class="arrow bounce">
+            <a class="fa fa-arrow-down fa-2x" href="#about"></a>
+        </div> -->
+    </div>
+    <div id="about" class="container-fluid bg-gray about border-top border-bottom ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="animation element-hidden">About Me</h1>
+                    <p class="text-detail animation element-hidden">A fresh graduate of Computer Science pursuing a
+                        career as
+                        a Software
+                        developer
+                        where I
+                        can utilize my
+                        understanding of coding and software development along with honing my skills to the
+                        efficiently
+                        fulfill
+                        the requirements of company.</p>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="content-list text-detail mt-3 ">
+                        <li class="d-flex">
+                            <span>Name :</span>
+                            <span>Ploypilin Bunprasoet</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Nickname :</span>
+                            <span>Ploy</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Date of birth :</span>
+                            <span>January 7, 1998</span>
+                        </li>
+                        <li class="d-flex">
+                            <span>Gender :</span>
+                            <span>Female</span>
+                        </li>
+                    </ul>
+                    <div class="py-4 ">
+                        <a href="https://github.com/ploymuddle" class="btn btn-git d-inline-flex px-3"
+                            target="_blank">GitHub</a>
+                        <a href="https://drive.google.com/file/d/1nPRbKmy667N45hApvKuApKMtZpNG6X4M/view?usp=sharing"
+                            class="btn btn-download d-inline-flex px-3" target="_blank">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="resume" class="container-fluid bg-white">
+        <h1>Resume</h1>
+
+        <div class="container my-5">
+            <div class="row p-3 bg-gray ">
+                <div class="border col-sm-6 p-4 bg-white animation element-hidden">
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-graduation-cap"></i> Education
+                    </h4>
+                    <div class="animation element-hidden">
+                        <p class="text-detail text-muted">2017 - 2021</p>
+                        <h5><span>Bachelor of Science:</span> Computer Science</h5>
+                        <p>King Mongkut's Institute of Technology Ladkrabang</p>
+                    </div>
+
+                </div>
+                <div class="border col-sm-6 p-4 bg-white animation element-hidden">
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-laptop-house"></i> Work
+                        Experience</h4>
+                    <div class="animation element-hidden">
+                        <p class="text-detail text-muted">13 January - 31 July 2020</p>
+                        <h5><span>Cooperative Education:</span> Java Developer</h5>
+                        <p>MFEC Public Company Limited, Bangkok</p>
+                        <ul class="ul-skill text-detail small">
+                            <li>Developed back office system for banking service apps management.</li>
+                            <li>Developed back end web applications with Java using spring framework.</li>
+                            <li>Developed front end web applications with Vue.</li>
+                            <li>Design database specification and api specification.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="text-center">
+                <h4 class="r-text bg-gray animation element-hidden"><i class="fas fa-users"></i> Activities</h4>
+            </div>
+            <div class="row p-3 ">
+                <div class="slider autoplay-3 my-3">
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Admin and Planner in CS Media team</h5>
+
+                        <p class="text-dark small">PR team of Computer Science</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl"
+                                    target="_blank">Computer
+                                    Science, KMITL <i class="fab fa-facebook-square"></i></a></li>
+                            <li>Plan and manage tasks within the team</li>
+                            <li>Coordinate with external organizations</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Esports Department at the KMITL Sci Day</h5>
+                        <p class="text-dark small">Admin in coordinating with tournament participants</p>
+
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Registration Department at the Natwok Game 22nd</h5>
+                        <p class="text-dark small">Was part of the organizer team at the Natwok Game 22nd
+                        </p>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Head of PR Department at the CS Camp 11</h5>
+                        <p class="text-dark small">Computer Science Camp</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Admin facebook page: <a class="text-sky" href="https://www.facebook.com/cskmitl.camp"
+                                    target="_blank">CS-CAMP
+                                    KMIT'L <i class="fab fa-facebook-square "></i></a></li>
+                            <li>Plan and manage tasks within the team</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>PR-coordinate Department at the AUCC 2018</h5>
+                        <p class="text-dark small">Was part of the organizer team at the AUCC 2018</p>
+                        <ul class="ul-skill text-dark small">
+                            <li>Prepare road signs at each location</li>
+                            <li>Coordinate with external department</li>
+                        </ul>
+                    </div>
+                    <div class="card-slide d-flex flex-column justify-content-center">
+                        <h5>Participate in a basketball competition</h5>
+                        <p class="text-dark small">at the Vidya Vidya Sport Day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <!-- <div class="container-fluid"> -->
+        <div class="container my-5">
+            <div class="row p-3">
+                <div class="col-lg-8">
+                    <h4 class="bg-gray r-text animation element-hidden "><i class="fas fa-laptop-code"></i> Coding
+                        Skills</h4>
+                    <div class="row flex-lg-nowrap mb-3 p-3 justify-content-center">
+                        <div class="col-sm-4 s-card flex-column mr-3 bg-gray">
+                            <h6 class="bg-white border-bottom r-text animation element-hidden">Languages</h6>
+                            <ul class="ul-skill  animation element-hidden">
+                                <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Java</li>
+                                <li>PHP</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 s-card  flex-column mr-3 bg-gray">
+                            <h6 class="bg-white border-bottom r-text animation element-hidden text-center">
+                                Framework & Libraries</h6>
+                            <ul class="ul-skill animation element-hidden">
+                                <p class="text-detail text-1 small mt-2 mb-0">(beginner)</p>
+                                <li>Spring</li>
+                                <li>Laravel</li>
+                                <li>Vue.js</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4  s-card  flex-column mr-3 bg-gray">
+                            <h6 class="bg-white border-bottom r-text animation element-hidden">Tools</h6>
+                            <ul class="ul-skill animation element-hidden">
+                                <li>Git</li>
+                                <li>VS Code</li>
+                                <li>Xampp</li>
+                                <li>NetBeans</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="bg-gray r-text animation element-hidden"><i class="fas fa-magic"></i> Design Skills</h4>
+                    <div class="row mb-3 p-3">
+                        <div class="col-sm-12 s-card flex-column bg-gray">
+                            <h6 class="bg-white border-bottom r-text animation element-hidden">Program</h6>
+                            <ul class="ul-skill-b animation element-hidden">
+                                <li>Adobe XD</li>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                                <li>After Effect</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Skills -->
+        </div>
+        <!-- </div> -->
+
+    </div>
+    <div id="project" class="container-fluid bg-gray border">
+        <h1>Projects</h1>
+        <p>Project in class!</p>
+
+        <!-- Project Co -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6 ">
+                    <h4 class=""><i class="far fa-folder-open"></i> Back Office System</h4>
+                    <p>MFEC Public Company Limited, Bangkok</p>
+
+                    <div class="detail font-weight-light">
+                        Developed back office system for banking service apps management.
+                    </div>
+                    <div class="">
+                        <span class="badge badge-dark badge-pill">Java</span>
+                        <span class="badge badge-dark badge-pill">Spring Framework</span>
+                        <span class="badge badge-dark badge-pill">Vue</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/1PEqAAcueu2uKX2oMxTP_fbp0vs4aKGDQ/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+
+                    <div id="img-slide" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#img-slide" data-slide-to="0" class="active"></li>
+                            <li data-target="#img-slide" data-slide-to="1"></li>
+                            <li data-target="#img-slide" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/bosacd.png" class="d-block w-100" alt="Architecture Diagram">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bosdeploy.png" class="d-block w-100" alt="Tools">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/bostools.png" class="d-block w-100" alt="Tools">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#img-slide" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#img-slide" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-1">
+                <img src="image/mfec.png" style="width:100%;">
+            </div>
+
+        </div>
+
+        <!-- Project Web Sell Furniture -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Sell Furniture</h4>
+                    <p>Software Engineering</p>
+
+                    <div class="detail font-weight-light">
+                        System analysis and design including code a website using php and xampp.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">PHP</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                        <span class="badge badge-dark badge-pill">CSS</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/1W1gi3iEni0xYJMXCrmylOIZ4C8Cf-Ecb/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <div class=" py-2 text-center d-flex flex-column  align-items-center">
+                        <img src="image/sell-furniturn.jpg" class="d-block w-75" alt="Architecture Diagram">
+                        <p class="text-0 mt-3">Architecture Diagram</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo Grid -->
+            <div class="row-image">
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-home.jpg"><img id="myImg"
+                            src="image/sell-furniturn-home.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-empty.jpg"><img id="myImg"
+                            src="image/sell-furniturn-empty.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-product-detail.jpg"><img id="myImg"
+                            src="image/sell-furniturn-product-detail.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-cart.jpg"><img id="myImg"
+                            src="image/sell-furniturn-cart.jpg" style="width:100%"></button>
+
+                </div>
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-login.jpg"> <img id="myImg"
+                            src="image/sell-furniturn-login.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search-by.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search-by.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-complete.jpg"><img id="myImg"
+                            src="image/sell-furniturn-complete.jpg" style="width:100%"></button>
+                </div>
+                <div class="column-image">
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-search-by2.jpg"><img id="myImg"
+                            src="image/sell-furniturn-search-by2.jpg" style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-add.jpg"><img id="myImg" src="image/sell-furniturn-add.jpg"
+                            style="width:100%"></button>
+                    <button type="button" class="btn btn-image" data-toggle="modal" data-target="#exampleModal"
+                        data-whatever="image/sell-furniturn-confirm.jpg"><img id="myImg"
+                            src="image/sell-furniturn-confirm.jpg" style="width:100%"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content fullscreen">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+                        <img id="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Web Residence Management -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Residence Management</h4>
+                    <p>Web Programming</p>
+
+                    <div class="detail font-weight-light">
+                        Developed a web application using Laravel framework.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">Laravel Framework</span>
+                        <span class="badge badge-dark badge-pill">PHP</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/1nIhzlyYfzrmN5fOKfOuG82dQygwUK2jI/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                        <a href="https://github.com/sutheemon/project-wp-residence.git" target="_blank"
+                            class="btn-doc border p-2 small"><i class="fab fa-github"></i> GITHUB</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <div class=" py-2 text-center d-flex flex-column  align-items-center">
+                        <img src="image/webrm.png" class="d-block w-100" alt="Architecture Diagram">
+                        <p class="text-0 mt-3">Architecture Diagram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider autoplay">
+                <div>
+                    <img src="image/webRM/1.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/2.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/3.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/4.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/5.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/6.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/7.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/9.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/10.jpg">
+                </div>
+                <div>
+                    <img src="image/webRM/11.jpg">
+                </div>
+            </div>
+        </div>
+        <!-- Project Web PM2.5 -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Web Application for Visualizing Air Pollution (PM 2.5) on a
+                        Map</h4>
+                    <p>Spatial Databases and GIS Application</p>
+
+                    <div class="detail font-weight-light">
+                        Developed a web application using React to insert and search data with a database using
+                        Microsoft SQL.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">React</span>
+                        <span class="badge badge-dark badge-pill">JavaScript</span>
+                        <span class="badge badge-dark badge-pill">HTML</span>
+                        <span class="badge badge-dark badge-pill">CSS</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/1W9jjxEp2wqKbdhvYeJ0yN6eQsYxWtJKe/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+
+                        <a href="https://github.com/ploymuddle/web-app-pm25.git" target="_blank"
+                            class="btn-doc border p-2 small"><i class="fab fa-github"></i> GITHUB</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/1DDTKmbgoloYSofjnsCR_6lkGF9Wop7m6/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Project Landing page -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-12">
+                    <h4><i class="far fa-folder-open"></i> UX&UI Course Online Landing page</h4>
+                    <p></p>
+
+                    <div class="detail font-weight-light">
+                        UXUI design landing page on figma according to the theory learned.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill">Mockup</span>
+
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://www.figma.com/proto/VUAgpVPG0cV3lVxw6nrocj/60050212?node-id=23%3A63&starting-point-node-id=23%3A63"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> FIGMA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col">
+                    <img class="img-1" src="image/landingm.png" style="width:100%;">
+                </div>
+                <div class="col">
+                    <img class="img-1" src="image/landingw.png" style="width:100%;">
+                </div>
+                <div class="col">
+                    <img class="img-1" src="image/landingd.png" style="width:100%;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project UXUI MeHome -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Project UX&UI Web Application for Sell Furniture</h4>
+                    <p>Designing Interactive System</p>
+
+                    <div class="detail font-weight-light">
+                        Design and test UX UI according to the theory the theory learned in the course.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill ">Wireframe</span>
+                        <span class="badge badge-dark badge-pill ">Mockup</span>
+                        <span class="badge badge-dark badge-pill ">Prototype</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/12ytWmrBL5KZwBGrT2sxCcdBu_3lcgjj0/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> DOCUMENT</a>
+                    
+                        <a href="https://www.figma.com/proto/V6lBWCBVpj8cHQH6vlWtXO/(DIS)HomeDesign?node-id=1%3A4&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A4"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> WIREFRAME</a>
+                    
+                        <a href="https://mehome.invisionapp.com/console/share/AMWU6WOG4/474841908#%2Fscreens"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> MOCKUP</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/12ytWmrBL5KZwBGrT2sxCcdBu_3lcgjj0/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Mockup -->
+        <div class="container project text-black border">
+            <div class="row my-3 animation element-hidden">
+                <div class="col-md-6">
+                    <h4><i class="far fa-folder-open"></i> Mockup Mobile Application for Pre-order Management</h4>
+                    <p>Electronic Business</p>
+
+                    <div class="detail font-weight-light">
+                        Mockup mobile app design for the purpose of trader to manage the product.
+                    </div>
+                    <div>
+                        <span class="badge badge-dark badge-pill ">Mockup</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <a href="https://drive.google.com/file/d/1T-4YpZ6bmY_w0sNvJWkbT8shcCiCBNik/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> PROJECT PROPOSAL</a>
+                        <a href="https://drive.google.com/file/d/16CBaq7RpKBwCgT--E2f5SQpeWKOnWH4R/view?usp=sharing"
+                            target="_blank" class="btn-doc border p-2 small"><i
+                                class="fas fa-external-link-square-alt"></i> MOCKUP XD</a>
+                    </div>
+                </div>
+                <div class="col-md-6 img-detail border-left">
+                    <iframe src="https://drive.google.com/file/d/1m2NjRhTwENAOoesUYHYlRrBS8Gtk85TG/preview" width="100%"
+                        height="300px"></iframe>
+                </div>
+            </div>
+
+            <div class="slider slide-5">
+                <div>
+                    <img src="image/xd/a1.png">
+                </div>
+                <div>
+                    <img src="image/xd/a2.png">
+                </div>
+                <div>
+                    <img src="image/xd/a3.png">
+                </div>
+                <div>
+                    <img src="image/xd/1.png">
+                </div>
+                <div>
+                    <img src="image/xd/2.png">
+                </div>
+                <div>
+                    <img src="image/xd/3.png">
+                </div>
+                <div>
+                    <img src="image/xd/4.png">
+                </div>
+                <div>
+                    <img src="image/xd/5.png">
+                </div>
+                <div>
+                    <img src="image/xd/6.png">
+                </div>
+                <div>
+                    <img src="image/xd/7.png">
+                </div>
+                <div>
+                    <img src="image/xd/9.png">
+                </div>
+                <div>
+                    <img src="image/xd/10.png">
+                </div>
+                <div>
+                    <img src="image/xd/12.png">
+                </div>
+                <div>
+                    <img src="image/xd/13.png">
+                </div>
+                <div>
+                    <img src="image/xd/14.png">
+                </div>
+                <div>
+                    <img src="image/xd/15.png">
+                </div>
+                <div>
+                    <img src="image/xd/16.png">
+                </div>
+                <div>
+                    <img src="image/xd/17.png">
+                </div>
+                <div>
+                    <img src="image/xd/18.png">
+                </div>
+                <div>
+                    <img src="image/xd/19.png">
+                </div>
+                <div>
+                    <img src="image/xd/20.png">
+                </div>
+                <div>
+                    <img src="image/xd/21.png">
+                </div>
+                <div>
+                    <img src="image/xd/22.png">
+                </div>
+                <div>
+                    <img src="image/xd/23.png">
+                </div>
+                <div>
+                    <img src="image/xd/24.png">
+                </div>
+                <div>
+                    <img src="image/xd/25.png">
+                </div>
+                <div>
+                    <img src="image/xd/26.png">
+                </div>
+                <div>
+                    <img src="image/xd/27.png">
+                </div>
+                <div>
+                    <img src="image/xd/28.png">
+                </div>
+                <div>
+                    <img src="image/xd/29.png">
+                </div>
+                <div>
+                    <img src="image/xd/30.png">
+                </div>
+                <div>
+                    <img src="image/xd/31.png">
+                </div>
+                <div>
+                    <img src="image/xd/32.png">
+                </div>
+                <div>
+                    <img src="image/xd/33.png">
+                </div>
+                <div>
+                    <img src="image/xd/34.png">
+                </div>
+                <div>
+                    <img src="image/xd/35.png">
+                </div>
+                <div>
+                    <img src="image/xd/36.png">
+                </div>
+                <div>
+                    <img src="image/xd/37.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-black text-white">
+        <h1 class="animation element-hidden">See my projects on GitHub.</h1>
+
+        <div class="animation element-hidden">
+            <a class="link" href="https://github.com/ploymuddle" target="_blank">
+                <!-- <i class="bi bi-github"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-github text-white git" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+
+        </div>
+
+    </div>
+    <div id="contact" class="container-fluid bg-white">
+        <h1>Contact Me</h1>
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-sm-6 pr-5">
+                    <div class="row py-2 animation element-hidden">
+                        <div class="col-md-4">
+                            <h5>Phone</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p><a class="link" href="tel:0988270289">098 827 0289</a></p>
+                        </div>
+                    </div>
+                    <div class="row py-2 animation element-hidden">
+                        <div class="col-md-4">
+                            <h5>Email</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p><a class="link" href="mailto:ploypilin.bun@gmail.com">ploypilin.bun@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="row py-2 animation element-hidden">
+                        <div class="col-md-4">
+                            <h5>Address</h5>
+                        </div>
+                        <div class="col-md-8">
+                            <p><a class="link">74/1 M.3 Meanumkoo, Plueakdeang, Rayong, Thailand 21140</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <form method="post" id="send">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="First">First name</label>
+                                <input type="text" class="form-control" name="Name" id="first">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Last">Last name</label>
+                                <input type="text" class="form-control" id="last">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email" class="form-control" id="email" name="Email">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Subject">Subject</label>
+                                    <input type="text" class="form-control" id="Subject">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="Message">Message</label>
+                                    <textarea class="form-control" id="message" name="Message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6 m-auto">
+                                <button type="button" value="Send Email" onclick="sendEmail()"
+                                    class="btn btn-block bg-2 rounded-circle circle m-auto">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section  -->
+</body>
+
+<footer>
+    <div class="container-fluid p-0">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center my-3">
+                    <h6>Phone</h6>
+                    <p><a class="text-black" href="tel:0988270289">098 827 0289</a></p>
+                </div>
+                <div class="col-sm-4 text-center my-3">
+                    <h6>GitHub</h6>
+                    <a class="text-black" href="https://github.com/ploymuddle" target="_blank">
+                        <!-- <i class="bi bi-github"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center my-3">
+                    <h6>Email</h6>
+                    <p><a class="text-black" href="mailto:ploypilin.bun@gmail.com">ploypilin.bun@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $('.nav a').on('click', () => {
+        $('#click').prop('checked', false);
+        $('body').css("overflow", "scroll");
+    });
+
+    $("#click").change(function () {
+        if ($(this).is(":checked"))
+            $('body').css("overflow", "hidden");
+        else
+            $('body').css("overflow", "scroll");
+    });
+
+    //  The scrollable area w3school ref:https://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp
+    $(document).ready(function () {
+        $('body').scrollspy({ target: ".navbar", offset: 80 });
+        // Add smooth scrolling on all links inside the navbar
+        $("#navbar a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            }  // End if
+        });
+    });
+
+    // scroll >= 300 show navbar
+    $(window).scroll(function () {
+        var sticky = $('.navbar'),
+            scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+            sticky.removeClass('position-absolute');
+            sticky.addClass('fixed-top');
+            sticky.addClass('animate-t08');
+
+        }
+        else {
+            sticky.removeClass('fixed-top ');
+            sticky.addClass('position-absolute');
+            sticky.removeClass('animate-t08');
+        }
+    });
+
+    // animate
+    $(window).scroll(function () {
+        $('.animation').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos - 400 < topOfWindow + imageHeight) {
+                $(this).addClass("animate");
+            } else {
+                $(this).removeClass("animate");
+            }
+
+        });
+    });
+    $(window).scroll(function () {
+        $('.animation-home').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos + imageHeight > topOfWindow - 100) {
+                $(this).addClass("animate");
+            } else {
+                $(this).removeClass("animate");
+            }
+        });
+    });
+
+    $(window).scroll(function () {
+        $('.animation-timeline').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
+
+            if (imagePos - 300 < topOfWindow + imageHeight) {
+                $(this).addClass("animate");
+            } else {
+                $(this).removeClass("animate");
+            }
+        });
+    });
+    // animate-test ref:http://jsfiddle.net/apaul34208/ozww5cvj/18/
+
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var recipient = button.data('whatever')
+        var modal = $(this)
+        modal.find('#image').attr("src", recipient);
+
+    })
+
+    $(document).ready(function () {
+        $(".slide-5").slick({
+            dots: false,
+            infinite: true,
+            centerMode: false,
+            touchMove: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplaySpeed: 2000
+        });
+        $('.autoplay').slick({
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+        $('.autoplay-3').slick({
+            dots: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    });
+    // https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html
+
+    function sendEmail() {
+        var x = document.getElementById("send");
+        var first = "&first=" + x.elements[0].value;
+        var last = "&last=" + x.elements[1].value;
+        var email = "&email=" + x.elements[2].value;
+        var subject = "&subject=" + x.elements[3].value;
+        var massage = "&massage=" + x.elements[4].value;
+
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", 'https://script.google.com/macros/s/AKfycbwuSE7d6_qoNmKvejEVFIrVWN4HvjTohCwZfAURsTexLZWGV0qL_PLY_ykIoj_io1nuCw/exec?action=insert' + first + last + email + subject + massage, true);
+
+        //Send the proper header information along with the request
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                alert("Thank you for contacting me!");
+            }
+        }
+        xhttp.send("null");
+    }
+</script>
+<script src="libery/jquery.min.js"></script>
+<script src="libery/slick.js"></script>
+
+</html>
