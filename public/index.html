@@ -1,81 +1,968 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>แบบฝึกหัด</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
 
-    <link rel="stylesheet" href="libery/resume-theme.css">
-    <link rel="stylesheet" href="libery/resume-theme.js">
-    <title>Document</title>
-</head>
-<body>
-  <!-- NAV -->
-  <nav class="sticky-top">
-    <!-- TITLE -->
-    <div class="band row">
-      <a class="navbar-brand">
-        <i class="fa fa-compass"></i>
-        เที่ยวไหนดี?
-      </a>
-    </div>
-    <!-- END TITLE -->
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
 
-    <!-- MENU -->
-    <!-- <input type="checkbox" id="click">
-    <label for="click" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </label>
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
 
-    <ul class="nav">
-      <li><a class="active" data-toggle="tab" href="#home">Home</a></li>
-      <li><a data-toggle="tab" href="#resume">Resume</a></li>
-    </ul> -->
-    <!-- MENU -->
-  </nav>
-  <!-- NAV -->
-  <div class="container tab-content my-3">
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
 
-    <div id="home" class="container tab-pane active">
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card text-bg-dark text-center">
-            <img src="Plan เที่ยวกาญจนบุรี 40c7631df773463cab4bfa38f3b82561/Untitled.png" class="card-img-top bg-circle" alt="..." >
-            <div class="card-img-overlay">
-              <a href="karn.html" class="btn btn-dark btn-travel">เที่ยวกาญจนบุรี</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
 
-    <!-- <div id="resume" class="container tab-pane fade"><br>
-      <h1>Resume</h1>
-    </div> -->
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-  </div>
-</body>
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
 
-<footer>
-  <div class="container">
-    <hr>
-    <div class="text-center mb-3">
-      <h6>ไปเที่ยวกันนนนนนน</h6>
-      <a class="btn" href="contact.html"> 
-        <i class="fas fa-heart"></i>
-      </a>
-    </div>
-  </div>
-</footer>
-<script src="libery/resume-theme.js"></script>
-<script src="libery/resume-theme.css"></script>
-</html>
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1531972d-30bf-8077-b9ed-d11460eb0b6d" class="page sans"><header><h1 class="page-title">แบบฝึกหัด</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1531972d-30bf-80e9-88b7-c4a6f2af3f89"><div style="font-size:1.5em"><span class="icon">📌</span></div><div style="width:100%"><p id="1531972d-30bf-80c9-a3b8-d73b376e3632" class="">Note: ควรใช้วิธีการอ่านไฟล์ให้เหมือนกับที่ครูสอน</p></div></figure><h3 id="1531972d-30bf-80c1-b270-ddc30ba659cf" class=""><strong>ตัวอย่างการอ่านไฟล์ txt</strong></h3><p id="1531972d-30bf-8026-8c93-e3682dcb693d" class="">อันนี้พี่ยกตัวอย่างมา ถ้าครูสอนเขียนแบบนี้ก็ทำความเข้าใจตามโค้ดข้างล่างได้เลยนะ (ลองเอาไปรันดู)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1531972d-30bf-80b6-93fa-f07abaf3fcfa" class="code"><code class="language-C">#include &lt;stdio.h&gt;
+
+int main()
+{
+    FILE *file;  // ตัวแปรสำหรับเก็บข้อมูลไฟล์
+    char line[256];  // ตัวแปรเก็บแต่ละบรรทัดที่อ่าน
+
+    // เปิดไฟล์ในโหมดอ่าน (&quot;r&quot;)
+    file = fopen(&quot;studentscore.txt&quot;, &quot;r&quot;);
+
+    // ตรวจสอบว่าเปิดไฟล์สำเร็จหรือไม่
+    if (file == NULL) {
+        printf(&quot;ไม่สามารถเปิดไฟล์ได้\n&quot;);
+        return 1;  // ออกจากโปรแกรมถ้าเปิดไฟล์ไม่สำเร็จ
+    }
+
+    // อ่านไฟล์ทีละบรรทัด
+    while (fgets(line, sizeof(line), file) != NULL) {
+        printf(&quot;%s&quot;, line);  // แสดงบรรทัดที่อ่าน
+    }
+
+    // ปิดไฟล์
+    fclose(file);
+
+    return 0;
+}</code></pre><h3 id="1531972d-30bf-8056-ad15-f71ff08ee0c1" class="">ขั้นตอนการรัน</h3><ol type="1" id="1531972d-30bf-800f-a4a2-d2bfd0fe10df" class="numbered-list" start="1"><li>เปิด website สำหรับรันโค้ด : <a href="https://www.onlinegdb.com/online_c_compiler">https://www.onlinegdb.com/online_c_compiler</a></li></ol><ol type="1" id="1531972d-30bf-8060-9ffd-c6678d661f68" class="numbered-list" start="2"><li>กด New File ตั้งชื่อ studentscore.txt แล้วนำข้อมูลในไฟล์ที่ครูให้มาใส่ <figure id="1531972d-30bf-8017-baa7-f842c1c44f12" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.20.21.png"><img style="width:2376px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.20.21.png"/></a></figure><figure id="1531972d-30bf-8037-a679-c07e7c7279a9" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.21.51.png"><img style="width:2082px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.21.51.png"/></a></figure></li></ol><ol type="1" id="1531972d-30bf-8025-b894-d24ece47fb12" class="numbered-list" start="3"><li>จากนั้นลอง run ดู จะได้ข้อมูลในไฟล์<figure id="1531972d-30bf-80b8-a891-dad6dfe14b00" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.24.02.png"><img style="width:2844px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_15.24.02.png"/></a></figure></li></ol><h3 id="1531972d-30bf-8045-aae3-e67e3bb53348" class="">ขั้นตอนการประกอบโค้ดตามแบบฝึกหัด</h3><p id="1531972d-30bf-8061-9fe1-c91d6aa07707" class="">ให้นักเรียนเขียนโปรแกรมอ่านไฟล์ studentscore.txt แล้วประกาศโครงสร้าง student เก็บข้อมูลนักเรียน ได้แก่ ชื่อ คะแนน math, reading, writing จากนั้น สร้างเมนูย่อย ได้แก่</p><p id="1531972d-30bf-80a2-b2b8-ce614cc43938" class="">1. เมนูสอบถามคะแนนแต่ละวิชา โดยป้อนชื่อนักเรียน  ถ้าหากพบชื่อ ให้ปริ้นคะแนนทั้ง 3 วิชา  ถ้าไม่พบ Not Found</p><p id="1531972d-30bf-80cd-a46e-c716dc7537e3" class="">2. เมนูแสดงค่าสถิติเบื้องต้น แต่ละวิชา (Min , Max, Average) </p><p id="1531972d-30bf-80a9-827e-d96c168e3129" class="">การส่งงาน ให้นักเรียน ถ่าย vdo อธิบายโค้ดแต่ละบรรทัด พร้อมทั้งแสดงผลลัพธ์</p><h3 id="1531972d-30bf-80a7-a0ba-f978f45bc6e2" class="">Step 1 : อ่านไฟล์ studentscore.txt แล้วประกาศโครงสร้าง student เก็บข้อมูลนักเรียน ได้แก่ ชื่อ คะแนน math, reading, writing </h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1531972d-30bf-80f1-9dff-f81328cc3388" class="code"><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+// กำหนดโครงสร้าง student
+struct student {
+    char name[50];
+    int math;
+    int reading;
+    int writing;
+};
+
+int main() {
+    FILE *file;
+    struct student students[1000];  // อาเรย์เก็บข้อมูลนักเรียน
+    int student_count = 0;  // ตัวแปรนับจำนวนของนักเรียนที่อ่านได้
+
+    // เปิดไฟล์ studentscore.txt ในโหมดอ่าน
+    file = fopen(&quot;studentscore.txt&quot;, &quot;r&quot;);
+    if (file == NULL) {
+        printf(&quot;ไม่สามารถเปิดไฟล์ได้\n&quot;);
+        return 1;  // ออกจากโปรแกรมหากไม่สามารถเปิดไฟล์ได้
+    }
+
+    // อ่านข้อมูลจากไฟล์ทีละบรรทัดและเก็บลงในโครงสร้าง
+    while (fscanf(file, &quot;%s %d %d %d&quot;, students[student_count].name, 
+                   &amp;students[student_count].math, 
+                   &amp;students[student_count].reading, 
+                   &amp;students[student_count].writing) == 4) {
+        student_count++;
+    }
+
+    // ปิดไฟล์หลังการอ่าน
+    fclose(file);
+
+    // แสดงผลข้อมูลนักเรียนที่เก็บในอาเรย์
+    printf(&quot;ข้อมูลนักเรียน:\n&quot;);
+    for (int i = 0; i &lt; student_count; i++) {
+        printf(&quot;ชื่อ: %s\n&quot;, students[i].name);
+        printf(&quot;คะแนนคณิตศาสตร์: %d\n&quot;, students[i].math);
+        printf(&quot;คะแนนการอ่าน: %d\n&quot;, students[i].reading);
+        printf(&quot;คะแนนการเขียน: %d\n&quot;, students[i].writing);
+        printf(&quot;\n&quot;);
+    }
+
+    return 0;
+}</code></pre><h3 id="1531972d-30bf-80d5-87c4-c051e355e293" class="">Step 2 : สร้างเมนูย่อย→ เมนูสอบถามคะแนนแต่ละวิชา โดยป้อนชื่อนักเรียน  ถ้าหากพบชื่อ ให้ปริ้นคะแนนทั้ง 3 วิชา  ถ้าไม่พบ Not Found</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1531972d-30bf-8071-be79-d36c62ff775a" class="code"><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+// กำหนดโครงสร้าง student
+struct student {
+    char name[50];
+    int math;
+    int reading;
+    int writing;
+};
+
+int main() {
+    FILE *file;
+    struct student students[1000];  // อาเรย์เก็บข้อมูลนักเรียน
+    int student_count = 0;  // ตัวแปรนับจำนวนของนักเรียนที่อ่านได้
+
+    // เปิดไฟล์ studentscore.txt ในโหมดอ่าน
+    file = fopen(&quot;studentscore.txt&quot;, &quot;r&quot;);
+    if (file == NULL) {
+        printf(&quot;ไม่สามารถเปิดไฟล์ได้\n&quot;);
+        return 1;  // ออกจากโปรแกรมหากไม่สามารถเปิดไฟล์ได้
+    }
+
+    // อ่านข้อมูลจากไฟล์ทีละบรรทัดและเก็บลงในโครงสร้าง
+    while (fscanf(file, &quot;%s %d %d %d&quot;, students[student_count].name, 
+                   &amp;students[student_count].math, 
+                   &amp;students[student_count].reading, 
+                   &amp;students[student_count].writing) == 4) {
+        student_count++;
+    }
+
+    // ปิดไฟล์หลังการอ่าน
+    fclose(file);
+    
+    // แสดงเมนู
+    int choice;
+    do {
+        printf(&quot;1. สอบถามคะแนนนักเรียน\n&quot;);
+        printf(&quot;2. แสดงค่าสถิติเบื้องต้น\n&quot;);
+        printf(&quot;3. ออกจากโปรแกรม\n&quot;);
+        printf(&quot;กรุณาเลือกเมนู: &quot;);
+        scanf(&quot;%d&quot;, &amp;choice);
+    
+        switch (choice) {
+            case 1: {
+                // รับค่าชื่อนักเรียน
+                char name[50];
+                printf(&quot;\nกรุณากรอกชื่อของนักเรียน: &quot;);
+                scanf(&quot;%s&quot;, name);
+                
+                // กำหนดตัวแปรสำหรับเก็บข้อมูลนักเรียน ให้เริ่มต้นที่ -1
+                // ถ้าพบข้อมูลนักเรียนคนนั้นจะจัดเก็บลำดับของนักเรียนใส่ในค่านี้ 
+                // แต่ถ้าไม่พบข้อมูลนักเรียนที่กรอกมาจะคงค่าเดิมคือ -1
+                int i = -1;
+                // วนลูปเพื่อหาข้อมูลนักเรียน
+                for (int j = 0; j &lt; student_count; j++) {
+                    // หาข้อมูลนักเรียนในไฟล์กับค่าที่กรอกเข้ามา
+                    if (strcmp(students[j].name, name) == 0) {
+                       i = j;
+                       break; // เมื่อเจอแล้วให้หยุดหา
+                    }
+                }
+                
+                // หลังจากหาข้อมูลเรียบร้อยแล้ว มาเช็คต่อว่าค่า i คืออะไรถ้าไม่ใช่ -1 แสดงว่าหาข้อมูลนักเรียนเจอ
+                if (i != -1) {
+                    printf(&quot;ชื่อ: %s\n&quot;, students[i].name);
+                    printf(&quot;คะแนนคณิตศาสตร์: %d\n&quot;, students[i].math);
+                    printf(&quot;คะแนนการอ่าน: %d\n&quot;, students[i].reading);
+                    printf(&quot;คะแนนการเขียน: %d\n&quot;, students[i].writing);
+                    printf(&quot;\n&quot;);
+                } else {
+                    // ถ้าไม่พบชื่อนักเรียน
+                    printf(&quot;Not Found\n&quot;);
+                }
+                break;
+            }
+            
+            case 2: {
+                break;
+            }
+        }
+    
+    } while (choice != 3);
+        
+}</code></pre><figure id="1531972d-30bf-807e-a103-feca4fa83f4a" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.10.46.png"><img style="width:707.984375px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.10.46.png"/></a></figure><figure id="1531972d-30bf-80f3-b163-e76dea5d5075" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.11.14.png"><img style="width:707.9921875px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.11.14.png"/></a></figure><p id="1531972d-30bf-800a-91d7-c8f6d437a69a" class="">
+</p><h3 id="1531972d-30bf-8058-9c2e-ebb747109e1f" class="">Step 3 Final : สร้างเมนูย่อย→ เมนูแสดงค่าสถิติเบื้องต้น แต่ละวิชา (Min , Max, Average)</h3><p id="1531972d-30bf-80f6-bafc-f3e0e60d727f" class="">ค่า Min หาได้จาก คะแนนที่น้อยที่สุดของวิชานั้นๆ</p><p id="1531972d-30bf-808c-8a4d-d7eb04aa8670" class="">ค่า Max หาได้จาก คะแนนที่มากที่สุดของวิชานั้นๆ</p><p id="1531972d-30bf-804c-b533-eddf9f89fa6d" class="">ค่า Average คือ ค่าเฉลี่ย หาได้จากผลรวมของคะแนนแต่ละวิชาหารด้วยจำนวนนักเรียนทั้งหมด</p><p id="1531972d-30bf-800b-9e23-ca99a115da95" class="">
+</p><p id="1531972d-30bf-80fb-ad8b-efff292bfd79" class="">โดยเราจะวนลูปหา [Final Code]-อย่าลืมส่งครูด้วยนะ สู้ๆๆค่าาาา </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1531972d-30bf-80a1-ab09-c4615a6e104a" class="code"><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+// กำหนดโครงสร้าง student
+struct student {
+    char name[50];
+    int math;
+    int reading;
+    int writing;
+};
+
+int main() {
+    FILE *file;
+    struct student students[1000];  // อาเรย์เก็บข้อมูลนักเรียน
+    int student_count = 0;  // ตัวแปรนับจำนวนของนักเรียนที่อ่านได้
+
+    // เปิดไฟล์ studentscore.txt ในโหมดอ่าน
+    file = fopen(&quot;studentscore.txt&quot;, &quot;r&quot;);
+    if (file == NULL) {
+        printf(&quot;ไม่สามารถเปิดไฟล์ได้\n&quot;);
+        return 1;  // ออกจากโปรแกรมหากไม่สามารถเปิดไฟล์ได้
+    }
+
+    // อ่านข้อมูลจากไฟล์ทีละบรรทัดและเก็บลงในโครงสร้าง
+    while (fscanf(file, &quot;%s %d %d %d&quot;, students[student_count].name, 
+                   &amp;students[student_count].math, 
+                   &amp;students[student_count].reading, 
+                   &amp;students[student_count].writing) == 4) {
+        student_count++;
+    }
+
+    // ปิดไฟล์หลังการอ่าน
+    fclose(file);
+    
+    // แสดงเมนู
+    int choice;
+    do {
+        printf(&quot;1. สอบถามคะแนนนักเรียน\n&quot;);
+        printf(&quot;2. แสดงค่าสถิติเบื้องต้น\n&quot;);
+        printf(&quot;3. ออกจากโปรแกรม\n&quot;);
+        printf(&quot;กรุณาเลือกเมนู: &quot;);
+        scanf(&quot;%d&quot;, &amp;choice);
+    
+        switch (choice) {
+            // step 2 : เมนูสอบถามคะแนนแต่ละวิชา โดยป้อนชื่อนักเรียน ถ้าหากพบชื่อ ให้ปริ้นคะแนนทั้ง 3 วิชา ถ้าไม่พบ Not Found
+            case 1: {
+                // รับค่าชื่อนักเรียน
+                char name[50];
+                printf(&quot;\nกรุณากรอกชื่อของนักเรียน: &quot;);
+                scanf(&quot;%s&quot;, name);
+                
+                // กำหนดตัวแปรสำหรับเก็บข้อมูลนักเรียน ให้เริ่มต้นที่ -1
+                // ถ้าพบข้อมูลนักเรียนคนนั้นจะจัดเก็บลำดับของนักเรียนใส่ในค่านี้ 
+                // แต่ถ้าไม่พบข้อมูลนักเรียนที่กรอกมาจะคงค่าเดิมคือ -1
+                int i = -1;
+                // วนลูปเพื่อหาข้อมูลนักเรียน
+                for (int j = 0; j &lt; student_count; j++) {
+                    if (strcmp(students[j].name, name) == 0) {
+                       i = j;
+                       break; // เมื่อเจอแล้วให้หยุดหา
+                    }
+                }
+                
+                // หลังจากหาข้อมูลเรียบร้อยแล้ว มาเช็คต่อว่าค่า i คืออะไรถ้าไม่ใช่ -1 แสดงว่าหาข้อมูลนักเรียนเจอ
+                if (i != -1) {
+                    printf(&quot;ชื่อ: %s\n&quot;, students[i].name);
+                    printf(&quot;คะแนนคณิตศาสตร์: %d\n&quot;, students[i].math);
+                    printf(&quot;คะแนนการอ่าน: %d\n&quot;, students[i].reading);
+                    printf(&quot;คะแนนการเขียน: %d\n&quot;, students[i].writing);
+                    printf(&quot;\n&quot;);
+                } else {
+                    // ถ้าไม่พบชื่อนักเรียน
+                    printf(&quot;Not Found\n&quot;);
+                }
+                
+                break;
+            }
+            
+            // step 3: สร้างเมนูย่อย→ เมนูแสดงค่าสถิติเบื้องต้น แต่ละวิชา (Min , Max, Average)
+            case 2: {
+                
+                // กำหนดให้ค่าเริ่มต้นของ min กับ max เป็นนักเรียนคนแรก
+                int min_math = students[0].math, max_math = students[0].math;
+                int min_reading = students[0].reading, max_reading = students[0].reading;
+                int min_writing = students[0].writing, max_writing = students[0].writing;
+                
+                // กำหนดค่า sum คือผลรวมของคะแนนแต่ละวิชา
+                int sum_math = 0, sum_reading = 0, sum_writing = 0;
+                
+                for (int i = 0; i &lt; student_count; i++) {
+                    
+                    // คำนวณค่าสูงสุดและต่ำสุดของคะแนนแต่ละวิชา
+                    if (students[i].math &lt; min_math) min_math = students[i].math;
+                    if (students[i].math &gt; max_math) max_math = students[i].math;
+                    if (students[i].reading &lt; min_reading) min_reading = students[i].reading;
+                    if (students[i].reading &gt; max_reading) max_reading = students[i].reading;
+                    if (students[i].writing &lt; min_writing) min_writing = students[i].writing;
+                    if (students[i].writing &gt; max_writing) max_writing = students[i].writing;
+
+                    // คำนวณผลรวมของคะแนนแต่ละวิชา
+                    sum_math += students[i].math;
+                    sum_reading += students[i].reading;
+                    sum_writing += students[i].writing;
+                }
+                // คำนวณค่าเฉลี่ย
+                float avg_math = (float)sum_math / student_count;
+                float avg_reading = (float)sum_reading / student_count;
+                float avg_writing = (float)sum_writing / student_count;
+
+                // แสดงผลค่าสถิติ
+                printf(&quot;\nค่าสถิติเบื้องต้น:\n&quot;);
+                printf(&quot;วิชาคณิตศาสตร์: Min = %d, Max = %d, Average = %.2f\n&quot;, min_math, max_math, avg_math);
+                printf(&quot;วิชาการอ่าน: Min = %d, Max = %d, Average = %.2f\n&quot;, min_reading, max_reading, avg_reading);
+                printf(&quot;วิชาการเขียน: Min = %d, Max = %d, Average = %.2f\n&quot;, min_writing, max_writing, avg_writing);
+                
+                break;
+            }
+        }
+    
+    } while (choice != 3);
+        
+}
+</code></pre><p id="1531972d-30bf-80c1-a3fb-d439e442fa37" class="">
+</p><figure id="1531972d-30bf-8088-93d0-dfda3455b627" class="image"><a href="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.03.36.png"><img style="width:2866px" src="%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9D%E0%B8%B6%E0%B8%81%E0%B8%AB%E0%B8%B1%E0%B8%94%201531972d30bf8077b9edd11460eb0b6d/Screenshot_2567-12-05_at_19.03.36.png"/></a></figure><p id="1531972d-30bf-80c1-9ad5-ff303a7bda6e" class="">
+</p><p id="1531972d-30bf-805b-a330-df298237c2c4" class="">แหล่งที่มา: <a href="https://chatgpt.com/">https://chatgpt.com/</a></p><p id="1531972d-30bf-801e-9664-c02e206c4336" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
